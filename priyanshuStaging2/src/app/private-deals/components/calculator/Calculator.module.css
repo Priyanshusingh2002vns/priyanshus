@@ -1,0 +1,693 @@
+@property --r {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.card {
+  background: #171717;
+  color: #fff;
+  border-radius: 24px;
+  padding: 20px;
+
+  max-width: 480px;
+  position: sticky;
+  top: 0;
+  font-family: Arial, sans-serif;
+  min-width: 430px;
+}
+
+.minInvestment {
+  display: flex;
+  justify-content: space-between;
+  background: #404040;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.minInvestment .div p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+  color: #FFFFFFB2;
+}
+
+.minInvestment .div span {
+  font-size: 20px;
+  font-weight: 400;
+  color: #FFFFFF;
+
+}
+
+.lotContainer {
+  margin-bottom: 20px;
+}
+
+.lotContainer p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  background: linear-gradient(130deg, #FFF2D0, #8E6B0F);
+  border: none;
+  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  color: #FFFFFF;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.value {
+  font-size: 16px;
+  width: 66%;
+  font-weight: 500;
+  color: #FFFFFF;
+  padding: 13px;
+  border-radius: 8px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #FFFFFF4D;
+
+}
+
+.valueInput {
+  font-size: 16px;
+  width: 66%;
+  font-weight: 500;
+  color: #FFFFFF;
+  padding: 13px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #FFFFFF4D;
+  background: transparent;
+  outline: none;
+}
+
+.amount p {
+  font-size: 14px;
+  font-weight: 400;
+  /* margin-bottom: 5px; */
+}
+
+.amount h2,
+.amount .amountValue {
+  background: linear-gradient(90deg, #FFF2D0, #8E6B0F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 39px;
+  font-weight: 300;
+}
+
+.showBtn {
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 34px;
+  padding: 12px 20px;
+  color: #FFFFFF;
+  background-image: url('/assets/pictures/showInterest.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 48px;
+  outline: none;
+  font-size: 16px;
+  /* background-color: #aa3e3e; */
+
+}
+
+.transactionBtn {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 34px;
+  padding: 14px 20px;
+  color: #FFFFFF;
+  background-image: url('/assets/pictures/showInterest.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 48px;
+  outline: none;
+  font-size: 16px;
+  text-align: center;
+  /* background-color: #aa3e3e; */
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.viewDetailsBtn {
+  padding: 5px;
+  margin: 24px 0;
+  margin-top: 14px;
+  height: 50px;
+  border-radius: 16px;
+  background-color: #404040;
+  box-shadow: 10px 10px 20px #0000000F;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.viewDetailsBtn .leftDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.viewDetailsBtn p {
+  margin: unset;
+  color: var(--White-White, #FFF);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 150% */
+}
+
+.viewDetailsBtn .link {
+  color: var(--Dark-Gold, #B18C07);
+  text-align: center;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 150% */
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 9.5%;
+  /* 1.52px */
+  text-underline-offset: 17.5%;
+  /* 2.8px */
+  text-underline-position: from-font;
+}
+
+.greenDot {
+
+  margin-right: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: #16A34A;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+  animation: blink 1.5s infinite;
+}
+
+
+@keyframes blink {
+
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    opacity: 0.8;
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 1);
+    opacity: 1;
+  }
+}
+
+.imageStack {
+  display: flex;
+  align-items: center;
+  border: 1px solid #B59131;
+  margin-bottom: 10px;
+  background: #C9A74E33;
+  padding: 10px 10px;
+  border-radius: 40px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.mobileStackImage img {
+  border-radius: 0 !important;
+  transform: none !important;
+}
+
+/* .imageStack div {
+  width: 15%;
+} */
+
+.imageStack .s1 {
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  color: #FFFFFF;
+  width: 75%;
+}
+
+.centeredImageStack {
+  justify-content: center;
+}
+
+.centeredImageStack .s1 {
+  width: 100%;
+  text-align: center;
+}
+
+.imageStack div img {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 18px;
+  border-radius: 50%;
+  border: 0px solid white;
+  object-fit: cover;
+  margin-left: -20px;
+  background: transparent;
+  margin-left: -10px;
+}
+
+.imageStack img {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 30px;
+  border-radius: 50%;
+  border: 0px solid white;
+  object-fit: cover;
+  margin-left: -20px;
+  background: transparent;
+  margin-left: -10px;
+  transform: rotate(270deg);
+}
+
+.imageStack img:first-child {
+  margin-left: 0;
+  /* No overlap for first image */
+}
+
+.askAiButton {
+  width: 100%;
+  padding: 11px 30px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  font-size: 16px;
+  color: #c9a74e;
+  /* Gold text */
+  background: linear-gradient(#171717, #171717) padding-box,
+    linear-gradient(to right, #fff2d0, #b8860b) border-box;
+  border: 1.5px solid transparent;
+  border-radius: 50px;
+  /* Fully rounded ends */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  /* Space between icon and text */
+  cursor: pointer;
+  justify-content: center;
+}
+
+.getInviteWrapper {
+  --r: 0deg;
+  /* required for animation */
+
+  position: relative;
+  padding: 16px;
+  margin-top: 14px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(3deg, #000 0%, #000 100%), #000000;
+  background-image: url('/meetBg.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.06);
+
+
+  border: 0px solid transparent;
+
+
+
+}
+
+/* ★ Animated border overlay ★ */
+.getInviteWrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  /* border width */
+  border-radius: 16px;
+  background: conic-gradient(from var(--r),
+      rgba(208, 160, 52, 0) 0%,
+      rgba(208, 160, 52, 0.4) 8%,
+      rgba(208, 160, 52, 1) 16%,
+      rgba(208, 160, 52, 0.4) 24%,
+      rgba(208, 160, 52, 0) 32%);
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  animation: rotateBorder 3s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rotateBorder {
+  0% {
+    --r: 0deg;
+  }
+
+  100% {
+    --r: 360deg;
+  }
+}
+
+
+.getInvite {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.getInviteLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.getInvite span {
+  color: rgba(228, 206, 69, 1);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  /* 150% */
+}
+
+.meetingDate {
+  color: #FFF !important;
+  text-align: center;
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 16px;
+  /* 114.286% */
+}
+
+.inviteButton {
+  /* min-width: 130px; */
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+  background-color: inherit;
+  color: #B18C07;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.inviteButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Spinner */
+.loader {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgba(177, 140, 7, 0.25);
+  /* light gold */
+  border-top: 2px solid #B18C07;
+
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Verified state */
+/* .verified {
+  position: relative;
+  color: #22c55e;
+  font-weight: 600;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.2;
+} */
+
+/* .verifiedUnderline {
+  width: 100%;
+  height: 2px;
+  background-color: #22c55e;
+  margin-top: 4px;
+  border-radius: 1px;
+} */
+
+@media(max-width:1440px) {
+  .card {
+    min-width: 390px;
+  }
+}
+
+@media(max-width:1150px) {
+  .minInvestment .div span {
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+  }
+
+  .amount h2,
+  .amount .amountValue {
+    font-size: 30px;
+
+  }
+
+  .askAiButton,
+  .imageStack .s1 {
+    font-size: 15px;
+
+  }
+
+  .askAiButton {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+}
+
+
+@media(max-width:1024px) {
+  .card {
+    min-width: 350px;
+  }
+}
+
+@media(max-width:900px) {
+  .card {
+    display: none;
+  }
+}
+
+
+
+.fixedBottomBtn {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  background: #1D1D1D;
+  padding: 20px;
+  padding-bottom: calc(20px + env(safe-area-inset-bottom));
+  z-index: 1000;
+  -webkit-transform: translateZ(0);
+}
+
+.fixedBottomBtn button {
+  width: 100%;
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  background-image: url(/assets/pictures/showInterest.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 2000;
+}
+
+.qnaSlider {
+  width: 100%;
+  max-height: 90%;
+  background: #111;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  /* padding: 20px; */
+  animation: slideDown 0.3s ease-out;
+  /* transform: translateY(-100%); */
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.slider {
+  width: 100%;
+  max-height: 90%;
+  background: #111;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 20px;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width:480px) {
+  .card {
+    min-width: unset;
+  }
+}
+
+/* Light theme overrides to match the clean white public layout */
+.lightCard {
+  background: #FFFFFF !important;
+  color: #1F2937 !important;
+  box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid #E5E7EB !important;
+}
+
+.lightCard .minInvestment {
+  background: #F3F4F6 !important;
+}
+
+.lightCard .minInvestment .div p {
+  color: #6B7280 !important;
+}
+
+.lightCard .minInvestment .div span {
+  color: #1F2937 !important;
+}
+
+.lightCard .lotContainer p {
+  color: #1F2937 !important;
+}
+
+.lightCard .valueInput {
+  color: #1F2937 !important;
+  border: 1px solid #D1D5DB !important;
+  background: #FFFFFF !important;
+}
+
+.lightCard .amount p {
+  color: #6B7280 !important;
+}
+
+.lightCard .amount h2,
+.lightCard .amount .amountValue {
+  background: none !important;
+  -webkit-text-fill-color: #B59131 !important;
+  color: #B59131 !important;
+}
+
+.lightCard .imageStack {
+  background: #FDF9EE !important;
+  border: 1px solid #D1D5DB !important;
+}
+
+.lightCard .imageStack .s1 {
+  color: #1F2937 !important;
+}
+
+.lightCard .askAiButton {
+  background: #FFFFFF !important;
+  color: #B59131 !important;
+  border: 1.5px solid #B59131 !important;
+}
+
+.lightCard .getInviteWrapper {
+  background: #F3F4F6 !important;
+  background-image: none !important;
+  border: 1px solid #D1D5DB !important;
+}
+
+.lightCard .getInviteWrapper span {
+  color: #B59131 !important;
+}
+
+.lightCard .getInviteWrapper .meetingDate {
+  color: #6B7280 !important;
+}
+
+.lightCard button[class*="inviteButton"] {
+  background-color: transparent !important;
+}
+
+.lightCard.fixedBottomBtn {
+  background: #FFFFFF !important;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05) !important;
+  border-top: 1px solid #E5E7EB !important;
+}

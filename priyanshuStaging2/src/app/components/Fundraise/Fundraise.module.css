@@ -1,0 +1,560 @@
+/* ============ OVERLAY ============= */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #111111;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+}
+
+/* ============ MODAL ============= */
+.modal {
+  background: #111111;
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: 0 32px 32px 32px;
+  position: relative;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  -ms-overflow-style: none;
+}
+
+.fundFormContainer {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+
+}
+
+/* ============ FORM WRAPPER ============= */
+.fundForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  max-width: 882px;
+  width: 100%;
+}
+
+.letsStartText {
+  max-width: 544px;
+  background: linear-gradient(180deg, #FDF7FE 0%, #D8BF7E 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-bottom: -14px;
+
+}
+
+.errorText {
+  color: #ff6b6b;
+  font-size: 12px;
+  margin-top: -17px;
+  margin-bottom: 0;
+}
+
+.fromNavLogo {
+  cursor: pointer;
+  align-items: flex-start !important;
+}
+
+/* ============ FORM GROUP ============= */
+.formGroup {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ============ LABEL ============= */
+.label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: -5px;
+  text-transform: capitalize;
+
+}
+
+.otpContainer {
+  display: flex;
+  gap: 16px;
+  margin: 0 auto;
+}
+
+.otpInput {
+  font-family: "Helvetica Neue";
+  font-weight: 500;
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  border: 1px solid #3F3F46;
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 14px;
+  background: #1A1A1A;
+  color: #FFF;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.otpInput:focus {
+  border-color: #B18C07;
+}
+
+.otpInputFilled {
+  border-color: #B18C07;
+}
+
+.multiFieldsForm {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.selectWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.selectWrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Red text when no selection */
+.inputError {
+  color: rgba(255, 255, 255, 0.5) !important;
+  /* red */
+}
+
+/* White text when option selected */
+.inputSuccess {
+  color: #ffffff !important;
+  /* white */
+}
+
+.dropdownIcon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+  font-size: 18px;
+}
+
+.rupeeCnt {
+  position: relative;
+}
+
+.rupee {
+  position: absolute;
+  color: #ffffff;
+  left: 8px;
+  top: 26%;
+}
+
+.headingText {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+
+.headingText h2 {
+  margin-bottom: 0;
+}
+
+.headingText p {
+  font-family: 'Helvetica Neue';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: -3px;
+
+}
+
+.resendTime,
+.resentOtp {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: -5px;
+  font-family: 'Helvetica Neue';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.resendTime span {
+  font-family: 'Helvetica Neue';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0%;
+  color: #DC2626;
+}
+
+.otpBox {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ============ INPUT ============= */
+.input {
+  font-family: "Helvetica Neue";
+  font-weight: 400;
+  font-size: 14px;
+  width: 100%;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid #3F3F46;
+  padding: 0 16px;
+  outline: none;
+  background: #1a1a1a;
+  color: white;
+  backdrop-filter: blur(3.4778685569763184px);
+  -webkit-backdrop-filter: blur(3.4778685569763184px);
+
+
+  box-shadow: 0px 0px 8px 0px #FFFFFF40 inset;
+}
+
+
+.uploadBox {
+  width: 100%;
+  height: 100px;
+  padding: 16px 24px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.uploadBox:hover {
+  background: #222;
+  border-color: #b18c07;
+  box-shadow: 0px 0px 14px #b18c0740 inset;
+}
+
+.uploadIconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uploadText {
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0;
+}
+
+.browse {
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+.selectedFileText {
+  margin-top: 10px;
+  color: #c4a962;
+  font-size: 14px;
+  font-family: "Helvetica Neue";
+  text-align: center;
+}
+
+
+.textArea {
+  padding: 16px;
+  height: 120px;
+}
+
+.input::placeholder {
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* ============ BUTTON ============= */
+.sendBtn {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 34px;
+  padding-top: 19px;
+  padding-bottom: 16px;
+  font-family: 'Helvetica Neue';
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+  cursor: pointer;
+  background-color: #242424;
+  border: none;
+
+  /* ⭐ Add these two lines */
+  backdrop-filter: blur(3.4778685569763184px);
+  -webkit-backdrop-filter: blur(3.4778685569763184px);
+
+
+  box-shadow: 0px 0px 8px 0px #FFFFFF40 inset;
+}
+
+.resentOtp {
+  color: #B18C07 !important;
+  cursor: pointer;
+}
+
+/* ============ TITLE ============= */
+.title {
+  background: linear-gradient(180deg, #fdf7fe 0%, #d8bf7e 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.fundDoneForm {
+  justify-content: center;
+  gap: 60px !important;
+}
+
+.formNav {
+  max-width: 1760px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  padding-top: 12px;
+  z-index: 999;
+  background-color: #111111;
+  text-align: start !important;
+}
+
+.timerCount {
+  margin-right: 3px;
+}
+
+.formNav img {
+  height: 32px;
+}
+
+.closeBtn {
+
+
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  background: transparent;
+  border: none;
+  color: rgb(153, 153, 153);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.closeBtnDone {
+  top: 20px !important;
+  right: 20px !important;
+}
+
+.stepIndicatorWrapper {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: -18px;
+}
+
+.stepDot {
+  width: 32px;
+  height: 5px;
+  background: #2e2e2e;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.activeDot {
+  background: #FFFFFF;
+  /* Active gold */
+  width: 38px;
+  /* Slightly larger like screenshot */
+}
+
+
+
+/* ============ TEXT ============= */
+.textPara {
+  font-family: "Helvetica Neue";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 0;
+}
+
+/* ============ LINK ============= */
+.poplink {
+  font-family: "Helvetica Neue";
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: underline;
+  color: #fbbf24;
+}
+
+/* ============ SUCCESS IMAGE WRAPPER ============= */
+.imageGlowParent {
+  position: relative;
+  border-radius: 50%;
+  margin: 0 auto 27px auto;
+  min-width: max-content;
+  min-height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Used but missing in your CSS → added */
+.glowCardImg {
+  width: 160px;
+  height: 160px;
+  padding-top: 7px;
+}
+
+/* Effect for glowing circle */
+.imageGlowParent::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(/landing-asset/SigninEllipse.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation: glowScaleUp 2s ease-in-out infinite;
+}
+
+@keyframes glowScaleUp {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+/* ============ RESPONSIVE ============= */
+@media (max-width: 769px) {
+  .modal {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .textPara {
+    font-size: 14px;
+  }
+
+  .letsStartText {
+    font-size: 40px;
+  }
+
+  .otpInput {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .fundForm {
+    gap: 40px;
+  }
+
+  .otpContainer {
+    gap: 9px;
+  }
+
+  .otpInput {
+    width: 40px;
+    height: 40px;
+  }
+
+  .letsStartText {
+    font-size: 36px;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+
+  .modal {
+    padding-top: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 50px;
+  }
+
+  .stepIndicatorWrapper {
+    margin-top: 22px;
+    /* justify-content: flex-start; */
+  }
+
+
+}
+
+/* @media (max-width: 300px){
+  .startYouFund{
+    padding: 9px 9px;
+
+  }
+} */

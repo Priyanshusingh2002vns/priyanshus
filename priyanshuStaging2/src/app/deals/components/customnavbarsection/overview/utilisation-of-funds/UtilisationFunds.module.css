@@ -1,0 +1,148 @@
+.card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 20px;
+
+  margin-bottom: 30px;
+  border: 1px solid #EBEBEB;
+  /* margin: 0 auto; */
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+align-items: center;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 12px;
+  color: #333;
+}
+.heading span{
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rowHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+
+  padding-bottom: 6px;
+}
+
+.text {
+  /* margin-top: 8px; */
+  font-size: 16px;
+  font-weight: 400;
+  width: 50%;
+  color: #9CA3AF;
+  /* padding-left: 22px; */
+
+  /* line-height: 1.5; */
+}
+
+.text p{
+  margin-bottom: 0;
+  /* color: #000; */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px
+}
+.text ul{
+  margin-bottom: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+.purpose {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #817E7E;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  /* 22.4px */
+
+}
+
+.colorBox {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.amount {
+  color: #0B2845;
+  font-weight: 500;
+}
+
+/* 
+=====================================================================Private Deal Css==================================================================== */
+
+
+.privateDeal {
+  border-radius: 24px;
+  border: 1px solid #EBEBEB;
+  background: var(--Zinc-800, #27272A);
+}
+
+.privateDeal .heading {
+  color: #FFF;
+  font-weight: 300;
+  letter-spacing: normal;
+  letter-spacing: 0.2px;
+}
+
+.privateDeal .rowHeader {
+  color: #fff;
+}
+
+.privateDeal .purpose {
+  color: #D1D5DB;
+}
+
+.privateDeal .amount {
+  color: white;
+}
+
+.privateDeal .text {
+  padding-left: 0;
+  /* margin: 8px 0px; */
+}
+
+@media (max-width:480px) {
+  .text p {
+    margin-bottom: unset;
+    font-size: 14px;
+  }
+
+  .heading {
+    margin-bottom: 3px;
+  }
+
+  .card {
+    padding: 12px 10px;
+    border-radius: 14px;
+  }
+
+  .row{
+    font-size: 14px;
+  }
+}

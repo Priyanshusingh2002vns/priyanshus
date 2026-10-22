@@ -1,0 +1,301 @@
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 24px;
+ 
+  width: 500px;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.headar{
+ padding: 26px;
+}
+
+.hr{
+  border:none;
+  background-color: rgba(226, 232, 240, 1);
+  height: 1px;
+
+  /* width: 500px; */
+}
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 40px;
+  background: none;
+  border: none;
+  font-weight: 100;
+  padding-right: 20px;
+  cursor: pointer;
+
+}
+.main_div{
+  padding: 26px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(31, 41, 55, 1);
+  margin-bottom: 15px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.lable{
+  position: relative; 
+  width: 113px;
+  padding-left: 10px;
+  top: 9px;
+  left: 13px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 2;
+}
+
+.inputGroup .label {
+  font-size: 14px;
+  margin-bottom: 5px;
+
+}
+
+.inputGroup .input {
+  padding: 8px 10px;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+.inputGroup .input:focus {
+  border-color: #c29c2f;
+}
+
+.sendBtn {
+  background-color: #d4af37;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  height: 48px; /* Added height to match Signin button */
+}
+
+.sendBtn:hover {
+  background-color: #c29c2f;
+}
+ .input :focus{
+ border-color: #b48b2e;
+}
+
+/* Phone Input Styles from Signin */
+.phoneInputWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid #E2E8F0;
+  padding: 0 16px;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.phoneInput {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.countrySelect {
+  position: relative;
+  margin-right: 12px;
+  border-right: 1px solid #E5E7EB;
+  padding-right: 12px;
+}
+
+.countryTrigger {
+  border: none;
+  background: transparent;
+  color: #1F2937;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+}
+
+.countryChevron {
+  font-size: 12px;
+  color: #6B7280;
+  transition: transform 0.2s ease;
+}
+
+.countryChevronOpen {
+  transform: rotate(180deg);
+}
+
+.countryMenu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: -20px;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.12);
+  padding: 6px;
+  min-width: 96px;
+  max-height: 240px;
+  overflow-y: auto;
+  z-index: 5;
+}
+
+.countryOption {
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: #1F2937;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.countryOption:hover {
+  background: #F3F4F6;
+}
+
+.countryOptionActive {
+  background: #111827 !important;
+  color: #FFFFFF !important;
+}
+
+/* Button States Logic */
+.buttonDisabled {
+  background: #E5E7EB !important;
+  color: #9CA3AF !important;
+  cursor: not-allowed !important;
+}
+
+.loaderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.loader {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #9CA3AF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* OTP Styles */
+.otpInputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.otpInputs input {
+  width: 56px;
+  height: 56px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  outline: none;
+}
+
+.otpInputs input:focus {
+  border-color: rgba(201, 167, 78, 1);
+}
+
+.timer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.red {
+  color: red;
+}
+
+.resendBtn {
+  background: none;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  color: rgba(201, 167, 78, 1);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.resendBtn:disabled {
+  color: rgba(201, 167, 78, 0.6);
+  cursor: not-allowed;
+}
+
+@media(max-width:580px){
+  .overlay{
+      position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 0;
+
+  }
+  .modal{
+  border-radius:32px 32px 0px 0px;
+    
+      /* border-bottom-left-radius: none;
+  border-bottom-right-radius: none; */
+  }
+}

@@ -1,0 +1,179 @@
+.questions-section {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+   background: linear-gradient(180deg,#F5F1E4,white);
+}
+
+.questions-section section{
+ background: linear-gradient(180deg,#F5F1E4,white);
+}
+
+.questions-section h4 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 200;
+  font-family:  Helvetica;
+}
+.questions-section span {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-family:  Helvetica;
+}
+
+
+
+
+.questions-section .accordion {
+  border: 0px solid #ddd !important;
+  border-radius: 8px;
+  overflow: hidden;
+  --bs-accordion-bg: transparent !important
+  
+}
+
+.questions-section .accordion-item {
+  border-bottom: 1px solid #ddd !important;
+  border: none !important;
+}
+
+.ques-main-div {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px 0px 0px;
+    padding: 40px 10px;
+}
+.questions-section .accordion-item:last-child {
+  border-bottom: none;
+}
+
+.questions-section .accordion-header {
+  margin: 0;
+}
+
+.questions-section .accordion-button {
+  width: 100%;
+  text-align: left;
+  padding: 16px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.questions-section .accordion-button.collapsed {
+  color: #333;
+}
+
+.questions-section .accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: black;
+  font-weight: 500;
+  box-shadow: none ;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.questions-section .accordion-button:focus{
+  box-shadow: none;
+}
+
+.questions-section .accordion-button:hover {
+  background-color: transparent;
+}
+
+.questions-section .accordion-collapse {
+  max-height: 0;
+  overflow: hidden;
+  padding: 16px;
+  background: transparent;
+  transition: max-height 0.4s ease,  0.3s ease;
+}
+
+.questions-section .accordion-collapse.show {
+  max-height: 500px; /* Set large enough for the tallest content */
+  padding: 16px;
+}
+
+.questions-section .accordion-body {
+  padding: 16px 0;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+@media (max-width: 400px) {
+  .questions-section{
+    padding: 10px 2px ;
+  }
+  .questions-section h4 {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 200;
+  font-family:  Helvetica;
+}
+.questions-section span {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-family:  Helvetica;
+}
+.questions-section .accordion-button{
+  font-size: 14px;
+}
+
+.questions-section .accordion-body{
+  font-size: 12px;
+}
+.questions-section .accordion-button{
+  padding: 5px 10px;
+}
+.questions-section .accordion-collapse.show{
+  padding: 5px 10px;
+}
+
+}
+
+@media (max-width: 401px) and(max-width: 700px) {
+    .questions-section{
+    padding: 10px 2px ;
+  }
+  .questions-section h4 {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 200;
+  font-family:  Helvetica;
+}
+.questions-section span {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-family:  Helvetica;
+}
+.questions-section .accordion-button{
+  font-size: 18px;
+}
+
+.questions-section .accordion-body{
+  font-size: 14px;
+}
+.questions-section .accordion-button{
+  padding: 5px 10px;
+}
+.questions-section .accordion-collapse.show{
+  padding: 5px 10px;
+}
+}

@@ -1,0 +1,393 @@
+.mainContainer {
+  width: 100%;
+  /* max-height: 919px; */
+  padding: 80px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+/* Card (1120x759, radius 30, padding 40, gradient) */
+.card {
+  /* width: 100%; */
+  max-width: 1120px;
+  /* min-height: 750px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  background: linear-gradient(180deg, #F5F1E4 0%, #FFFFFF 100%);
+}
+
+/* Heading wrap (1040 wide, center) */
+.headingWrap {
+  width: 100%;
+  /* max-width: 1040px; */
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  /* Fallback stack */
+  line-height: 100%;
+  font-size: 25px;
+  letter-spacing: 0;
+  text-align: center;
+  font-weight: 200;
+  /* Thin */
+}
+
+.headingLight {
+  color: #1F2937;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 200;
+}
+
+.headingBold {
+  color: #1F2937;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* QA list container (1040 wide, gap 16) */
+.qaList {
+  width: 100%;
+  /* max-width: 1040px; */
+  /* min-height: 600px; */
+  display: flex;
+  flex-direction: column;
+  /* gap: 16px; */
+}
+
+/* Each item has a 40px header row height with dark gray bg like screenshot */
+.qaItem {
+  width: 100%;
+  /* color: #ffffff; */
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.qaItem:focus-visible {
+  outline: 2px solid #111827;
+  outline-offset: 2px;
+}
+
+.qaRow {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  /* exact Figma height */
+  /* padding: 0 20px; */
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.question {
+  color: #1F2937;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+.chevron {
+  font-weight: 700;
+  font-size: 14px;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+  color: #4B5563;
+}
+
+.open .chevron {
+  transform: rotate(90deg);
+}
+
+/* Answer panel */
+.answerWrap {
+  max-height: 0;
+  overflow: hidden;
+  /* padding: 0 20px; */
+  color: #111827;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.open .answerWrap {
+  max-height: 150px;
+  /* padding: 20px; */
+}
+
+/* Answer typography */
+.answer {
+  margin: 0;
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #6B7280;
+  margin-bottom: 7px;
+}
+
+/* Each item has a 40px header row height with dark gray bg like screenshot */
+.qaItem {
+  width: 100%;
+  /* color: #ffffff; */
+  border-radius: 8px;
+  overflow: visible;
+  /* Change from hidden to visible to show the line */
+  cursor: pointer;
+  user-select: none;
+  transition: box-shadow 0.2s ease;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+/* Add horizontal line using pseudo-element */
+.qaItem::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  /* Position the line 8px below the item */
+  left: 0;
+  width: 100%;
+  /* Full width as specified (1040px will be constrained by container) */
+  height: 1px;
+  background-color: #E2E8F0;
+  opacity: 1;
+}
+
+/* Remove line from the last item */
+.qaItem:last-child::after {
+  display: none;
+}
+
+/* Remove margin from last item */
+.qaItem:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Large Desktop (1440px+) */
+/* Tablet and Small Desktop (768px to 1024px) */
+@media (max-width: 1024px) {
+  .mainContainer {
+    padding: 60px 100px;
+    max-height: none;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 900px;
+    padding: 32px;
+    gap: 32px;
+    min-height: auto;
+  }
+
+  .headingWrap {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .heading {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .qaList {
+    max-width: 100%;
+    min-height: auto;
+    /* gap: 12px; */
+  }
+
+  .question {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .answer {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .open .answerWrap {
+    max-height: 200px;
+  }
+}
+
+/* Mobile Landscape (481px to 768px) */
+@media (max-width: 768px) {
+  .mainContainer {
+    padding: 40px 30px;
+    max-height: none;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+    padding: 24px;
+    gap: 24px;
+    min-height: auto;
+  }
+
+  .headingWrap {
+    height: auto;
+    padding: 0 10px;
+  }
+
+  .heading {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .qaList {
+    gap: 10px;
+  }
+
+  .qaRow {
+    padding: 0 16px;
+    min-height: 48px;
+    /* Larger touch target */
+    gap: 8px;
+  }
+
+  .question {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .chevron {
+    font-size: 12px;
+  }
+
+  .answerWrap {
+    padding: 0 16px;
+  }
+
+  .open .answerWrap {
+    padding: 16px;
+    max-height: 250px;
+  }
+
+  .answer {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+/* Mobile Portrait (320px to 480px) */
+@media (max-width: 480px) {
+  .mainContainer {
+    padding: 0;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .card {
+    border-radius: 20px;
+    padding: 20px 4px;
+    gap: 20px;
+  }
+
+  .headingLight,
+  .headingBold {
+    font-size: 20px;
+  }
+
+  .headingWrap {
+    padding: 0 8px;
+    justify-content: flex-start;
+  }
+
+  .heading {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .qaList {
+    gap: 0px;
+  }
+
+  .qaRow {
+    padding: 0 12px;
+    min-height: 44px;
+    gap: 6px;
+  }
+
+  .question {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .chevron {
+    font-size: 11px;
+  }
+
+  .answerWrap {
+    padding: 0 12px;
+  }
+
+  .open .answerWrap {
+    padding: 12px;
+    max-height: 300px;
+    /* More space for mobile reading */
+  }
+
+  .answer {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+/* Very Small Screens (below 320px) */
+@media (max-width: 320px) {
+  .mainContainer {
+    padding: 16px 12px;
+  }
+
+  .card {
+    padding: 16px;
+    gap: 16px;
+    border-radius: 12px;
+  }
+
+  .heading {
+    font-size: 16px;
+  }
+
+  .qaRow {
+    padding: 0 10px;
+    min-height: 40px;
+  }
+
+  .question {
+    font-size: 12px;
+  }
+
+  .chevron {
+    font-size: 10px;
+  }
+
+  .answerWrap {
+    padding: 0 10px;
+  }
+
+  .open .answerWrap {
+    padding: 10px;
+  }
+
+  .answer {
+    font-size: 11px;
+  }
+}

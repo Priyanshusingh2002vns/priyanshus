@@ -1,0 +1,264 @@
+.wrapper {
+  max-width: 624px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 32px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  /* adjust as needed */
+  right: 15px;
+  /* push to the right end */
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  background: #fff;
+  box-shadow: 0 4px 40px 0 rgba(68, 49, 151, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 22px;
+  color: #000;
+  /* change color if needed */
+  z-index: 10;
+  /* ensure it stays above other elements */
+}
+
+.titleWrapper {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.backBtn {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border: none;
+  border-radius: 100px;
+  background: #FFF;
+  box-shadow: 0 4px 40px 0 rgba(68, 49, 151, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.logo {
+  width: 134px;
+  margin-bottom: 32px;
+}
+
+.title {
+  color: #1F2937;
+  text-align: left;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: #6B7280;
+  text-align: flex-start;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 38px;
+}
+
+.sectionLabel {
+  color: #1F2937;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  width: 100%;
+  padding-bottom: 8px;
+}
+
+.options {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.option {
+  height: 46px;
+  border-radius: 9999px;
+  border: 1px solid #E5E7EB;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 18px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.active {
+  border-color: #B59131;
+  background: #FFF;
+  box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.06);
+}
+
+.active .optionText {
+  color: #B59131;
+}
+
+.radioOuter {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #B59131;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radioInner {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #B59131;
+  transition: opacity .2s ease;
+}
+
+.optionText {
+  color: #1F2937;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.proceed {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 24px;
+  height: 48px;
+  border-radius: 9999px;
+  background: #0B0F19;
+  color: white;
+  font-size: 20px;
+  border: none;
+}
+
+.customModalWrapper :global(.modal-content) {
+  background-color: transparent;
+  border: none;
+}
+
+
+.wrapper {
+  border-radius: 32px;
+  background: #FFF;
+  box-shadow: 0 4px 36.1px 0 rgba(0, 0, 0, 0.10);
+}
+
+.customModalContent .modal-content {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wrapper {
+    padding-top: 32px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .backBtn {
+    top: 20px;
+    left: 12px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .logo {
+    height: 48px;
+    margin-bottom: 60px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    margin-bottom: 32px;
+  }
+
+  .sectionLabel {
+    font-size: 13px;
+  }
+
+  .option {
+    height: 42px;
+    padding: 0 16px;
+  }
+
+  .optionText {
+    font-size: 12px;
+  }
+
+  .proceed {
+    height: 44px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 25px 15px;
+  }
+
+  .backBtn {
+    top: 16px;
+    left: 8px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo {
+    height: 40px;
+    margin-bottom: 40px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    margin-bottom: 24px;
+  }
+
+  .sectionLabel {
+    font-size: 12px;
+  }
+
+  .option {
+    height: 40px;
+    padding: 0 14px;
+  }
+
+  .optionText {
+    font-size: 11px;
+  }
+
+  .proceed {
+    height: 40px;
+    font-size: 14px;
+  }
+}

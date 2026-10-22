@@ -1,0 +1,27 @@
+.avatarStack {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #D1C9F7;
+    color: #51489A;
+    font-size: 10px;
+    padding-top: 2px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #FFFFFF;
+    margin-left: -11px;
+    position: relative;
+    box-shadow: 0px 1.5px 4px rgba(0, 0, 0, 0.1);
+}
+
+.avatar:first-child {
+    margin-left: 0;
+}

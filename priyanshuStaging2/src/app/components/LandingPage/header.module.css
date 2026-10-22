@@ -1,0 +1,250 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap'); */
+
+.parentHeader {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Manrope;
+    z-index: 999;
+    background: rgba(1, 3, 9, 0.42);
+    backdrop-filter: blur(22px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.parentHeader.lightHeaderParent {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(22px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.notFixed {
+    position: static;
+    transform: unset
+}
+
+.header {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    border-radius: 0 0 20px 20px;
+
+    /* 
+    background-image: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0) 100%);
+
+    backdrop-filter: blur(30px) saturate(200%);
+    -webkit-backdrop-filter: blur(30px) saturate(200%);
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+        0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+
+.nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.lightNav a {
+    color: #000 !important;
+}
+
+/* In your CSS module (YourComponent.module.css) or regular CSS */
+
+/* Base styling for the navigation links (keep this as is) */
+.nav a {
+    position: relative;
+    text-decoration: none;
+    color: #F7FCFF;
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+    z-index: 2;
+    display: inline-block;
+}
+
+/* Active & Hover states share same positioning */
+.nav a.active::after,
+.nav a:hover::after {
+    content: url(/link-after.svg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    /* centers horizontally and adjusts vertically */
+    z-index: 1;
+    pointer-events: none;
+}
+
+.lightNav a.active::after,
+.lightNav a:hover::after {
+    filter: invert(1) brightness(0);
+}
+
+.firstPart {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.lightHeader .hamburger svg path {
+    stroke: #000;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.containerBtn {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    background: #0d0d0d;
+    cursor: pointer;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    z-index: 0;
+    transition: background 0.3s ease;
+    text-shadow: 1px 0 0 rgba(255, 0, 0, 0.5), -1px 0 0 rgba(0, 0, 255, 0.5);
+}
+
+.hideOnMobile {
+    display: block;
+}
+
+.showOnMobile,
+.headerMobileShine {
+    display: none;
+}
+
+
+/* Responsive */
+@media (max-width: 769px) {
+    .header {
+        padding: 16px 20px;
+    }
+
+    .flexDiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #FFFFFF1F;
+    }
+
+    .firstPart div img {
+        max-width: 85px;
+        height: 100%;
+    }
+
+    .flexDiv p {
+        margin: unset;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .showOnMobile {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        -webkit-backdrop-filter: blur(100px) saturate(180%);
+        backdrop-filter: blur(100px);
+        border: 1px solid rgba(255, 255, 255, 0);
+        width: 100%;
+        padding: 1rem;
+        border-radius: 0px;
+        height: 100vh;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        background: rgba(0, 0, 0, 1);
+        gap: 23px;
+    }
+
+    .headerMobileShine.active {
+        position: relative;
+        display: block;
+    }
+
+    .headerMobileShine>div {
+        position: absolute;
+        top: 69vh;
+        right: -20px;
+        transform: translateY(-100%);
+    }
+
+    .nav.active {
+        transform: translateY(56px);
+    }
+
+    .activeHeader {
+        background: black;
+        border-radius: unset;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .header {
+        max-width: 100%;
+    }
+
+    .header a.active::after {
+        content: none;
+    }
+}
+
+.newHeader {
+    max-width: 1380px;
+    padding: 16px 45px;
+}

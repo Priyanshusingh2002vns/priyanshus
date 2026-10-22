@@ -1,0 +1,476 @@
+.section {
+  height: 300vh;
+  background: #000;
+  overscroll-behavior: none;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* PINNED SECTION */
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: visible;
+  border-right: 1px solid var(--white-white-20, rgba(255, 255, 255, 0.20));
+  border-left: 1px solid var(--white-white-20, rgba(255, 255, 255, 0.20));
+  max-width: 1320px;
+  margin: 0 auto;
+  contain: none;
+}
+
+/* 🔒 CENTER TEXT */
+.centerContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 0;
+  pointer-events: none;
+  max-width: 558px;
+  width: 100%;
+}
+
+.badge {
+  padding: 6px 16px;
+  color: #FFF;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 100px;
+  background: var(--G3, linear-gradient(113deg, #D4CBB5 15.04%, #8E6B0F 84.96%));
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.badge.titleVisible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.badge.titleHidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-20px);
+}
+
+.badgeContainer {
+  position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+}
+
+.title {
+  color: #FFF;
+  font-size: 44px;
+  font-weight: 500;
+  letter-spacing: -0.64px;
+  background: linear-gradient(90deg, #ffffff, #D8BF7E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.15;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0;
+}
+
+.titleContainer {
+  position: relative;
+  height: 100px;
+}
+
+.titleVisible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.titleHidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
+/* STAGE */
+.stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* PROBLEM CARDS */
+.problemCard {
+  position: absolute;
+  top: 34%;
+  left: 41%;
+  width: 360px;
+  height: 320px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  background: #1B1B1B;
+  padding: 0px;
+  border: 1px solid #595959;
+
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.problemCard:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: #000000CC;
+}
+
+.problemCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.sepratebox {
+  height: 80px;
+  border-top: 1px solid var(--white-white-20, rgba(255, 255, 255, 0.20));
+  border-bottom: 1px solid var(--white-white-20, rgba(255, 255, 255, 0.20));
+  bottom: 0;
+  width: 100%;
+  background: #000;
+}
+
+.seprateboxcontent {
+  height: 78px;
+  width: 100%;
+  background: #000;
+  border-right: 1px solid rgba(255, 255, 255, 0.20);
+  border-left: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+/* SOLUTION CARDS */
+.solutionCard {
+  position: absolute;
+  top: 34%;
+  left: 41%;
+  width: 360px;
+  height: 320px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #1B1B1B;
+  padding: 0px;
+  border: 1px solid #595959;
+
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.solutionCard:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: #000000CC;
+}
+
+.solutionCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* TEXT OVERLAY */
+.cardTextOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.cardText {
+  color: #FFF;
+  font-family: Manrope;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0;
+  padding: 9.5px 22px;
+  margin-bottom: 12px;
+}
+
+/* SVG DECORATION */
+.svgDecoration {
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+
+  /* Ensure SVG doesn't cause repaints */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.svgDecoration svg {
+  width: 200px;
+  height: 106px;
+}
+
+/* RESPONSIVE */
+
+
+@media (max-width: 1400px) {
+  .stickyWrapper,.sticky{
+    max-width: 1140px;
+    margin: auto;
+  } 
+  
+}
+@media (max-width: 1360px) {
+  .title {
+    font-size: 40px;
+  }
+
+  .problemCard,
+  .solutionCard {
+    width: 320px;
+    height: 280px;
+  }
+
+  .cardText {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1441px) {
+  .seprateboxcontent ,.sticky ,.stickyWrapper{
+    max-width: 1290px !important;
+  }
+  
+}
+
+@media (max-width: 1440px) and (min-width: 1200px) {
+  .seprateboxcontent ,.sticky ,.stickyWrapper{
+    max-width: 1140px !important;
+  }
+  
+}
+
+@media (max-width: 1199px) and (min-width: 1025px) {
+  .seprateboxcontent ,.sticky ,.stickyWrapper {
+    max-width: 1000px !important;  
+  }
+  .left{
+    width: 41%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .seprateboxcontent ,.sticky ,.stickyWrapper {
+    max-width: 952px !important;  
+  }
+  
+}
+
+
+@media (max-width: 1180px) {
+  .title {
+    font-size: 38px;
+  }
+
+  .problemCard,
+  .solutionCard {
+    width: 290px;
+    height: 260px;
+  }
+
+  .cardText {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .centerContent {
+    max-width: 450px;
+    top: 41%;
+    left: 50%;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .problemCard,
+  .solutionCard {
+    width: 280px;
+    height: 250px;
+    left: 41%;
+  }
+
+  .cardText {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sticky ,.stickyWrapper ,.seprateboxcontent {
+    max-width: 720px !important;
+  }
+
+  .centerContent {
+    max-width: 280px;
+    top: 43%;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .badge {
+    font-size: 14px;
+    height: 30px;
+    padding: 4px 12px;
+  }
+
+  .problemCard,
+  .solutionCard {
+    width: 180px;
+    height: 180px;
+    left: 44%;
+    border-radius: 12px;
+  }
+
+  .cardText {
+    font-size: 14px;
+    line-height: normal;
+    margin-bottom: 6px;
+    padding: 0 10px;
+  }
+
+  .svgDecoration svg {
+    width: 120px;
+    height: 64px;
+  }
+
+  .problemCard:after,
+  .solutionCard:after {
+    background: #000000AA;
+  }
+
+  .svgDecoration {
+    top: 34%;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 0 20px;
+  }
+
+  .sticky {
+    max-width: 100%;
+  }
+
+  .sepratebox {
+    padding: 0 20px;
+  }
+
+  .svgDecoration {
+    top: 31%;
+  }
+}
+
+@media (max-width: 480px) {
+  .svgDecoration {
+    top: 27%;
+    left: 59%;
+  }
+
+  .centerContent {
+    max-width: 180px;
+    top: 48%;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .problemCard,
+  .solutionCard {
+    width: 160px;
+    height: 140px;
+    top: 32%;
+  }
+
+  .stage {
+    top: 16%;
+    left: -20%;
+  }
+}
+
+@media (max-width: 375px) {
+  .stage {
+    top: 14%;
+    left: -26%;
+  }
+
+  .problemCard,
+  .solutionCard {
+    width: 160px;
+    height: 140px;
+    top: 27%;
+  }
+
+  .svgDecoration {
+    left: 60%;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+
+  .sticky,
+  .stage,
+  .problemCard,
+  .solutionCard {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  .problemCard,
+  .solutionCard {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}

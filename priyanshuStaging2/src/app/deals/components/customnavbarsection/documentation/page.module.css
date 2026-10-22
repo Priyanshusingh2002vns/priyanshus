@@ -1,0 +1,160 @@
+.docWrapper {
+  width: 100%;
+  padding: 20px 32px;
+
+}
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 24px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F3F4F6;
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #817E7E;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+/* .item:hover {
+  background: #eceef2;
+} */
+
+/* .icon {
+  font-size: 20px;
+  color: #b89b47; 
+} */
+
+.pitchDeck {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+  margin-bottom: 12px;
+}
+
+.pitchDeckHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.pitchDeck h4,
+.pitchDeck h3 {
+  font-family: Helvetica;
+  font-size: 20px;
+  /* fixed typo (20.bod-section h4px → 20px) */
+  font-weight: 200;
+  line-height: 28px;
+  margin: 0;
+}
+
+.imageContainer {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.pitchDeck img {
+  width: 100%;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+/* Blur image on hover */
+.imageContainer:hover img {
+  filter: blur(2px);
+}
+
+/* Overlay container */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show overlay on hover */
+.imageContainer:hover .overlay {
+  opacity: 1;
+}
+
+.pitchOverlayBtn {
+  padding: 13px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 100px;
+}
+
+/* Alternative button styling */
+.overlayBtn {
+  background: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.privateContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 14px;
+  padding-bottom: 24px;
+}
+
+.privateContainer .item {
+  background-color: #27272A;
+  color: white;
+}
+
+@media(max-width:920px) {
+  .privateContainer {
+    /* padding: 0 10px; */
+    padding-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .container {
+    /* padding: 0 10px; */
+    padding-bottom: 20px;
+  }
+
+  .docWrapper {
+    padding: 0 15px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+}

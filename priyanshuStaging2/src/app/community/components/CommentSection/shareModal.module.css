@@ -1,0 +1,62 @@
+.modalOverlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent{
+  background: #111827;
+  color: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  width: min(520px, 92%);
+}
+
+.modalHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.modalTitle{
+  margin: 0;
+  font-weight: 600;
+}
+
+.closeBtn{
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modalBody{
+  display: flex;
+  gap: 8px;
+}
+
+.input{
+  flex: 1;
+  background: #1f2937;
+  color: #e5e7eb;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.copyBtn{
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #FFF2D0 0%, #8E6B0F 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+

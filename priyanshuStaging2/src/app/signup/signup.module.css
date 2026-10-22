@@ -1,0 +1,183 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+  overflow: hidden;
+}
+
+.backBtn {
+  width: 64px;
+  height: 64px;
+  border: none;
+  border-radius: 9999px;
+  background: radial-gradient(100% 100% at 50% 50%, rgba(17, 24, 39, 0.04) 0%, rgba(17, 24, 39, 0.02) 60%, rgba(17, 24, 39, 0.01) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.logo {
+  height: 72px;
+  margin-bottom: 16px;
+}
+
+.title {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 800;
+  color: #111827;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 6px 0 28px;
+  color: #6B7280;
+  font-size: 16px;
+  text-align: center;
+  max-width: 720px;
+}
+
+.form {
+  width: 100%;
+  max-width: 920px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.label {
+  color: #111827;
+  font-weight: 600;
+}
+
+.input {
+  height: 64px;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+.input:focus {
+  border-color: #D1A946;
+  box-shadow: 0 0 0 3px rgba(209, 169, 70, .15);
+  outline: none;
+}
+
+.tc {
+  color: #6B7280;
+  font-size: 14px;
+}
+
+.link {
+  color: #B59131;
+  text-decoration: none;
+}
+
+.button {
+  height: 64px;
+  border-radius: 9999px;
+  background: #0B0F19;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+.buttonDisabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.customModalWrapper :global(.modal-content) {
+  background-color: transparent;
+  border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wrapper {
+    padding-top: 32px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .backBtn {
+    top: 20px;
+    left: 12px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .logo {
+    height: 48px;
+    margin-bottom: 40px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+    max-width: 100%;
+  }
+
+  .form {
+    gap: 12px;
+  }
+
+  .input {
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .button {
+    height: 44px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding-top: unset;
+    padding-left: 15px;
+    padding-right: 15px;
+    justify-content: center;
+  }
+
+  .backBtn {
+    top: 16px;
+    left: 8px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo {
+    height: 40px;
+    margin-bottom: 32px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .input {
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .button {
+    height: 40px;
+    font-size: 14px;
+  }
+}

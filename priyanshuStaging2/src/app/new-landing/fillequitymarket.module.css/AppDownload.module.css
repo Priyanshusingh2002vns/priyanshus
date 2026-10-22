@@ -1,0 +1,183 @@
+  .section {
+    position: relative;
+    background: #000;
+    /* padding: 140px 0; */
+    overflow: hidden;
+    /* height: 618px; */
+  }
+
+  .gridmoves {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .gridmoves video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+  }
+
+  /* PHONE AS BACKGROUND */
+  /* .phoneBg {
+    position: absolute;
+    inset: 0;
+    background: url("/loadmob.png") center center no-repeat;
+    background-size: auto;
+    opacity: 1;
+    pointer-events: none;
+  } */
+
+  .appdownloadcontainer {
+    border-top: 1px solid #434343;
+    border-right: 1px solid #434343;
+    border-left: 1px solid #434343;
+    height: 727px;
+    position: relative;
+  }
+
+  .appdownloadcontent {
+    position: absolute;
+    /* top: 50%; */
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .appdownloadcontent img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* FOREGROUND */
+  .container {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    max-width: 930px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 20px;
+    top: 36px;
+  }
+
+  /* STORE BUTTONS */
+  .store img {
+    max-width: 207px;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+  }
+
+  .store img:hover {
+    transform: scale(1.05);
+  }
+
+  .featuresContainerlines {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.20);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+    height: 60px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: repeating-linear-gradient(to right,
+        rgba(255, 255, 255, 0.20) 0px,
+        rgba(255, 255, 255, 0.20) 1px,
+        transparent 1px,
+        transparent calc(1px + 7px));
+    background-size: calc(1px + 7px) 100%;
+  }
+
+  @media (max-width: 1399px) {
+    .appdownloadcontainer {
+      height: 100%;
+    }
+
+    .section {
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .featuresContainerlines {
+      height: 50px;
+      background-image: repeating-linear-gradient(to right,
+          rgba(255, 255, 255, 0.20) 0px,
+          rgba(255, 255, 255, 0.20) 1px,
+          transparent 1px,
+          transparent calc(1px + 6px));
+      background-size: calc(1px + 6px) 100%;
+    }
+  }
+
+  @media (max-width: 1399px) {
+    .appdownloadcontainer {
+      /* height: 618px; */
+    }
+
+    .section {
+      /* height: 618px; */
+    }
+  }
+
+  @media (max-width: 640px) {
+    .featuresContainerlines {
+      height: 40px;
+      background-image: repeating-linear-gradient(to right,
+          rgba(255, 255, 255, 0.20) 0px,
+          rgba(255, 255, 255, 0.20) 1px,
+          transparent 1px,
+          transparent calc(1px + 5px));
+      background-size: calc(1px + 5px) 100%;
+    }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 767px) {
+    .container {
+      gap: 140px;
+      top: 0;
+      bottom: 32px;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .phoneBg {
+      background-size: 260px;
+    }
+
+    .store img {
+      max-width: 76px;
+    }
+
+    .appdownloadcontent img {
+      max-width: 35%;
+    }
+
+    .appdownloadcontainer {
+      height: 272px;
+    }
+
+    .section {
+      height: 272px;
+    }
+
+    .appdownloadcontainer {
+      border-left: unset;
+      border-right: unset;
+    }
+  }

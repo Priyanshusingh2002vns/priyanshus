@@ -1,0 +1,36 @@
+.scroll-stack-container {
+    position: relative;
+    height: max-content;
+    perspective: 1000px;
+    overflow: visible;
+    /* margin-top: 100px; */
+}
+
+.scroll-stack-card-wrapper {
+    position: sticky;
+    top: 15%;
+    will-change: transform, opacity;
+    transform-origin: center top;
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.scroll-stack-card {
+    background: transparent;
+    color: white;
+    box-shadow: none;
+    /* padding: 60px; */
+    /* max-width: 800px; */
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    .scroll-stack-container {
+        height: max-content;
+    }
+
+    .scroll-stack-card-wrapper {
+        top: -60%;
+    }
+}

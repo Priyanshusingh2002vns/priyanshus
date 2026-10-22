@@ -1,0 +1,293 @@
+.wrapper {
+  max-width: 571px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+padding: 32px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.titleWrapper{
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;       /* adjust as needed */
+  right: 15px;     /* push to the right end */
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  background: #fff;
+  box-shadow: 0 4px 40px 0 rgba(68, 49, 151, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 22px;
+  color: #000;     /* change color if needed */
+  z-index: 10;     /* ensure it stays above other elements */
+}
+
+.backBtn {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border: none;
+  border-radius: 100px;
+  background: #fff;
+  box-shadow: 0 4px 40px 0 rgba(68, 49, 151, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.logo {
+  width: 134px;
+  margin-bottom: 32px;
+}
+
+.title {
+  color: #1f2937;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 6px;
+}
+
+.resendButtonDiv {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.resendButton {
+  cursor: pointer;
+  color: #C9A74E;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 8%;
+  text-underline-offset: 25%;
+  text-underline-position: from-font;
+  border: transparent;
+}
+
+.resendButtonDisabled {
+  cursor: not-allowed;
+  color: #C9A74E;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 8%;
+  text-underline-offset: 25%;
+  text-underline-position: from-font;
+  border: transparent;
+  opacity: 0.5;
+}
+
+.subtitle {
+color: var(--Gray-500, #6B7280);
+font-size: 14px;
+font-style: normal;
+font-weight: 300;
+line-height: 1.2;
+  margin-bottom: 38px;
+}
+
+.form {
+  width: 100%;
+  max-width: 820px;
+}
+
+.formGroup {
+  position: relative;
+}
+
+.label {
+  color: #1f2937;
+  font-size: 14px;
+  font-weight: 500;
+  /* position: absolute; */
+  left: 12px;
+  top: -10px;
+  background: #fff;
+  padding: 0 6px;
+}
+
+.input {
+  width: 100%;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid #443197;
+  padding: 0 16px;
+  font-size: 16px;
+  letter-spacing: 12px;
+}
+
+.otpInputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: auto;
+  justify-content: center;
+}
+
+.otpInputs input {
+  max-height: 50px;
+  width: 100%;
+  width: 50px;
+  border-radius: 5px;
+  padding: 10px 17px;
+  border: 1px solid #E5E7EB
+}
+
+.otpInputs input:focus-visible {
+  outline: none;
+  border-color: #d1a946;
+}
+
+
+.resendRow {
+  margin: 24px 0;
+  color: #1f2937;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.timer {
+  color: #dc2626;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.button {
+  width: 100%;
+  height: 48px;
+  border-radius: 9999px;
+  background: #0b0f19;
+  color: white;
+  font-size: 20px;
+  border: none;
+}
+
+.buttonDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ==================================Pop up Otp================================== */
+
+.customModalWrapper :global(.modal-content) {
+  background-color: transparent;
+  border: none;
+}
+
+
+.wrapper{
+  border-radius: 32px;
+background: #FFF;
+box-shadow: 0 4px 36.1px 0 rgba(0, 0, 0, 0.10);
+}
+.customModalContent .modal-content{
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wrapper {
+    padding-top: 32px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .backBtn {
+    top: 20px;
+    left: 12px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .logo {
+    height: 48px;
+    margin-bottom: 60px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+
+  .input {
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .button {
+    height: 44px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 25px 15px;
+  }
+
+ 
+
+  .backBtn {
+    top: 16px;
+    left: 8px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo {
+    height: 40px;
+    margin-bottom: 40px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+
+  .input {
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .button {
+    height: 40px;
+    font-size: 14px;
+  }
+  .otpInputs input{
+    max-width: 40px;
+    padding: 10px 14px;
+  }
+}

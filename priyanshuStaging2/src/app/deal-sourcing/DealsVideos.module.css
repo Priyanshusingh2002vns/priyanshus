@@ -1,0 +1,180 @@
+.scrollSection {
+    background-color: #000;
+    height: 500vh;
+    /* Provides scroll depth for 5 phases */
+    position: relative;
+}
+
+.stickyContainer {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.videoWrapper {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.bgVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.bgVideo.active {
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.gridLines {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.lineLeft,
+.lineRight {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.lineLeft {
+    left: 0;
+}
+
+.lineRight {
+    right: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 40px;
+}
+
+.textBlock {
+    position: absolute;
+    max-width: 900px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    pointer-events: none;
+    padding: 0 20px;
+}
+
+.textBlock.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.scrollIcon {
+    margin-bottom: 24px;
+    opacity: 0.8;
+}
+
+.title {
+    color: #F5F5F5;
+    text-align: center;
+    font-family: Manrope;
+    font-weight: 200;
+    letter-spacing: -0.8px;
+    font-size: clamp(32px, 5vw, 64px);
+    margin-bottom: 24px;
+}
+
+.title span {
+    background: linear-gradient(113deg, #D4CBB5 15.04%, #8E6B0F 84.96%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+}
+
+.description {
+    color: #D5D5D5;
+    text-align: center;
+    font-family: Manrope;
+    font-size: clamp(16px, 2vw, 24px);
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sepratebox1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    z-index: 4;
+}
+
+.seprateboxcontent1 {
+    height: 100%;
+    width: 100%;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sepratebox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    z-index: 4;
+}
+
+.seprateboxcontent {
+    height: 100%;
+    width: 100%;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}

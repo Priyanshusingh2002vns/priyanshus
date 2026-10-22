@@ -1,0 +1,115 @@
+.container {
+  max-width: 936px;
+  background-color: #fdfdfd;
+  /* max-width: 800px; */
+  /* margin: 0px auto; */
+  /* margin-top: 60px; */
+  border-radius: 24px;
+  padding:  32px;
+  color: #333;
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.hr{
+  /* margin-bottom:30px ;
+  border: none;
+  background-color: rgba(229, 231, 235, 1);
+   height: 2px; */
+      margin-top: 25px;
+  margin-bottom: 30px;
+  background-color: rgba(229, 231, 235, 1);
+  height: 1px;
+  border: none;
+}
+
+.section {
+  /* margin-bottom: 12px; */
+  /* gap: 8px; */
+  
+  padding-bottom: 8px;
+}
+
+.section h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.section p {
+  color: rgba(75, 85, 99, 1);
+  font-size: 14px;
+  font-weight:400;
+  margin-bottom: 8px;
+}
+
+.section ul {
+  /* margin: 8px 0 8px 20px; */
+  color: rgba(75, 85, 99, 1);
+  margin-left: -10px;
+}
+
+.section li {
+  font-size: 14px;
+  font-weight: 300;
+  
+  /* line-height: 1.6; */
+}
+
+.email {
+  color: rgba(37, 99, 235, 1);
+  text-decoration: none;
+}
+
+.email:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  .heading {
+    font-size: 24px;
+    text-align: left; /* tablet pe left align */
+  }
+
+  .section h3 {
+    font-size: 15px;
+  }
+
+  .section p,
+  .section li {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 580px) {
+  .heading {
+    font-size: 20px;
+    display: none;
+    text-align: center; /* chhoti screen pe center */
+  }
+
+  .section h3 {
+    font-size: 14px;
+  }
+
+  .section p,
+  .section li {
+    font-size: 12px;
+  }
+
+  .container {
+    border-radius: 0px;
+    padding: 15px ;
+    
+  }
+  .hr{
+    display: none;
+  }
+}

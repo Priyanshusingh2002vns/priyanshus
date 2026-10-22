@@ -1,0 +1,121 @@
+.networkglobalsection {
+  background: #000;
+  padding-top: 100px;
+}
+
+.extraspace {
+  background: #000;
+  height: 100px;
+}
+
+.networkglobalcontent {
+  text-align: center;
+}
+
+.networkglobalcontent h2 {
+  background: radial-gradient(50% 50% at 50% 50%, #FFF 0%, #D8BF7E 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 64px;
+  font-weight: 200;
+  line-height: 120%;
+  letter-spacing: -0.64px;
+}
+
+.networkglobalcontent p {
+  color: #FFF;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  /* 133.333% */
+  max-width: 658px;
+  margin: auto;
+  margin-bottom: 32px;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #F7FCFF;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: -0.32px;
+  border-radius: 2px;
+  background: var(--G3, linear-gradient(113deg, #D4CBB5 15.04%, #8E6B0F 84.96%));
+  backdrop-filter: blur(0px);
+  border: none;
+  padding: 14px 24.5px;
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+}
+
+.networkglobalimage {
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+}
+
+.networkglobalimage img {
+  width: 100%;
+  height: 100%;
+}
+
+.networkglobalimage::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, #000 100%);
+}
+
+.networkglobalimagemob {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .networkglobalcontent h2 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .networkglobalcontent p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .networkglobalcontent h2 {
+    font-size: 40px;
+  }
+
+  .networkglobalimage {
+    display: none;
+  }
+
+  .networkglobalimagemob {
+    display: block;
+  }
+
+  .networkglobalsection {
+    padding: 0 24px;
+    padding-top: 100px;
+  }
+}

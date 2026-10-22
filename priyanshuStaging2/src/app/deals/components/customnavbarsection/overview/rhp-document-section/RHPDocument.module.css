@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  /* margin: 16px 0; */
+}
+
+.docButtonLight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: linear-gradient(180deg, #f3f4f6, #ffffff);
+  padding: 18px 24px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.docButtonLight:hover {
+  background-color: #F3F4F6;
+}
+
+.docTextLight {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #1F2937;
+  margin: 0;
+}
+
+.chevronLight {
+  color: #1F2937;
+}
+
+/* Dark Theme (Private Deals) */
+.docButtonDark {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #27272A;
+  padding: 18px 24px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.docButtonDark:hover {
+  background-color: #3F3F46;
+}
+
+.docTextDark {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 300;
+  color: #D1D5DB;
+  margin: 0;
+}
+
+.chevronDark {
+  color: #9CA3AF;
+}
+
+@media (max-width: 480px) {
+  .docTextLight,
+  .docTextDark {
+    font-size: 18px;
+  }
+
+  .docButtonLight,.docButtonDark{
+    padding: 16px;
+    border-radius: 16px;
+  }
+}
+  

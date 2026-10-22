@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "NCQUR5ZGSQ.com.preqt.app",
+        "paths": ["/deals/*", "*"]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["NCQUR5ZGSQ.com.preqt.app"]
+  }
+}

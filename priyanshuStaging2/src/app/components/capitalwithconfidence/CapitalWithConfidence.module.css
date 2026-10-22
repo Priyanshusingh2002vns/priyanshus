@@ -1,0 +1,276 @@
+/* PreqtAppSection.module.css */
+
+/* ... (Existing styles for .preqtSection, .header h1, .appDisplayWrapper) ... */
+
+.preqtSection {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.header h1 {
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 55px;
+    letter-spacing: -1.28px;
+    margin: 0 3rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f9f6eb 25%, #f1e1a6 60%, #d8bf7e 85%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 24px;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+.btn{
+    width: max-content;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+
+.appDisplayWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animatedBorder {
+    position: relative;
+    background-color: #000;
+    width: 100%;
+    max-width: 1200px;
+    /* Adjust as needed */
+    border-radius: 20px;
+    padding: 1px;
+
+}
+
+/* --- L-SHAPED GRADIENT GLOW EFFECT --- */
+
+/* Top-Left Corner L-shape */
+.animatedBorder::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+
+    left: -2px;
+
+    width: calc(30% + 40px);
+
+    height: calc(50% + 40px);
+
+    border-radius: 20px;
+
+    pointer-events: none;
+    z-index: 1;
+
+    /* Use a masked background to create the L-shape with gradients */
+    background:
+        /* Top arm of the L: fades to the right */
+        linear-gradient(to right, #FFCC5B 0%, #FFCC5B 20%, rgba(255, 204, 91, 0.0) 100%),
+        /* Left arm of the L: fades downwards */
+        linear-gradient(to bottom, #FFCC5B 0%, #FFCC5B 20%, rgba(255, 204, 91, 0.0) 100%);
+
+    /* Positioning the background gradients */
+    background-position: top left, top left;
+    background-size: 50% 100%, 100% 50%;
+    /* Top arm covers top half, Left arm covers left half */
+    background-repeat: no-repeat;
+
+    filter: blur(10px);
+    /* Apply the blur to the combined gradients */
+    opacity: 0.6;
+    animation: pulseGlow 2s infinite alternate;
+}
+
+/* Bottom-Right Corner L-shape (mirrored) */
+.animatedBorder::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    /* Adjust */
+    right: -2px;
+    /* Adjust */
+    width: calc(30% + 40px);
+    height: calc(50% + 40px);
+    border-radius: 20px;
+    pointer-events: none;
+    z-index: 1;
+    background:
+        linear-gradient(to left, #FFCC5B 0%, #FFCC5B 20%, rgba(255, 204, 91, 0.0) 100%),
+        linear-gradient(to top, #FFCC5B 0%, #FFCC5B 20%, rgba(255, 204, 91, 0.0) 100%);
+
+    background-position: bottom right, bottom right;
+    background-size: 50% 100%, 100% 50%;
+    /* Bottom arm covers bottom half, Right arm covers right half */
+    background-repeat: no-repeat;
+    filter: blur(10px);
+    opacity: 0.6;
+    animation: pulseGlow 2s infinite alternate reverse;
+}
+
+
+.appScreenshotContainer {
+    position: relative;
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    min-height: 500px;
+    padding: 16px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ... (Existing styles for .appContentPlaceholder and .appDowloadLink) ... */
+
+.appContentPlaceholder {
+    /* Placeholder for the actual image content */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.appContentPlaceholder img {
+    max-width: 100%;
+}
+
+.appDowloadLink {
+    position: absolute;
+    bottom: 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+}
+
+@keyframes pulseGlow {
+    from {
+        opacity: 0.5;
+        /* Adjusted base opacity */
+        transform: scale(0.99);
+        /* Subtle scale for breathing */
+    }
+
+    to {
+        opacity: 0.7;
+        /* Higher end opacity for the pulse */
+        transform: scale(1.01);
+    }
+}
+
+.hideOnMobile {
+    display: block;
+}
+
+.showOnMobile {
+    display: none;
+}
+
+/* .bodyPartnerContaienr{
+    display: flex;
+    flex-direction: column;
+
+} */
+.partnerDiv {
+    background: #242424 url("/landing-asset/box.svg") no-repeat center center / cover;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    padding: 70px;
+    padding-bottom: 35px;
+}
+
+.partnerDiv>div {
+    height: 100%;
+}
+
+.bodyPartner span {
+    font-family: Helvetica Neue;
+    font-weight: 400;
+    font-style: Italic;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: white;
+    display: block;
+    /* margin-top: 50px;
+    margin-bottom: 10px; */
+}
+
+.partnerFooter {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 40px;
+    }
+
+    .partnerDiv {
+        padding: 30px;
+    }
+
+    .bodyPartner span {
+        margin: 20px 0 5px 0;
+    }
+}
+
+@media (max-width:480px) {
+
+
+    .hideOnMobile {
+        display: none
+    }
+
+    .showOnMobile {
+        display: block;
+    }
+
+    .preqtSection {
+        padding: 20px 16px;
+    }
+
+    .header h1 {
+        font-size: 32px;
+        line-height: 42px;
+        margin: 0 2rem;
+        margin-bottom: 5px;
+    }
+
+    .appScreenshotContainer {
+        min-height: unset;
+        padding: 6px;
+        border-radius: 8px;
+    }
+
+    .partnerDiv {
+        padding: 20px 16px;
+    }
+
+    .bodyPartner span {
+        margin: 20px 0 5px 0;
+    }
+    .partnerFooter{
+        gap: 10px;
+    }
+
+}

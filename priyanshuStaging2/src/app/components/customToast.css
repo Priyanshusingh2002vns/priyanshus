@@ -1,0 +1,154 @@
+/* Force the progress bar to the top */
+/* Force the progress bar to top */
+
+/* toast.css */
+.Toastify__progress-bar {
+  top: 0 !important;
+  /* move to top */
+  bottom: auto !important;
+  /* disable bottom positioning */
+  background: linear-gradient(90deg, #FFF2D0, #8E6B0F) !important;
+  /* your gradient */
+  height: 4px !important;
+  /* optional: make it slightly thicker */
+  border-radius: 4px !important;
+  /* rounded edges */
+}
+
+.Toastify__toast-container .Toastify__progress-bar.customProgressTop {
+  order: -1 !important;
+  /* Move to top inside flex container */
+  align-self: flex-start !important;
+  /* Override internal default */
+  background: linear-gradient(90deg, #FFF2D0, #8E6B0F) !important;
+  height: 6px !important;
+  border-radius: 4px !important;
+  margin-bottom: 8px !important;
+  /* optional spacing if you want a gap below */
+}
+
+.Toastify__progress-bar--success {
+  background: #FFF2D0 !important;
+}
+
+/* Ensure the toast layout allows top placement */
+.customToast {
+  display: flex !important;
+  flex-direction: column !important;
+  /* progress bar above content */
+  position: relative !important;
+  overflow: hidden !important;
+  background: #242424 !important;
+  /* color: #1e1e2f !important; */
+  border-radius: 50px !important;
+  padding: 12px 14px 12px 12px !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15) !important;
+  min-width: 360px !important;
+}
+
+/* Optional: separate color for error bar */
+/* .errorToast .Toastify__progress-bar.customProgressTop {
+  background: #C8746A !important;
+} */
+
+
+/* Optional: color variations for success/error */
+/* .successToast .Toastify__progress-bar.customProgressTop {
+  background: linear-gradient(90deg, #FFF2D0, #8E6B0F) !important;
+} */
+
+/* .errorToast .Toastify__progress-bar.customProgressTop {
+  background: #dc2626 !important;
+} */
+
+/* .successToast {
+    border-top: 4px solid #d4af37 !important;
+}
+
+.errorToast {
+    border-top: 4px solid #dc2626 !important;
+} */
+
+.customBody {
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.toastIcon {
+  flex-shrink: 0;
+}
+
+.toastContent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.successToast .toastMessage,
+.errorToast .toastMessage {
+  flex: 1;
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 400;
+  font-style: Regular;
+  letter-spacing: normal;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+}
+
+/* .errorToast .toastMessage {
+  flex: 1;
+  color: var(--Slate-700, #C8746A);
+  font-family: "Helvetica Neue";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+
+} */
+
+.customCloseBtn {
+  position: absolute;
+  top: 2px;
+  right: 14px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  height: 15px;
+  width: 15px;
+}
+
+.privateDeal .customToast {
+  background-color: black !important;
+}
+
+@media (max-width:480px) {
+  .customToast {
+    padding: 12px 10px !important;
+    margin-top: 10px !important;
+    margin-right: 7px !important;
+  }
+
+  .customToast {
+    padding: 10px 12px !important;
+  }
+
+  .Toastify__toast-container {
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    max-width: calc(100vw - 20px);
+  }
+
+  .successToast .toastMessage,
+  .errorToast .toastMessage {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+}

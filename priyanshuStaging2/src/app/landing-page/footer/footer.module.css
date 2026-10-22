@@ -1,0 +1,178 @@
+.footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 70px 32px;
+  overflow: hidden;
+  padding-bottom: 0;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0.00) 31.18%, #1A1A1A 100%);
+  width: 100%;
+  height: 275px;
+}
+
+.footer::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 213px;
+  background: linear-gradient(180deg, rgba(17, 17, 17, 0.00) 0%, #111 100%);
+}
+
+/* === Marquee Animation === */
+.marquee {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* Left + Right fade gradients */
+.marquee::before,
+.marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  max-width: 500px;
+  width: 100%;
+  /* adjust as needed */
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee::before {
+  left: 0;
+  background: linear-gradient(90deg, #111 0%, rgba(17, 17, 17, 0) 100%);
+}
+
+.marquee::after {
+  right: 0;
+  background: linear-gradient(270deg, #111 0%, rgba(17, 17, 17, 0) 100%);
+}
+
+.marqueeInner {
+  display: flex;
+  width: fit-content;
+  animation: marquee 600s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.heading {
+  text-align: center;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -1.28px;
+  margin: 0 3rem;
+
+  /* --- realistic white → soft gold blend --- */
+  background: linear-gradient(180deg,
+      #ffffff 0%,
+      #f9f6eb 25%,
+      #f1e1a6 60%,
+      #d8bf7e 85%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.heading span {
+  font-weight: 800;
+}
+
+/* === Subtext === */
+.subText {
+  color: #FFF;
+  text-align: center;
+  font-family: "Helvetica Neue";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  /* 133.333% */
+  max-width: 625px;
+  margin: 0 auto;
+  padding: 17px 0 32px 0;
+}
+
+/* === Golden Button === */
+.joinButton {
+  background: linear-gradient(90deg, #b59131, #f6e27a);
+  color: #000;
+  font-weight: 600;
+  border: none;
+  border-radius: 34778.336px;
+  padding: 0.9rem 2.5rem;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  box-shadow: 0 0 25px rgba(181, 145, 49, 0.4);
+  backdrop-filter: blur(1.7px);
+  transition: transform 0.3s ease;
+}
+
+.joinButton:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width:768px) {
+  .footer {
+    padding: 30px 16px;
+  }
+
+  .heading {
+    font-size: 100px;
+  }
+
+  .subText {
+    margin: 10px auto 20px auto;
+  }
+}
+
+
+@media (max-width:480px) {
+  .footer {
+    padding: 20px 0px;
+  }
+
+  .heading {
+    font-size: 48px;
+  }
+
+  .subText {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
+
+  .marquee::before,
+  .marquee::after {
+    display: none;
+  }
+
+  .earthImg {
+    margin-top: 30px;
+  }
+}

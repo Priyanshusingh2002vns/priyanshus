@@ -1,0 +1,14 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.preqt.app",
+      "sha256_cert_fingerprints": [
+        "0D:12:F5:FB:41:FC:FE:A7:7E:B9:9D:61:D3:C3:0B:0B:96:4D:A2:2E:FF:CD:01:D4:F4:13:07:9E:9B:D3:6A:3A",
+        "20:4E:60:6F:C2:89:0A:6F:18:21:1A:B8:FF:2A:6F:D7:74:DB:64:C3:42:19:B9:5C:8F:7C:0F:A2:CD:5E:72:FE",
+        "90:87:03:AB:3A:C1:F7:CB:1C:AF:FF:A6:B5:D4:19:1E:97:CC:68:2B:74:78:C9:DD:46:FB:99:82:BB:E0:BD:5E"
+      ]
+    }
+  }
+]

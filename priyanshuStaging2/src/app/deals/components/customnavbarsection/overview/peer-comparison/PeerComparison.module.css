@@ -1,0 +1,417 @@
+/* PeerComparison.module.css */
+
+.container {
+  background: #27272A;
+  border-radius: 24px;
+  padding: 24px 24px;
+  color: #ffffff;
+  font-family: var(--font-inter), sans-serif;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0 0 12px 0;
+  color: #ffffff;
+}
+
+
+
+.tableWrapper {
+  border-radius: 12px;
+  overflow-x: auto;
+  border: 1px solid;
+}
+
+.peerTable {
+  width: 100%;
+  min-width: 600px;
+  border-radius: 12px;
+  border-collapse: collapse;
+  white-space: nowrap;
+  table-layout: fixed;
+}
+
+.dark .tableWrapper {
+border: 1px solid transparent;
+  border-radius: 12px;
+  overflow-x: auto;
+
+  background: 
+    /* linear-gradient(#000, #000) padding-box, */
+    linear-gradient(180deg, #09090B 0%, #27272A 100%) padding-box,
+    linear-gradient(180deg, #B59131, #4B5563) border-box;
+}
+
+.peerTable th, 
+.peerTable td {
+  border: 1px solid #4B5563;
+  padding: 7px 10px ;
+  text-align: center;
+}
+
+
+
+/* Remove outer borders from inner cells to prevent double width borders */
+.peerTable tr:first-child th {
+  border-top: none;
+}
+.peerTable tr:last-child td {
+  border-bottom: none;
+}
+.peerTable th:first-child,
+.peerTable td:first-child {
+  border-left: none;
+}
+.peerTable th:last-child,
+.peerTable td:last-child {
+  border-right: none;
+}
+
+.metricHeader {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  background-color: #18181b; /* Solid dark background to hide scrolled content under */
+  font-weight: 300;
+  color: #e2e8f0;
+  width: 140px;
+  min-width: 140px;
+  padding: 12px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.companyHeader {
+  font-weight: 400;
+  padding: 10px 10px;
+}
+
+.companyInfo {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+
+.companyName {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #e2e8f0;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.companyLogoImg {
+  flex-shrink: 0;
+}
+
+.dummyLogo {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logoTextWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0.65);
+}
+
+.logoTextBlue {
+  color: #1a428a;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.logoTextRed {
+  color: #d12229;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.metricCell {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background-color: #18181b;
+  color: #a0a0a0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.dataCell {
+  color: #d1d1d1;
+  font-size: 13px;
+  line-height: 27px;
+}
+
+/* Light Theme Overrides */
+.light {
+  background: linear-gradient(180deg, #f3f4f6, #ffffff);
+  color: #1F2937;
+}
+
+.light .metricHeader, 
+.light .metricCell {
+  background-color: #ffffff;
+}
+
+.light .title {
+  color: #4B5563;
+}
+
+.light .tableWrapper {
+  border: 1px solid #E5E7EB;
+  border-image-source: none;
+  background: #FFFFFF;
+}
+
+.light .peerTable th, 
+.light .peerTable td {
+  border: 1px solid #F3F4F6;
+}
+
+.light .metricHeader {
+  color: #6B7280;
+}
+
+.light .companyName {
+  color: #374151;
+}
+
+.light .metricCell {
+  color: #4B5563;
+}
+
+.light .dataCell {
+  color: #374151;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 12px 10px;
+  }
+  .peerTable th, 
+  .peerTable td {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* 2-Column Layout Adjustments */
+.twoColumns .metricHeader,
+.twoColumns .metricCell {
+    width: 200px;
+    min-width: 200px;
+}
+
+.twoColumns th,
+.twoColumns td {
+    text-align: center;
+}
+
+.twoColumns .companyInfo {
+    justify-content: center;
+}
+
+.twoColumns .companyName {
+    text-align: center;
+}
+@media (max-width: 550px) {
+  .title {
+    text-align: center;
+  }
+  .peerTable th, 
+  .peerTable td {
+    text-align: center;
+  }
+  .companyInfo {
+    justify-content: center;
+  }
+  .companyName {
+    text-align: center;
+  }
+  .metricHeader,
+  .metricCell {
+    text-align: center;
+  }
+  .twoColumns .metricHeader,
+  .twoColumns .metricCell {
+    width: 120px !important;
+    min-width: 120px !important;
+  }
+}
+
+/* Wrapper for positioning shadows and badge relative to the table */
+.wrapperRelative {
+  position: relative;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.scrollShadowLeft {
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: 1px;
+  width: 50px;
+  pointer-events: none;
+  z-index: 30;
+  background: linear-gradient(to right, rgba(24, 24, 27, 0.95), rgba(24, 24, 27, 0)); /* default dark mode */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+}
+
+.scrollShadowLeft.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scrollShadowRight {
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  right: 1px;
+  width: 50px;
+  pointer-events: none;
+  z-index: 30;
+  background: linear-gradient(to left, rgba(24, 24, 27, 0.95), rgba(24, 24, 27, 0)); /* default dark mode */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+}
+
+.scrollShadowRight.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Light mode overrides for shadows */
+.light .scrollShadowLeft {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0));
+}
+
+.light .scrollShadowRight {
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0));
+}
+
+/* Scroll Hint Badge / Swipe Pill */
+.scrollHintBadge {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: rgba(39, 39, 42, 0.95); /* default dark mode */
+  border: 1px solid rgba(63, 63, 70, 0.6);
+  border-radius: 9999px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  color: #F4F4F5;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  animation: pulse-scroll-hint 2.5s infinite ease-in-out;
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.scrollHintBadge:hover {
+  background: rgba(39, 39, 42, 0.95);
+  box-shadow: 0 12px 30px -3px rgba(212, 175, 55, 0.25);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.scrollHintIconWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #D4AF37; /* default dark mode */
+  animation: slide-scroll-arrow 1.8s infinite ease-in-out;
+}
+
+/* Light mode overrides for badge */
+.light .scrollHintBadge {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(229, 231, 235, 0.6);
+  color: #1F2937;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.08);
+}
+
+.light .scrollHintBadge:hover {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 12px 30px -3px rgba(181, 145, 49, 0.25);
+  border-color: rgba(181, 145, 49, 0.4);
+}
+
+.light .scrollHintIconWrapper {
+  color: #B59131;
+}
+
+@keyframes pulse-scroll-hint {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.95;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.04);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-scroll-arrow {
+  0%, 100% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+}
+
+/* 1-Column Layout Adjustments */
+.oneColumn {
+  min-width: unset !important;
+  width: 100% !important;
+}
+
+.oneColumn .metricHeader,
+.oneColumn .metricCell {
+  width: 50% !important;
+  min-width: 50% !important;
+  max-width: 50% !important;
+}
+
+.oneColumn th,
+.oneColumn td {
+  width: 50% !important;
+  text-align: center;
+}
+
+.oneColumn .companyInfo {
+  justify-content: center;
+}
+
+.oneColumn .companyName {
+  text-align: center;
+}

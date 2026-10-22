@@ -1,0 +1,162 @@
+.ratingWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.ratingBadge {
+    display: flex;
+    align-items: center;
+    background: #C9A85D0D;
+    border: 1px solid #C9A85D33;
+    border-radius: 40px;
+    padding: 1px 8px 1px 2px;
+    gap: 8px;
+    max-width: 128px;
+    flex-shrink: 0;
+}
+
+.ratingValueBox {
+    background: #6F5B24;
+    color: #FFFFFF;
+    width: 28px;
+    padding: 5.5px 0px 4.5px 0px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 10.5px;
+}
+
+.stars {
+    display: flex;
+    gap: 0.5px;
+    margin-top: -2px !important;
+}
+
+.featuredStarsGap {
+    gap: 5px !important;
+}
+
+.starIcon {
+    width: 14px;
+    height: 16px;
+}
+
+.starIcon.empty {
+    opacity: 0.15;
+    filter: grayscale(1);
+}
+
+.ratingLabel {
+    font-size: 10px;
+    line-height: 14px;
+    font-style: italic;
+    color: #7A7A7AB2;
+    margin-top: 2px !important;
+    /* margin-bottom: 3px; */
+    text-align: right;
+    display: block;
+    width: 93%;
+}
+
+.ratingLabelNoMargin {
+    font-size: 10px;
+    line-height: 14px;
+    font-style: italic;
+    color: #7A7A7AB2;
+    margin: 0;
+    text-align: right;
+    display: block;
+    width: 100%;
+}
+
+.compactWrapper {
+    align-items: flex-start !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.desktopRatingContainer {
+    display: block;
+}
+
+.compactRatingContainer {
+    width: 93px !important;
+    height: 22px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.compactRatingBadge {
+    width: 93px !important;
+    height: 22px !important;
+    max-width: 93px !important;
+    padding: 1px 6px 1px 2px !important;
+    gap: 4px !important;
+    box-sizing: border-box !important;
+    border-radius: 20px !important;
+}
+
+.compactRatingValueBox {
+    width: 22px !important;
+    height: 18px !important;
+    padding: 2.5px 0px 0px 0px !important;
+    font-size: 9.5px !important;
+    border-radius: 12px !important;
+    flex-shrink: 0 !important;
+    line-height: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.starsCompact {
+    display: flex !important;
+    gap: 0.5px !important;
+    margin-top: 0 !important;
+    align-items: center !important;
+}
+
+.starIconCompact {
+    width: 11px !important;
+    height: 12px !important;
+}
+
+.simpleMobileBadge {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .isListView .desktopRatingContainer {
+        display: none !important;
+    }
+
+    .isListView .simpleMobileBadge {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: #FAF6F0 !important;
+        border-radius: 8px !important;
+        padding: 0px 8px 5.5px 8px !important;
+        gap: 6px !important;
+        height: 28px;
+        border: 1px solid rgba(197, 168, 93, 0.1) !important;
+        line-height: 1 !important;
+    }
+
+    .isListView .starGlyph {
+        color: #C5A85A !important;
+        font-size: 12px !important;
+        line-height: 1 !important;
+        /* margin-top: -2px !important; */
+    }
+
+    .isListView .simpleMobileValue {
+        color: #4A3E1B !important;
+        font-weight: 700 !important;
+        font-size: 11.5px !important;
+        line-height: 1 !important;
+    }
+}

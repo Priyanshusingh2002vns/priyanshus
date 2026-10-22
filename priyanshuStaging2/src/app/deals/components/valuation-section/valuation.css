@@ -1,0 +1,198 @@
+.valuation-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  /* gap: 30px; */
+}
+.progress-container {
+  background-color: #e5e5e5;
+  /* light gray background */
+  border-radius: 8px;
+  height: 8px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.investmentCard {
+  /* padding: 16px; */
+  /* padding-bottom: 10px; */
+  border-radius: 8px;
+  color: #fff;
+}
+
+.investmentCard.lightCard {
+  color: #1F2937;
+}
+
+.investmentCard.lightCard .amt {
+  color: #1F2937;
+}
+
+.investmentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 12px;
+}
+
+.label {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.progressStack{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.subtext {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 2px;
+}
+
+.docSection {
+  text-align: right;
+}
+
+.docLabel {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0;
+  text-align: left;
+}
+
+.docLink {
+  text-decoration: none;
+  color: var(--Golden-gradient, #B59131);
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 140% */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.progressWrapper {
+  margin-top: 12px;
+  position: relative;
+  margin-bottom: 12px;
+}
+.label{
+  color: var(--Gray-500, #6B7280);
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px; /* 133.333% */
+}
+.amt{
+  color: var(--White-White, #FFF);
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px; /* 140% */
+/* margin-bottom: unset; */
+margin-bottom: 8px;
+    padding-top: 5px;
+}
+.amt-suffix{
+  font-size: 14px;
+}
+
+.progress {
+  height: 8px;
+  background: #333;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #FFD89E 0%, #B88609 100%); 
+  border-radius: 30px;
+  height: 100%;
+}
+
+.progressPercent {
+  color: var(--White-White, #FFF);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 125% */
+}
+
+.labelWithTooltip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+}
+
+.tooltipWrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltipIcon {
+  color: #003399;
+  font-weight: 600;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.tooltipBox {
+  visibility: hidden;
+ 
+  background: #0c0c0c;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: 0 0 8px rgba(255, 220, 120, 0.25);
+  border: 1px solid rgba(255, 220, 120, 0.25);
+  position: absolute;
+  z-index: 1;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+}
+.tooltipBox::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #0c0c0c transparent transparent transparent;
+  filter: drop-shadow(0 0 4px rgba(255, 220, 120, 0.25));
+}
+
+.tooltipWrapper:hover .tooltipBox {
+  visibility: visible;
+}
+
+
+
+
+@media(max-width:480px){
+  .valuation-container{
+    gap: 10px;
+  }
+  .investmentHeaderMobile{
+    margin-top: 20px;
+  }
+}
+

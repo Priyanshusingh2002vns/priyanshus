@@ -1,0 +1,1187 @@
+.teaserContainer {
+    position: relative;
+    width: 100%;
+    /* max-width: 938px; */
+    background: #0C0A05;
+    border-radius: 0px 0px 0px 0px;
+    border: 1px solid rgba(230, 200, 117, 0.12);
+    overflow: hidden;
+    padding: 64px 32px 74px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    /* box-shadow: 0 20px 80px rgba(0, 0, 0, 0.8), 0 0 40px rgba(230, 200, 117, 0.03); */
+}
+
+/* Background cards container */
+.bgContainer {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    width: 1300px;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+    display: flex;
+    gap: 48px;
+    margin-top: 100px;
+    justify-content: center;
+    opacity: 1;
+    border-top: 2px solid;
+    border-image: linear-gradient(90deg, transparent 0%, #9E854B 15%, #FFF2CC 50%, #9E854B 85%, transparent 100%) 1;
+}
+
+.bgColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.bgColumnPrivate {
+    width: 900px;
+}
+
+.bgColumnStartup {
+    width: 500px;
+}
+
+.bgHeader {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+}
+
+.heroHeader {
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    pointer-events: none;
+}
+
+/* Mock Section Headers matching landing page style */
+.bgSectionHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.bgSectionTitleRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bgSectionTitle {
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.bgSectionTitleGold {
+    color: #E6C875 !important;
+}
+
+.bgSectionArrow {
+    color: #E6C875;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.bgSectionSubtitle {
+    font-size: 12px;
+    color: #7A7A7A;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+/* Mock Filter Buttons matching landing page style */
+.bgFilterContainer {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.bgFilterButton {
+    border-radius: 9999px;
+    padding: 6px 18px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    background: transparent;
+    border: 1px solid #3A3222;
+    color: #A87E3B;
+    text-transform: uppercase;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bgFilterButtonActive {
+    background: linear-gradient(90deg, #A87E3B 0%, #E6C875 50%, #A87E3B 100%) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+}
+
+/* Mock Cards Row */
+.bgCardsRow {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+.bgCardWrapper {
+    width: 400px;
+    height: 550px;
+    flex-shrink: 0;
+}
+
+.bgCardWrapper>div {
+    width: 400px !important;
+    height: 550px !important;
+}
+
+/* Frosted Glass Overlay - Custom Styles Provided by User */
+.frostedOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: #0C0A0566;
+    backdrop-filter: blur(5.8px);
+    -webkit-backdrop-filter: blur(5.8px);
+    pointer-events: none;
+}
+
+/* Foreground content container */
+.foreground {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    /* max-width: 580px; */
+    width: 100%;
+}
+
+/* Header Text Styles */
+.headerLabel {
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.headerTitle {
+    font-size: 38px;
+    font-weight: 600;
+    color: #D9D9D9;
+    line-height: 1.2;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
+}
+
+/* Custom Highlight Gradient requested by User */
+.privateHighlight {
+    background: linear-gradient(90deg, #614B0D 0%, #FFD106 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    font-weight: 700;
+}
+
+.headerDesc {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.6;
+    margin: 0px;
+    margin: 0 auto 36px auto;
+    max-width: 1280px;
+}
+
+/* Phone Wrapper to animate both outline and logo together */
+.phoneWrapper {
+    position: relative;
+    display: inline-block;
+    width: 255px;
+    aspect-ratio: 1856 / 2304;
+    margin-bottom: 24px;
+    /* animation: floatAnimation 5s ease-in-out infinite; */
+    filter: drop-shadow(0 10px 25px rgba(255, 209, 6, 0.2));
+}
+
+.phoneGraphic {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.phoneLogo {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 59px;
+    height: auto;
+    pointer-events: none;
+    user-select: none;
+}
+
+@keyframes floatAnimation {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(1deg);
+    }
+}
+
+/* Lower Call to Action content */
+.actionTitle {
+    font-size: 36px;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.01em;
+}
+
+.actionDesc {
+    font-size: 18px;
+    font-weight: 300px;
+    color: #FFFFFF;
+    line-height: 1.5;
+    margin: 0 auto 28px auto;
+    max-width: 600px;
+}
+
+/* Download Store Badge Container */
+.badgeContainer {
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.storeBadge {
+    height: 64px;
+    width: auto;
+    border-radius: 11px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.storeBadge:hover {
+    transform: translateY(-2px) scale(1.04);
+    filter: brightness(1.15) drop-shadow(0 4px 12px rgba(255, 255, 255, 0.15));
+}
+
+.storeBadge:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .bgContainer {
+        transform: translateX(-50%) scale(0.8);
+    }
+
+    .bgContainer {
+        top: -50px;
+    }
+
+}
+
+@media (max-width: 786px) {
+    .teaserContainer {
+        padding: 48px 20px;
+        border-radius: 0px;
+    }
+
+    .headerTitle {
+        font-size: 28px;
+    }
+
+    .actionTitle {
+        font-size: 20px;
+    }
+
+    .hideOnMobile {
+        display: none !important;
+    }
+
+    .bgColumnPrivate {
+        width: 400px;
+    }
+
+    .bgColumnStartup {
+        width: 300px;
+    }
+
+    .bgContainer {
+        width: 700px;
+        overflow: hidden;
+        margin-top: 30px;
+
+    }
+
+    .headerDesc {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 550px) {
+    .bgColumnPrivate {
+        width: 374px;
+        margin-top: 90px;
+    }
+
+    .bgColumnStartup {
+        display: none !important;
+    }
+
+    .bgContainer {
+        width: 600px;
+        overflow: hidden;
+
+    }
+
+    .storeBadge {
+        width: 150px;
+        height: 45px;
+        border-radius: 7px;
+    }
+
+    .actionDesc {
+        font-size: 14px;
+        max-width: 500px;
+    }
+
+    .teaserContainer {
+        margin-top: 0px;
+    }
+}
+
+
+@media (max-width: 425px) {
+    .headerDesc {
+        max-width: 400px;
+    }
+}
+
+/* ==========================================
+   Horizontal Banner Layout (isAllDeals={true})
+   ========================================== */
+.allDealsContainer {
+    border-radius: 20px !important;
+}
+
+.allDealsTeaser {
+    min-height: 72px !important;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 18px !important;
+    border: 1px solid rgba(230, 200, 117, 0.2) !important;
+    padding: 10px 24px !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    margin-top: 0 !important;
+    margin-bottom: 16px !important;
+    box-sizing: border-box !important;
+    background: #0C0A05 !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.allDealsTeaser .bgContainer {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    transform: none !important;
+    margin-top: 0 !important;
+    opacity: 0.95 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    border-top: none !important;
+    pointer-events: none !important;
+    user-select: none !important;
+}
+
+.singleCardBackdrop {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.65;
+}
+
+.singleCardBackdrop>div {
+    width: 100% !important;
+}
+
+.allDealsTeaser .frostedOverlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(12, 10, 5, 0.82) !important;
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+    z-index: 2 !important;
+}
+
+.allDealsTeaser .foreground {
+    position: relative !important;
+    z-index: 3 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    text-align: left !important;
+    gap: 16px !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.allDealsTeaser .phoneWrapper {
+    width: 48px !important;
+    aspect-ratio: 1856 / 2304;
+    margin-bottom: 0 !important;
+    flex-shrink: 0 !important;
+    margin-top: 0px !important;
+    position: relative !important;
+    display: inline-block !important;
+}
+
+.allDealsTeaser .phoneGraphic {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+}
+
+.allDealsTeaser .phoneLogo {
+    position: absolute !important;
+    top: 36% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 14px !important;
+    height: auto !important;
+    pointer-events: none !important;
+}
+
+.allDealsTeaser .textSection {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: 2px !important;
+    flex: 1 1 auto !important;
+    z-index: 10 !important;
+    min-width: 0 !important;
+}
+
+.allDealsTeaser .actionTitle {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    margin: 0 !important;
+    line-height: 1.25 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.allDealsTeaser .actionDesc {
+    font-size: 11px !important;
+    font-weight: 400 !important;
+    color: rgba(255, 255, 255, 0.72) !important;
+    line-height: 1.35 !important;
+    margin: 0 !important;
+    max-width: 520px !important;
+    text-align: left !important;
+}
+
+.allDealsTeaser .badgeContainer {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
+}
+
+.allDealsTeaser .storeBadge {
+    height: 28px !important;
+    width: auto !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    transition: opacity 0.2s ease !important;
+}
+
+.allDealsTeaser .storeBadge:hover {
+    opacity: 0.85 !important;
+}
+
+@media (max-width: 1024px) {
+    .allDealsTeaser {
+        min-height: auto !important;
+        height: auto !important;
+        padding: 10px 24px !important;
+    }
+
+    .allDealsTeaser .foreground {
+        gap: 20px !important;
+    }
+
+    .allDealsTeaser .phoneWrapper {
+        width: 124px !important;
+        margin: 20px 0px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .allDealsTeaser .phoneLogo {
+        width: 29px !important;
+    }
+
+    .allDealsTeaser .textSection {
+        gap: 6px !important;
+    }
+
+    .allDealsTeaser .actionTitle {
+        font-size: 20px !important;
+        white-space: normal !important;
+        line-height: 1.25 !important;
+    }
+
+    .allDealsTeaser .actionDesc {
+        font-size: 16px !important;
+        line-height: 1.4 !important;
+        max-width: 650px !important;
+        display: block !important;
+        -webkit-line-clamp: unset !important;
+        overflow: visible !important;
+    }
+
+    .allDealsTeaser .badgeContainer {
+        gap: 10px !important;
+    }
+
+    .allDealsTeaser .storeBadge {
+        height: 35px !important;
+        width: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .allDealsTeaser {
+        padding: 16px !important;
+    }
+
+    .allDealsTeaser .foreground {
+        align-items: center !important;
+        text-align: center !important;
+        gap: 14px !important;
+    }
+
+    .allDealsTeaser .textSection {
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+
+    .allDealsTeaser .actionTitle {
+        font-size: 17px !important;
+        text-align: center !important;
+    }
+
+    .allDealsTeaser .actionDesc {
+        font-size: 14px !important;
+        text-align: left !important;
+        display: block !important;
+    }
+
+    .allDealsTeaser .phoneWrapper {
+        width: 93px !important;
+        margin: 2px 0px !important;
+    }
+
+    .allDealsTeaser .phoneLogo {
+        width: 29px !important;
+    }
+
+    .allDealsTeaser .badgeContainer {
+        flex-direction: column !important;
+        justify-content: center !important;
+        margin-left: 0 !important;
+        gap: 10px !important;
+    }
+
+    .allDealsTeaser .storeBadge {
+        height: 35px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .allDealsTeaser {
+        padding: 12px 14px !important;
+    }
+
+    .allDealsTeaser .foreground {
+        display: grid !important;
+        grid-template-columns: auto 1fr !important;
+        grid-template-rows: auto auto !important;
+        grid-template-areas:
+            "phone title"
+            "phone badges" !important;
+        align-items: center !important;
+        column-gap: 14px !important;
+        row-gap: 8px !important;
+        text-align: left !important;
+    }
+
+    .allDealsTeaser .phoneWrapper {
+        grid-area: phone !important;
+        width: 90px !important;
+        margin: 10px 0px !important;
+        align-self: center !important;
+    }
+
+    .allDealsTeaser .phoneLogo {
+        width: 22px !important;
+    }
+
+    .allDealsTeaser .textSection {
+        grid-area: title !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        gap: 0 !important;
+    }
+
+    .allDealsTeaser .actionTitle {
+        font-size: 16px !important;
+        text-align: left !important;
+        white-space: normal !important;
+        line-height: 1.25 !important;
+        margin: 0 !important;
+    }
+
+    .allDealsTeaser .actionDesc {
+        display: none !important;
+    }
+
+    .allDealsTeaser .badgeContainer {
+        grid-area: badges !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        margin-left: 0 !important;
+        margin-top: 2px !important;
+        gap: 8px !important;
+        flex-wrap: wrap !important;
+    }
+
+    .allDealsTeaser .storeBadge {
+        height: 35px !important;
+        width: auto !important;
+    }
+}
+
+/* ==========================================
+   Compact List View Teaser Layout (isListView={true})
+   ========================================== */
+.compactListTeaser {
+    position: relative;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 56px;
+    height: 58px;
+    background: #0C0A05 !important;
+    border-radius: 18px !important;
+    border: 1px solid rgba(230, 200, 117, 0.25) !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+}
+
+.compactListBgContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+}
+
+.compactListBackdrop {
+    width: 100%;
+    padding: 0 16px;
+}
+
+.compactListTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.compactListOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(12, 10, 5, 0.78) !important;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    pointer-events: none;
+}
+
+.compactListForeground {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px 0 18px;
+    gap: 12px;
+    box-sizing: border-box;
+}
+
+.compactListPhoneWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 24px;
+    height: 32px;
+}
+
+.compactListPhoneGraphic {
+    width: 200px;
+    height: 55px;
+    object-fit: contain;
+    display: block;
+}
+
+.compactListLogo {
+    height: 25px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-left: 0px;
+}
+
+.compactListText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5px;
+    margin-left: 4px;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 500;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.compactListBadges {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.compactListBadge {
+    height: 26px;
+    width: auto;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    background: #FFFFFF;
+    display: block;
+}
+
+.compactListBadge:hover {
+    transform: translateY(-1px) scale(1.02);
+    filter: brightness(1.08) drop-shadow(0 2px 6px rgba(255, 255, 255, 0.2));
+}
+
+@media (max-width: 1100px) {
+    .compactListText {
+        font-size: 10.5px;
+    }
+    .compactListBadge {
+        height: 22px;
+    }
+}
+
+@media (max-width: 850px) {
+    .compactListTeaser {
+        height: auto !important;
+        min-height: 56px !important;
+        padding: 8px 12px !important;
+    }
+    .compactListForeground {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0;
+    }
+    .compactListText {
+        white-space: normal;
+        font-size: 10.5px;
+    }
+    .compactListBadges {
+        margin-left: auto;
+    }
+}
+
+/* ==========================================
+   Grid Card Teaser Layout (isGridCard={true})
+   ========================================== */
+.gridCardTeaser {
+    width: 100% !important;
+    min-width: 340px !important;
+    height: 100% ;
+    border-radius: 20px !important;
+    border: 1px solid #D8BE62 !important;
+    /* Premium gold accent border */
+    margin: 0 auto !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    background: #0C0A05 !important;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.4) !important;
+}
+
+.gridSingleCardBackdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+    transform: scale(0.95) !important;
+    /* Slightly scale inside box container bounds */
+}
+
+.gridSingleCardBackdrop>div {
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+}
+
+.gridFrostedOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(12, 10, 5, 0.82) !important;
+    /* High contrast backdrop overlay */
+    backdrop-filter: blur(5.8px) !important;
+    -webkit-backdrop-filter: blur(5.8px) !important;
+    pointer-events: none;
+}
+
+.gridForeground {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 24px 20px !important;
+    gap: 14px !important;
+}
+
+.gridPhoneWrapper {
+    position: relative;
+    display: inline-block;
+    width: 150px !important;
+    aspect-ratio: 1856 / 2304;
+    margin-bottom: 0 !important;
+    animation: gridFloatAnimation 5s ease-in-out infinite;
+    filter: drop-shadow(0 4px 15px rgba(255, 209, 6, 0.25));
+}
+
+.gridPhoneGraphic {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.gridPhoneLogo {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28px !important;
+    height: auto;
+    pointer-events: none;
+    user-select: none;
+}
+
+@keyframes gridFloatAnimation {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+.gridTextSection {
+    text-align: center;
+}
+
+.gridActionTitle {
+    font-size: 21px !important;
+    font-weight: 600 !important;
+    color: #FFFFFF !important;
+    line-height: 1.25 !important;
+    margin: 0 0 6px 0 !important;
+    letter-spacing: -0.01em;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.gridActionDesc {
+    font-size: 11px !important;
+    font-weight: 300 !important;
+    color: rgba(255, 255, 255, 0.72) !important;
+    line-height: 1.4 !important;
+    margin: 0 auto !important;
+    max-width: 270px !important;
+}
+
+.gridBadgeContainer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2px;
+}
+
+.gridStoreBadge {
+    height: 30px !important;
+    width: auto !important;
+    border-radius: 6px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gridStoreBadge:hover {
+    transform: translateY(-1px) scale(1.03);
+    filter: brightness(1.1) drop-shadow(0 2px 8px rgba(255, 255, 255, 0.15));
+}
+
+/* ==========================================
+   Top Deals Compact Teaser Layout (420px x 130px)
+   ========================================== */
+.topDealsTeaser {
+    width: 100% !important;
+    max-width: 420px !important;
+    height: 130px !important;
+    border-radius: 20px !important;
+    padding: 10px 16px !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    background: #0C0A05 !important;
+    border: 1px solid rgba(230, 200, 117, 0.12) !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+.topDealsTeaser .bgContainer {
+    display: none !important;
+}
+
+.topDealsTeaser .frostedOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 10, 5, 0.72) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+}
+
+.topDealsTeaser .foreground {
+    position: relative;
+    z-index: 3;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    text-align: left !important;
+    gap: 16px !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.topDealsTeaser .phoneWrapper {
+    width: 60px !important;
+    aspect-ratio: 1856 / 2304;
+    margin-bottom: 0 !important;
+    flex-shrink: 0 !important;
+    margin-top: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative;
+}
+
+.topDealsTeaser .phoneGraphic {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+}
+
+.topDealsTeaser .phoneLogo {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px !important;
+    height: auto;
+    pointer-events: none;
+    user-select: none;
+}
+
+.topDealsTeaser .textSection {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: 2px !important;
+    flex-grow: 1 !important;
+    z-index: 10 !important;
+}
+
+.topDealsTeaser .actionTitle {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #FFFFFF !important;
+    margin: 0 !important;
+    line-height: 1.2 !important;
+}
+
+.topDealsTeaser .actionDesc {
+    font-size: 10px !important;
+    font-weight: 300 !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    line-height: 1.3 !important;
+    margin: 0 !important;
+    max-width: 280px !important;
+    text-align: left !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+}
+
+.topDealsTeaser .badgeContainer {
+    display: flex !important;
+    gap: 6px !important;
+    justify-content: flex-start !important;
+    margin-top: 4px !important;
+}
+
+.topDealsTeaser .storeBadge {
+    height: 22px !important;
+    width: auto !important;
+    border-radius: 4px !important;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .gridCardTeaser {
+        max-width: 100% !important;
+        height: 370px !important;
+    }
+
+    .gridPhoneWrapper {
+        width: 100px !important;
+    }
+}

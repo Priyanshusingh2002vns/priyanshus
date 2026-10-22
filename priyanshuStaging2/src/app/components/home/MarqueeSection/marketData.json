@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "Nifty 50",
+    "value": "22,419.60",
+    "change": "-93.90 (0.42%)",
+    "changeType": "negative"
+  },
+  {
+    "id": 2,
+    "name": "BANK Nifty 50",
+    "value": "22,419.60",
+    "change": "-93.90 (0.42%)",
+    "changeType": "negative"
+  },
+  {
+    "id": 3,
+    "name": "Sensex",
+    "value": "22,419.60",
+    "change": "-93.90 (0.42%)",
+    "changeType": "negative"
+  },
+  {
+    "id": 4,
+    "name": "Finnifty",
+    "value": "22,419.60",
+    "change": "-93.90 (0.42%)",
+    "changeType": "negative"
+  },
+  {
+    "id": 5,
+    "name": "Mid Cap Nifty",
+    "value": "22,419.60",
+    "change": "-93.90 (0.42%)",
+    "changeType": "positive"
+  },
+  {
+    "id": 6,
+    "name": "Small Cap Nifty",
+    "value": "22,419.60",
+    "change": "-93.90 (0.42%)",
+    "changeType": "positive"
+  },
+  {
+    "id": 7,
+    "name": "Mid Cap Nifty",
+    "value": "22,419.60",
+    "change": "-93.90 (0.42%)",
+    "changeType": "positive"
+  }
+]

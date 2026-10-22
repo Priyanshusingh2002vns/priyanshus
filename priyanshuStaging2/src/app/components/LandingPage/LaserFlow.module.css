@@ -1,0 +1,477 @@
+.laser-flow-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    pointer-events: none;
+}
+
+.imageParent {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden; */
+    /* margin-bottom: 100px; */
+    position: relative;
+    max-width: 100%;
+}
+
+.imageParent img {
+    height: auto;
+    width: 100%;
+
+
+}
+
+.bannerHeading {
+    position: absolute;
+    top: 150px;
+    max-width: 1280px;
+    width: 100%;
+    left: 50%;
+    z-index: 99;
+    transform: translateX(-50%);
+    padding: 16px 32px;
+}
+
+.bannerHeading h1, .bannerHeading .HeadingTagReplace {
+    font-size: 66px;
+    font-weight: 700;
+    color: white;
+}
+
+.bannerHeading h1 span:first-child, .bannerHeading .HeadingTagReplace span:first-child {
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 50%, #D8BF7E 100%);
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 50%, #D8BF7E 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.bannerHeading h1 span:last-child, .bannerHeading .HeadingTagReplace span:last-child {
+    background: linear-gradient(180deg, #FDF7FE 0%, #D8BF7E 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bannerHeading p {
+    color: #E5E5E7;
+    font-family: "Helvetica Neue";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px;
+    letter-spacing: 0.778px;
+    max-width: 630px;
+}
+
+.overlayEffect {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50% !important;
+    /* max-height: 200px; */
+}
+
+.bottomText {
+    max-width: fit-content;
+    display: flex;
+    gap: 0px;
+    align-items: center;
+    margin: 16px 0;
+    color: #E5E7EB;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: "Helvetica Neue";
+    letter-spacing: 0.303px;
+}
+
+.descText {
+    padding-top: 40px;
+}
+
+.descText>p {
+    color: #D4D4D8;
+    opacity: 0.6;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.dotIcon {
+    margin: 0px 1px;
+    max-width: max-content;
+}
+
+.mideSection {
+    background: linear-gradient(180deg, #111 0%, rgba(17, 17, 17, 0.00) 100%);
+    width: 100%;
+    height: 150px;
+    flex-shrink: 0;
+}
+
+.hideOnMobile {
+    display: block;
+}
+
+.overlayEffectLarge {
+    position: absolute;
+    bottom: -70%;
+    left: 0;
+    z-index: 99;
+}
+
+.flowContainer {
+    height: 1150px;
+    position: relative;
+    background-color: #120a02;
+    max-width: 1920px;
+    margin: auto;
+}
+
+.videoContainerDiv {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 1920px;
+    z-index: 0;
+}
+
+.laserFlowVideo {
+    position: absolute;
+    top: calc(52% - 16px);
+    left: calc(18% + 2px);
+    width: calc(53% + 13px);
+    height: max-content;
+    background-color: #060010;
+    border-radius: 11px;
+    border: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    z-index: 6;
+}
+
+.sideOVerflow {
+    position: absolute;
+    top: 10%;
+    left: -23%;
+    background: transparent;
+    width: 117% !important;
+    z-index: 99;
+    box-shadow: -14.68px 13.7px 43.05px 0px #0000001A;
+
+    box-shadow: -57.73px 53.82px 78.28px 0px #00000017;
+
+    box-shadow: -130.14px 120.36px 106.66px 0px #0000000D;
+
+    box-shadow: -230.93px 214.3px 126.23px 0px #00000003;
+
+    box-shadow: -361.07px 334.65px 137.97px 0px #00000000;
+
+}
+
+.overlayEffectNew {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+}
+
+@media (max-width: 1440px) {
+    .laserFlowVideo {
+        top: calc(52% - 19px) !important;
+        left: calc(15% - 6px) !important;
+        width: calc(59% + 10px) !important;
+    }
+}
+
+@media (max-width: 1380px) {
+    .laserFlowVideo {
+        left: calc(14% - 13px) !important;
+        width: calc(61% + 18px) !important;
+    }
+}
+
+
+@media (max-width: 1280px) {
+    .laserFlowVideo {
+        left: calc(11% - 13px) !important;
+        width: calc(66% + 16px) !important;
+    }
+}
+
+@media (max-width: 1166px) {
+    .laserFlowVideo {
+        left: calc(8% - 19px) !important;
+        width: calc(72% + 18px) !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .laserFlowVideo {
+        top: calc(52% - 18px) !important;
+        left: calc(0%) !important;
+        width: calc(85% - 8px) !important;
+    }
+
+    .bottomText {
+        flex-wrap: wrap;
+        font-size: 0.75rem;
+        padding: 1rem 0.5rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .laserFlowVideo {
+        top: calc(54% - 42px) !important;
+        left: calc(0%) !important;
+        width: calc(95% + 4px) !important;
+    }
+
+
+    .bottomText>span {
+        padding: 0.25rem 0.4rem;
+    }
+
+    .bannerHeading h1, .bannerHeading .HeadingTagReplace {
+        font-size: 42px;
+    }
+
+    .bannerHeading p {
+        font-size: 16px;
+        max-width: 59%;
+    }
+}
+
+@media (max-width: 700px) {
+    .laserFlowVideo {
+        left: calc(0%) !important;
+        width: 100% !important;
+    }
+
+    .overlayEffect {
+        top: 88%;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .flowContainer {
+        
+        overflow: hidden;
+        height: 700px;
+    }
+
+    .flowContainer {
+        position: relative;
+    }
+
+    .flowContainer:before {
+        position: absolute;
+        top: 0px;
+        content: "";
+        height: 350px;
+        width: 100%;
+        z-index: 99;
+        background: linear-gradient(180deg, black 60%, transparent 100%);
+    }
+
+    .bannerHeading h1, .bannerHeading .HeadingTagReplace {
+        font-size: 32px;
+    }
+
+    .bannerHeading p {
+        font-size: 14px;
+        max-width: 69%;
+        line-height: 1.4;
+    }
+
+    .laserFlowVideo {
+        width: calc(100% - 43px) !important;
+        height: auto !important;
+        left: 25px !important;
+        border-radius: 3px !important;
+    }
+
+    .bannerHeading {
+        padding: 16px;
+        z-index: 100;
+        top: 100px;
+    }
+
+    .videoContainerDiv {
+        position: absolute;
+        top: 23%;
+        left: 59%;
+        transform: translateX(-50%);
+        width: 168%;
+        height: auto;
+        object-fit: unset;
+    }
+
+    .laserFlowVideo {
+        top: calc(70% - 25px) !important;
+        left: calc(24px) !important;
+        width: calc(89% + 8px) !important;
+    }
+
+}
+
+@media (max-width:440px) {
+    .laserFlowVideo {
+        top: calc(70% - 46px) !important;
+        left: calc(24px) !important;
+        width: calc(89% + 5px) !important;
+    }
+}
+
+@media (max-width:430px) {
+    .laserFlowVideo {
+        top: calc(68% - 41px) !important;
+        left: calc(25px) !important;
+        width: calc(89% + 3px) !important;
+    }
+}
+
+@media (max-width:425px) {
+    .laserFlowVideo {
+        top: calc(62% - 4px) !important;
+        left: calc(25px) !important;
+        width: calc(89% + 3px) !important;
+    }
+}
+
+@media (max-width:415px) {
+    .laserFlowVideo {
+        top: calc(71% - 52px) !important;
+        left: calc(23px) !important;
+        width: calc(89% + 5px) !important;
+    }
+    .videoContainerDiv{
+        top: 26%;
+    }
+}
+
+@media (max-width:402px) {
+    .laserFlowVideo {
+        top: calc(71% - 60px) !important;
+        left: calc(22px) !important;
+        width: calc(88% + 8px) !important;
+    }
+    .bannerHeading{
+        top: 70px;
+    }
+}
+ 
+@media (max-width:395px) {
+    .laserFlowVideo {
+        top: calc(74% - 88px) !important;
+        width: calc(87% + 9px) !important;
+    }
+}
+
+@media (max-width:393px) {
+    /* .laserFlowVideo {
+        top: calc(65% - 88px) !important;
+        width: calc(88% + 9px) !important;
+    } */
+}
+
+@media (max-width:380px) {
+    .laserFlowVideo {
+        top: calc(74% - 79px) !important;
+        left: calc(23px) !important;
+        width: calc(88% + 6px) !important;
+
+    }
+    .videoContainerDiv{
+        top: calc(40% - 83px);
+    }
+}
+
+@media (max-width:360px) {
+    .laserFlowVideo{
+        top: calc(74% - 79px) !important;
+        left: calc(23px) !important;
+        width: calc(87% + 6px) !important;
+    }
+}
+
+
+
+@media (max-width:350px) {
+    /* .flowContainer {
+        height: 650px;
+    } */
+
+    .laserFlowVideo {
+        top: calc(70% - 57px) !important;
+        left: calc(18px) !important;
+        width: calc(88% + 9px) !important;
+    }
+
+    .videoContainerDiv {
+        top: calc(51% - 83px);
+    }
+}
+
+@media(max-width:340px){
+    .laserFlowVideo {
+        top: calc(77% - 57px) !important;
+        left: calc(18px) !important;
+        width: calc(87% + 9px) !important;
+    }
+    .videoContainerDiv {
+        top: calc(49% - 83px) !important;
+    }
+}
+
+@media (max-width:321px) {
+    /* .flowContainer {
+        height: 650px;
+    } */
+
+    .bannerHeading {
+        top: 20px;
+    }
+
+    .laserFlowVideo {
+        top: calc(70% - 75px) !important;
+        left: calc(18px) !important;
+        width: calc(88% + 6px) !important;
+    }
+}
+
+@media (max-width:300px) {
+    /* .flowContainer {
+        height: 650px;
+    } */
+
+    .bannerHeading {
+        top: 45px;
+    }
+
+    .bannerHeading p {
+        max-width: 85%;
+        font-size: 13px;
+    }
+
+    .laserFlowVideo {
+        top: calc(56% - 89px) !important;
+        left: calc(18px) !important;
+        width: calc(88% + 5px) !important;
+    }
+}

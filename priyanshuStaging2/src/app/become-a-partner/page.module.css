@@ -1,0 +1,881 @@
+ /* ========== start Banner Section ============= */
+ .bannerSection {
+     min-height: 80vh;
+     width: 100vw;
+     background-image: url("/partner-banner.png");
+     background-repeat: no-repeat;
+     background-position: center center;
+     display: flex;
+ }
+
+ .contentSection {
+     margin-top: 10%;
+     display: flex;
+     min-height: max-content;
+     justify-content: space-between;
+     align-items: center;
+     gap: 40px;
+ }
+
+ .textSection h1, .textSection h2 {
+     background: linear-gradient(180deg, #FDF7FE 0%, #D8BF7E 100%);
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     font-size: 60px;
+     font-weight: 700;
+     color: white;
+ }
+
+ .textSection p {
+     color: #E5E5E7;
+     font-family: "Helvetica Neue";
+     font-size: 18px;
+     font-style: normal;
+     font-weight: 300;
+     line-height: 28px;
+     letter-spacing: 0.778px;
+ }
+
+ .partnerForn {
+     background: #1A1A1A;
+     border: 0.5px solid #ABABAB66;
+     padding: 32px 32px 40px 32px;
+     border-radius: 30px;
+     /* min-width: max-content; */
+     width: 100%;
+     max-width: 475px;
+ }
+
+ .provideCompanyDetails {
+     display: flex;
+     flex-direction: column;
+     gap: 32px;
+ }
+
+ .partnerForn h2 {
+     font-weight: 500;
+     font-size: 24px;
+     color: white;
+     /* margin-bottom: 32px; */
+ }
+
+ .partnerForn p {
+     color: #FFFFFFCC;
+     font-size: 16px;
+     margin: 24px 0;
+ }
+
+ .formMainGroup {
+     display: flex;
+     flex-direction: column;
+     gap: 32px;
+ }
+
+ .formGroup {
+     position: relative;
+ }
+
+ .label {
+     font-size: 14px;
+     font-weight: 400;
+     position: absolute;
+     left: 12px;
+     top: -10px;
+     color: #FFFFFF;
+     padding: 0 6px;
+     background: #1A1A1A;
+     z-index: 99;
+
+ }
+
+ .input {
+     font-family: "Helvetica Neue";
+     font-weight: 400;
+     font-size: 14px;
+     letter-spacing: 0%;
+
+     width: 100%;
+     height: 48px;
+     border-radius: 12px;
+     border: 1px solid rgba(63, 63, 70, 1);
+     padding: 0 16px;
+     outline: none;
+     background: #1A1A1A;
+     color: white;
+ }
+
+ .input::placeholder {
+     color: #6B7280;
+     text-overflow: ellipsis;
+     font-size: 14px;
+     font-weight: 400;
+ }
+
+ .input:focus {
+     border-color: #d1a946;
+     /* box-shadow: 0 0 0 3px rgba(209, 169, 70, 0.15); */
+ }
+
+ .email-input-wrapper {
+     position: relative;
+     width: 100%;
+ }
+
+ .email-pending-border {
+     /* border-color: #d1a946; */
+ }
+
+ .email-verified-border {
+     /* border-color: #16a34a; */
+ }
+
+ .emailLable {
+     z-index: -99;
+ }
+
+ .email-status-inside {
+     position: absolute;
+     right: 12px;
+     top: 50%;
+     transform: translateY(-50%);
+     display: flex;
+     align-items: center;
+     gap: 4px;
+     pointer-events: auto;
+     /* ✅ FIXED — allows clicking */
+     z-index: 10;
+ }
+
+ .email-pending-cont {
+     display: flex;
+     align-items: center;
+     gap: 4px;
+ }
+
+ .email-pending-text {
+     font-family: "Helvetica Neue";
+     font-weight: 400;
+     font-style: italic;
+     color: #EA580C;
+     font-size: 14px;
+     line-height: normal;
+ }
+
+ .email-verified-text {
+     font-family: "Helvetica Neue";
+     font-weight: 400;
+     font-style: italic;
+     color: #16a34a;
+     font-size: 14px;
+     line-height: normal;
+ }
+
+ .email-toggle-btn {
+     margin-top: 10px;
+     background: transparent;
+     border: 1px solid #333;
+     border-radius: 4px;
+     color: #aaa;
+     font-size: 13px;
+     cursor: pointer;
+     padding: 4px 10px;
+ }
+
+
+ /* OTP inputs */
+ .otpRow {
+     display: flex;
+     align-items: center;
+     gap: 12px;
+     justify-content: space-between;
+ }
+
+ .otpContainer {
+     display: flex;
+     gap: 13px;
+ }
+
+ .otpLevel {
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 8px;
+
+ }
+
+ /* .phoneNumber{
+    position: absolute;
+} */
+ .checkYourInbox {
+     font-family: "Helvetica Neue";
+     font-weight: 500;
+     font-size: 14px;
+     color: #FFFFFF;
+     text-transform: capitalize;
+ }
+
+ .resendTime {
+     font-family: "Helvetica Neue";
+     font-weight: 400;
+     font-size: 14px;
+     letter-spacing: 0%;
+     text-transform: capitalize;
+     color: #DC2626;
+     transition: all 0.2s ease;
+ }
+
+ .resendTime.resendLink {
+     color: #d1a946;
+     text-decoration: underline;
+     cursor: pointer;
+ }
+
+ .resendTime.resendLink:hover {
+     opacity: 0.8;
+ }
+
+ .otpInput {
+     font-family: "Helvetica Neue";
+     font-weight: 500;
+     width: 52px;
+     height: 52px;
+     border-radius: 8px;
+     border: 1px solid #3F3F46;
+     padding: 10px 12px;
+     text-align: center;
+     font-size: 14px;
+     background: #1A1A1A;
+     color: #FFF;
+     outline: none;
+     transition: border-color 0.2s ease;
+ }
+
+ .otpInput:focus {
+     border-color: #B18C07;
+ }
+
+ .otpInputFilled {
+     border-color: #B18C07;
+ }
+
+
+ .otpSubmit,
+ .verifyButtonInside {
+     background: transparent;
+     border: none;
+     color: #d1a946;
+     cursor: pointer;
+     font-family: "Helvetica Neue";
+     font-weight: 500;
+     font-size: 14px;
+     line-height: 20px;
+     letter-spacing: 0%;
+     text-align: center;
+     text-decoration: underline;
+     z-index: 15;
+     cursor: pointer;
+
+ }
+
+.otpSubmit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(209, 169, 70, 0.35);
+    border-top-color: #D1A946;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+ .profileOptions {
+     display: flex;
+     gap: 10px;
+     flex-wrap: wrap;
+ }
+
+ /* ========== Custom Gold Radio ========== */
+ .profileForm {
+     display: flex;
+     flex-direction: column;
+     gap: 32px;
+ }
+
+ .partnerForn h2 {
+     margin-bottom: 32px;
+ }
+
+ .radioOption {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     color: #A1A1AA;
+     font-family: "Helvetica Neue", Arial, sans-serif;
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 24px;
+
+     padding: 10px 20px;
+     border-radius: 100px;
+     background: #1a1a1a;
+     backdrop-filter: blur(5px);
+     position: relative;
+     overflow: hidden;
+     z-index: 1;
+     border: 1px solid rgba(26, 26, 26, 0.2);
+     /* margin-bottom: 30px; */
+ }
+
+ .radioOption::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     border-radius: 100px;
+     padding: 1px;
+     background: linear-gradient(170deg,
+             rgba(255, 255, 255, 0.3) 0%,
+             rgba(255, 255, 255, 0) 50%,
+             rgba(255, 255, 255, 0.3) 100%);
+     -webkit-mask:
+         linear-gradient(#fff 0 0) content-box,
+         linear-gradient(#fff 0 0);
+     -webkit-mask-composite: xor;
+     mask-composite: exclude;
+     z-index: -1;
+ }
+
+ .radioInput {
+     position: absolute;
+     opacity: 0;
+     cursor: pointer;
+     z-index: 1;
+ }
+
+ /* Custom visible radio circle */
+ .radioCircle {
+     width: 18px;
+     height: 18px;
+     border-radius: 50%;
+     border: 2px solid #B18C07;
+     background-color: #1a1a1a;
+     display: inline-block;
+     position: relative;
+     transition: all 0.3s ease;
+ }
+
+ /* The golden dot when selected */
+ .radioInput:checked+.radioCircle::after {
+     content: "";
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     width: 8px;
+     height: 8px;
+     background-color: #B18C07;
+     border-radius: 50%;
+     transform: translate(-50%, -50%);
+ }
+
+ /* Hover and focus glow */
+ .radioOption:hover .radioCircle,
+ .radioInput:focus+.radioCircle {
+     box-shadow: 0 0 6px rgba(177, 140, 7, 0.3);
+ }
+
+ /* Text beside the radio */
+ .radioLabelText {
+     font-family: "Helvetica Neue";
+     font-weight: 500;
+     font-size: 14px;
+     color: rgba(255, 255, 255, 0.8);
+ }
+
+ .selectedRadio {
+     border-color: #B18C07;
+     background: rgba(26, 26, 26, 0.5);
+     box-shadow: 0 0 12px rgba(177, 140, 7, 0.2);
+ }
+
+ .yourprofile {
+     display: flex;
+     flex-direction: column;
+     gap: 16px;
+ }
+
+ .yourprofile p {
+     margin: 0;
+ }
+
+ /* Step 3 Styling */
+ .stepThreeForm {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .stepThreeForm h2 {
+     font-weight: 500;
+     font-size: 24px;
+     color: white;
+     margin-bottom: 20px;
+ }
+
+ .submitBtn {
+     width: 100%;
+     height: 52px;
+     border-radius: 40px;
+     background: linear-gradient(90deg, #1a1a1a 0%, #2d2d2d 100%);
+     border: 1px solid rgba(255, 255, 255, 0.1);
+     color: #fff;
+     font-weight: 600;
+     font-size: 14px;
+     letter-spacing: 0.5px;
+     text-transform: uppercase;
+     margin-top: 30px;
+     position: relative;
+     overflow: hidden;
+     cursor: pointer;
+     transition: all 0.3s ease;
+ }
+
+ .submitBtn::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: -50%;
+     width: 50%;
+     height: 100%;
+     background: radial-gradient(circle at right, rgba(255, 236, 179, 0.9), rgba(209, 169, 70, 0.4), transparent);
+     transform: skewX(-20deg);
+     transition: 0.5s;
+ }
+
+ .submitBtn:hover::before {
+     left: 120%;
+ }
+
+ .submitBtn:hover {
+     border-color: rgba(209, 169, 70, 0.5);
+     box-shadow: 0 0 20px rgba(209, 169, 70, 0.4);
+ }
+
+ /* ========== End Banner Section ============= */
+
+ /* ========= counter Section =============== */
+ .networkStack {
+     background: #111;
+     padding: 80px 0 0 0;
+     position: relative;
+ }
+
+ .overlay {
+     position: absolute;
+     top: 0%;
+     left: 0;
+     z-index: -99;
+     height: 200px;
+     width: 100%;
+     transform: translateY(-100%);
+ }
+
+ .counterDiv {
+     display: flex;
+     padding: 40px 60px;
+     align-items: center;
+     gap: 60px;
+     border-radius: 32px;
+     border: 1px solid rgba(171, 171, 171, 0.20);
+     background: #1A1A1A;
+     max-width: max-content;
+     margin: auto;
+     margin-bottom: -83px;
+     position: relative;
+     z-index: 9;
+ }
+
+
+ .verticalLine {
+     width: 50px;
+     height: 1px;
+     transform: rotate(90deg);
+     background: rgba(171, 171, 171, 0.20);
+ }
+
+ .valueDiv {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+ }
+
+ .valueDiv div {
+     color: #FFF;
+     text-align: center;
+     font-family: "Helvetica Neue";
+     font-size: 48px;
+     font-style: normal;
+     font-weight: 300;
+     line-height: 130%;
+     /* 62.4px */
+ }
+
+ .valueDiv p {
+     color: #A1A1AA;
+     text-align: center;
+     font-family: "Helvetica Neue";
+     font-size: 14px;
+     font-style: normal;
+     font-weight: 300;
+     line-height: 140%;
+     margin-bottom: unset;
+     letter-spacing: 0.5px;
+ }
+
+
+
+ .mainContainer {
+     border-radius: 160px 160px 0 0;
+     border-top: 1px solid rgba(171, 171, 171, 0.40);
+     background:
+         url('/dots-layer.svg') center 2% no-repeat,
+         url('/landing-ellipse.png') center 1% no-repeat;
+     background-size: 75%, 120%;
+     padding: 125px 0 215px 0;
+     position: relative;
+ }
+
+ .glowCardParent {
+     display: flex;
+     gap: 20px;
+     grid-template-columns: 1fr;
+     margin-top: 100px;
+     min-height: max-content;
+ }
+
+ .parentGlowCard {
+     background: #1A1A1A;
+     box-shadow: 0px 0px 40px 0px #D4AF3720;
+     border-top: 1px solid #FFFFFF1A;
+     padding: 40px 24px;
+     border-radius: 24px;
+     width: 100%;
+     height: 100%;
+     box-sizing: border-box;
+
+ }
+
+ .parentGlowCard h2 {
+     font-size: 24px;
+     font-weight: 500;
+     color: white;
+ }
+
+ .parentGlowCard p {
+     font-size: 15px;
+     color: #A1A1AA;
+     font-weight: 400;
+ }
+
+ .mainMobileDiv {
+     padding: unset !important;
+ }
+
+ .imageGlowParent {
+     position: relative;
+     border-radius: 50%;
+     margin: 0 auto 27px auto;
+     max-width: 180px;
+     width: 100%;
+     height: 180px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     overflow: hidden;
+ }
+
+ .imageGlowParent::after {
+     content: "";
+     position: absolute;
+     inset: 0;
+     background-image: url(/landing-asset/SigninEllipse.png);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     /* border-radius: 50%; */
+     animation: StepsComponent_scaleUp__jcG0R 2s ease-in-out infinite;
+ }
+
+ /* =========== End Counter Section =========== */
+ .faqSections {
+     max-width: 720px;
+     margin: auto;
+ }
+
+ .faqSections>div>div {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+ }
+
+ .faqSections h1, .faqSections h2 {
+     text-align: center;
+     font-size: 48px;
+     font-style: normal;
+     font-weight: 500;
+     line-height: 55px;
+     letter-spacing: -1.28px;
+     margin: 0 3rem;
+     background: linear-gradient(180deg, #ffffff 0%, #f9f6eb 25%, #f1e1a6 60%, #d8bf7e 85%);
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     margin-bottom: 24px;
+ }
+
+ .faqSections p {
+     color: #FFF;
+     font-family: "Helvetica Neue";
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 300;
+     line-height: 140%;
+     margin-bottom: 0;
+     text-align: center;
+ }
+
+ .aadharCard {
+     display: flex;
+     justify-content: center;
+     position: relative;
+     max-width: fit-content;
+     margin: auto;
+ }
+
+ .pandCard {
+     display: flex;
+     justify-content: center;
+     position: relative;
+     max-width: fit-content;
+     margin: auto;
+ }
+
+ .aadharCardPlace{
+        position: absolute;
+        bottom: 46px;
+        left: 113px;
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+ }
+
+ .aadharCardPlace p{
+        font-size: 14px;
+        color: #000000;
+        font-weight: 500;
+        margin-bottom: unset;
+ }
+
+ .panCardPlace {
+     position: absolute;
+     bottom: 46px;
+     left: 34px;
+     display: flex;
+     flex-direction: column;
+     gap: 11px;
+ }
+
+ .panCardPlace p {
+     font-size: 12px;
+     color: #000000;
+     font-weight: 500;
+     margin-bottom: unset;
+ }
+
+ .panDetails {
+     border: 1px solid #C9A74E;
+     background: #C9A74E1A;
+     padding: 16px;
+     border-radius: 12px;
+     margin-top: 40px;
+ }
+
+ .singleDiv div {
+     color: #A1A1AA;
+     font-size: 14px;
+     font-weight: 400;
+ }
+
+ .singleDiv p {
+     font-size: 16px;
+     font-weight: 500;
+     color: #FFFFFF;
+ }
+
+ .successMsg {
+     text-align: center;
+     max-width: 300px;
+     margin: auto;
+ }
+
+ .successMsg div {
+     font-size: 30px;
+     color: #FFFFFF;
+     font-weight: 400;
+     text-align: center;
+ }
+
+ .successMsg p {
+     margin-bottom: unset;
+     font-size: 16px;
+     font-weight: 400;
+     color: white;
+ }
+
+ @media (max-width: 1024) {
+     .textSection h1, .textSection h2 {
+         font-size: 42px;
+     }
+ }
+
+ @media (max-width: 768px) {
+     .faqSections h1, .faqSections h2 {
+         font-size: 38px;
+     }
+
+     .textSection h1, .textSection h2 {
+         font-size: 36px;
+     }
+
+     .contentSection {
+         flex-wrap: wrap;
+     }
+
+     .networkStack {
+         padding: 40px 16px;
+     }
+
+     .counterDiv {
+         padding: 20px 30px;
+         border-radius: 20px;
+     }
+
+     .valueDiv div {
+         font-size: 32px;
+         line-height: 42px;
+     }
+
+     .glowCardParent {
+         flex-wrap: wrap;
+     }
+
+ }
+
+ @media (max-width:480px) {
+     .textSection p {
+         font-size: 16px;
+     }
+
+     .header h1 {
+         font-size: 32px;
+         line-height: 42px;
+         margin: 0 2rem;
+         margin-bottom: 5px;
+     }
+
+     .textSection h1, .textSection h2 {
+         font-size: 24px;
+     }
+
+     .partnerForn {
+         padding: 25px 20px;
+         border-radius: 20px;
+     }
+
+     .partnerForn h2 {
+         font-size: 20px;
+     }
+
+     .partnerForn p {
+         margin: 20px 0;
+     }
+
+     .networkStack {
+         padding: 30px 0px;
+         padding-bottom: 0;
+     }
+
+     .valueDiv div {
+         font-size: 24px;
+         line-height: 32px;
+     }
+
+     .counterDiv {
+         gap: 0px;
+         margin: 0px 20px -50px 20px;
+         padding: 15px 10px;
+     }
+
+     .mainContainer {
+         border-radius: 20px 20px 0 0;
+         background-size: 200%, 200%;
+         background-position: center 4%, center 7%;
+     }
+
+     .mainMobileDiv {
+         padding: 0px 16px !important;
+     }
+
+     .glowCardParent {
+         margin-top: 50px !important;
+     }
+
+     .parentGlowCard h2 {
+         font-size: 20px;
+     }
+
+     .parentGlowCard p {
+         font-size: 16px;
+     }
+
+     .parentGlowCard {
+         padding: 20px 10px;
+     }
+
+     .mainContainer {
+         padding: 125px 0px;
+     }
+
+     .bannerSection {
+         min-height: 120vh;
+     }
+
+     .contentSection {
+         margin-top: 20%;
+     }
+ }
+
+ @keyframes scaleUp {
+
+     0%,
+     100% {
+         transform: scale(1);
+         filter: blur(0);
+     }
+
+     50% {
+         transform: scale(1.05);
+         filter: blur(1px);
+     }
+ }

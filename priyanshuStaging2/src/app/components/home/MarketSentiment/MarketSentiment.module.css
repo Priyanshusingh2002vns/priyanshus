@@ -1,0 +1,1030 @@
+.MarketSentimentMainContainer {
+    display: flex;
+    flex-direction: column;
+    /* height: 1050px; */
+    max-width: 460px;
+    /* border: 1px solid black; */
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 60px 0px #0000000F;
+
+    gap: 32px;
+    padding: 20px;
+    border-radius: 24px;
+
+    overflow-y: auto;
+    /* enable internal scrolling */
+    scrollbar-width: none;
+}
+
+.MarketSentimentMainContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.MarketSentimentGreed {
+    /* height: 225px; */
+    /* max-width: 360px; */
+    /* display: flex; */
+    flex-direction: column;
+    background: linear-gradient(to bottom, #FFFFFF, #FFFFFF00);
+
+    /* border: 1px solid black; */
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    padding: 16px;
+}
+
+.MarketSentimentInnerContainer {
+    display: flex;
+    flex-direction: column;
+    /* max-width: 350px; */
+    gap: 18px;
+    /* height: 193px; */
+    /* border: 1px solid black; */
+}
+
+.MarketSentimentHeadingContainer {
+    display: flex;
+    /* max-width: 350px; */
+    height: 28px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Heading {
+    color: #1F2937;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+.colorsGraph {
+    width: 350px;
+}
+
+/* .greed {
+    width: 100px;
+    height: 61px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    top: 20px;
+} */
+
+.greedText {
+    width: 100%;
+    /* height: 33px; */
+    color: #16A34A;
+    font-size: 34px;
+}
+
+.CurrentSentement {
+    color: #374151;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.highMomentum {
+    color: #374151;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 500;
+    max-width: 150px;
+    text-align: right;
+    line-height: 16px;
+}
+
+.greedDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 10px;
+    padding-bottom: 12px;
+}
+
+.newDeals {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 12px;
+    border-radius: 12px;
+    background: #FFFFFF;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+/* The ::before pseudo-element creates the circular spinning light */
+.newDeals::before {
+    content: '';
+    position: absolute;
+
+    /* Sizing and Positioning for the conic gradient (Increased size for thicker glow) */
+    width: 500%;
+    height: 500%;
+    top: -185%;
+    left: -205%;
+
+    /* Conic gradient for the sweeping light effect */
+    background: conic-gradient(rgba(201, 167, 78, 0) 0deg,
+            rgba(201, 167, 78, 0) 180deg,
+            rgba(201, 167, 78, 1) 185deg,
+            rgba(201, 167, 78, 1) 255deg,
+            rgba(201, 167, 78, 0) 270deg);
+
+    z-index: 0;
+
+    /* Apply the continuous spin animation */
+    animation: spinAnim 3s infinite linear;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+/* Inner background to cover the center */
+.newDeals::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border-radius: calc(12px - 2px);
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+
+/* put the content above the pseudo-element */
+.newDeals>* {
+    position: relative;
+    z-index: 2;
+    transform: none;
+}
+
+/* Keyframes for the continuous circular spin animation */
+@keyframes spinAnim {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+.newDealsHeading {
+    max-width: 171px;
+    max-height: 20px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.greenDot {
+    width: 10px;
+    height: 10px;
+    background-color: #16A34A;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+
+
+.plusDeals {
+    color: #6B7280;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.viewAllBtnContainer {
+    max-width: 120px;
+    max-height: 40px;
+    padding: 8px 16px 8px 16px;
+    display: flex;
+    gap: 3px;
+    border-radius: 34778.34px;
+    background-color: #302F2B;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.ViewAllText {
+    color: #FFF;
+    text-align: center;
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 142.857% */
+    margin: 0px;
+    cursor: pointer;
+    padding-top: 2px !important;
+
+}
+
+.upperRightArrow {
+    width: 24px;
+    height: 24px;
+    position: relative;
+
+}
+
+.RecentPostContainer {
+    /* max-width: 420px;
+    max-height: 652px; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* border: 1px solid black; */
+}
+
+.RecentPostHeader {
+    display: flex;
+    justify-content: space-between;
+    /* max-width: 420px;
+    max-height: 24px; */
+    /* border: 1px solid black; */
+}
+
+.recentPostsHeading {
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    list-style: 24px;
+}
+
+.ExploreStyles {
+    max-width: 109px;
+    max-height: 24px;
+    display: flex;
+    align-items: center;
+    padding-right: 16px;
+    padding-left: 16px;
+    gap: 3px;
+}
+
+.ExploreBtn {
+    color: #B59131;
+    font-size: 14px;
+    padding-top: 4px;
+    font-weight: 500;
+}
+
+.arrowImg {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.prqtPostConatiner {
+    display: flex;
+    flex-direction: column;
+    /* max-width: 420px; */
+    /* height: 908px; */
+    /* border: 1px solid black; */
+    background-color: #FFFFFF;
+    border-radius: 24px;
+    gap: 10px;
+}
+
+.logoAndTimeDiv {
+    /* max-width: 420px;
+    max-height: 62px; */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px 10px 16px;
+    align-items: center;
+}
+
+.LogoNew {
+    max-width: 42px;
+    max-height: 42px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.NewLogoImg {
+    max-width: 42px;
+    max-height: 42px;
+    /* border: 1px solid black; */
+    border-radius: 100px;
+}
+
+.preqtLogoText {
+    max-width: 40px;
+    max-height: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -3%;
+    line-height: 100%;
+    color: #000000;
+}
+
+/* .DateAndTime{
+    max-width: 135px;
+    max-height: 15px;
+} */
+.DateAndTimeText {
+    color: #6B7280;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.36px;
+}
+
+.postDescriptionMainContainer {
+    /* max-width: 420px;
+    max-height: 458px; */
+    display: flex;
+    flex-direction: column;
+    padding-right: 16px;
+    padding-left: 16px;
+    gap: 10px;
+    /* border: 1px solid black; */
+}
+
+.PostDescriptionHeading {
+    /* max-width: 388px;
+    max-height: 40px; */
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color: #1F2937;
+    font-weight: 500;
+}
+
+.preqtCandidImage {
+    /* max-width: 400px; */
+    object-fit: cover;
+    height: 408px;
+    border-radius: 18px;
+}
+
+.LikeCommentAndShare {
+    display: flex;
+    /* max-width: 420px;
+    max-height: 48px; */
+    justify-content: space-between;
+    padding: 4px 16px 4px 16px;
+    /* border: 1px solid black; */
+}
+
+.LikeAndCommentContainer {
+    max-width: 252px;
+    max-height: 40px;
+    display: flex;
+    gap: 10px;
+}
+
+.LikeAndCommentContainer p {
+    margin: 0;
+}
+
+.MarketSentimentMainContainer p {
+    margin: 0;
+}
+
+.LikeBtnContainer {
+    display: flex;
+    max-width: 110px;
+    max-height: 40px;
+    padding: 8px 4px 8px 4px;
+    gap: 6px;
+    align-items: center;
+}
+
+
+.likeImage {
+    max-width: 19px;
+    max-height: 20px;
+}
+
+.likesCount {
+    font-size: 14px;
+    color: #878A8C;
+    line-height: 17px;
+    letter-spacing: 0%;
+}
+
+.commentsCount {
+    max-width: 94px;
+    max-height: 17px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #878A8C;
+}
+
+.commentBtnContainer {
+    display: flex;
+    /* max-width: 150px; */
+    max-height: 40px;
+    padding: 8px 4px 8px 4px;
+    gap: 6px;
+    align-items: center;
+}
+
+.ShareButton {
+    display: flex;
+    /* max-width: 75px;
+    max-height: 40px; */
+    padding: 8px 4px 8px 4px;
+    gap: 6px;
+}
+
+/* ---------------------------------------------- */
+.ColorGraph {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* max-width: 350px; */
+}
+
+.MainColorGraphDiv {
+    /* max-width: 350px; */
+    width: 100%;
+    display: flex;
+    border-radius: 100px;
+    /* border: 1px solid black; */
+    /* padding-left: 10px; */
+    position: relative;
+}
+
+.MarketSentimentDescription {
+    color: #1F2937;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    /* 142.857% */
+}
+
+.MarketSentimentDescription span {
+    color: #16A34A;
+}
+
+.GreenColor1 {
+    width: 100%;
+    height: 16px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    background-color: #E82D48;
+
+}
+
+.greenColor2 {
+    width: 100%;
+    height: 16px;
+    background-color: #EDA635;
+
+}
+
+.yellowColor {
+    width: 100%;
+    height: 16px;
+    background-color: #EFD933;
+}
+
+.OrangeColor {
+    width: 100%;
+    height: 16px;
+    background-color: #8CE249;
+
+}
+
+.lastColor {
+    width: 100%;
+    height: 16px;
+    background-color: #3FD146;
+
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.ColorLevelMainContainer {
+    /* max-width: 350px; */
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ExtremeFear {
+    color: #4B5563;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+
+
+/* .PinScaleImage {
+    position: absolute;
+    right: 0px;
+    
+} */
+.PinScaleImage {
+    width: 22px;
+    height: 39px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(-50%) translateX(0);
+    opacity: 0;
+    animation: slideLeftToRight 3s ease-out forwards;
+    animation-delay: .3s;
+    /* <-- ADD THIS */
+}
+
+@keyframes slideLeftToRight {
+    0% {
+        opacity: 1;
+        left: 0;
+        transform: translateY(-50%) translateX(0);
+    }
+
+    33% {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+
+    100% {
+        opacity: 1;
+        left: calc(100% - 22px);
+        transform: translateY(-50%) translateX(0%);
+    }
+}
+
+
+/* Base styles (already provided above) */
+
+/* Large Desktop (1440px+) */
+/*
+@media (min-width: 1440px) {
+    .ColorGraph {
+        max-width: 350px;
+        gap: 16px;
+    }
+    
+    .MainColorGraphDiv {
+        max-width: 350px;
+        height: 24px;
+    }
+    
+    .GreenColor1, .greenColor2, .yellowColor, .OrangeColor, .lastColor {
+        height: 24px;
+    }
+    
+    .ColorLevelMainContainer {
+        max-width: 350px;
+        top: -10px;
+    }
+    
+    .ExtremeFear {
+        font-size: 10px;
+    }
+    
+    .PinScaleImage {
+        right: 90px;
+        width: 18px;
+        height: 35px;
+    }
+    
+    .MarketSentimentInnerContainer {
+        max-width: 350px;
+    }
+}
+*/
+/* Tablet and Small Desktop (768px to 1024px) */
+@media (max-width: 1024px) {
+    .ColorGraph {
+        /* max-width: 300px; */
+        gap: 12px;
+    }
+
+    .MainColorGraphDiv {
+        /* max-width: 300px; */
+        height: 20px;
+    }
+
+
+    .MarketSentimentMainContainer {
+        padding: 16px;
+        max-width: 100%;
+    }
+
+    .GreenColor1,
+    .greenColor2,
+    .yellowColor,
+    .OrangeColor,
+    .lastColor {
+        height: 20px;
+    }
+
+    .ColorLevelMainContainer {
+        /* max-width: 300px; */
+        top: -8px;
+        padding: 0 6px;
+    }
+
+
+    .PinScaleImage {
+        right: 70px;
+        width: 16px;
+        height: 32px;
+    }
+
+    .MarketSentimentInnerContainer {
+        /* max-width: 300px; */
+        padding: 0 12px;
+    }
+
+}
+
+/* Mobile Landscape (481px to 768px) */
+@media (max-width: 768px) {
+    .ColorGraph {
+        /* max-width: 280px; */
+        gap: 10px;
+    }
+
+    .MainColorGraphDiv {
+        /* max-width: 280px; */
+        height: 18px;
+    }
+
+    .GreenColor1,
+    .greenColor2,
+    .yellowColor,
+    .OrangeColor,
+    .lastColor {
+        height: 18px;
+    }
+
+    .ColorLevelMainContainer {
+        /* max-width: 280px; */
+        top: 0px;
+        padding: 0px;
+    }
+
+
+
+    .PinScaleImage {
+        right: 60px;
+        width: 16px;
+        height: 28px;
+    }
+
+    .MarketSentimentInnerContainer {
+        /* max-width: 280px; */
+        padding: 0 8px;
+    }
+
+    .LikeBtnContainer,
+    .commentBtnContainer {
+        padding: 6px 2px;
+        gap: 4px;
+        /* max-width: 60px; */
+    }
+
+    .ShareButton {
+        padding: 6px 2px;
+        gap: 4px;
+        /* max-width: 40px; */
+    }
+
+    .likesCount,
+    .commentsCount {
+        font-size: 12px;
+    }
+
+    .likeImage {
+        max-width: 16px;
+        max-height: 16px;
+    }
+}
+
+/* Mobile Portrait (320px to 480px) */
+@media (max-width: 480px) {
+    .MarketSentimentMainContainer {
+        padding: 0;
+        background-color: unset;
+        border-radius: 0;
+
+    }
+
+    .MarketSentimentGreed {
+        padding: 0;
+        background: unset;
+        border-radius: 0;
+    }
+
+    .newDeals {
+        display: none;
+    }
+
+    .RecentPostContainer {
+        display: none;
+    }
+
+    .ColorGraph {
+        /* max-width: 240px; */
+        gap: 8px;
+    }
+
+    .MainColorGraphDiv {
+        /* max-width: 240px; */
+        height: 16px;
+    }
+
+    .GreenColor1,
+    .greenColor2,
+    .yellowColor,
+    .OrangeColor,
+    .lastColor {
+        height: 16px;
+    }
+
+    .ColorLevelMainContainer {
+        /* max-width: 240px; */
+        top: -4px;
+        padding: 0 2px;
+    }
+
+    .ExtremeFear {
+        font-size: 10px;
+    }
+
+    .greedDiv {
+        padding: 0;
+    }
+
+    .PinScaleImage {
+        right: 50px;
+        width: 12px;
+        height: 24px;
+    }
+
+    .MarketSentimentInnerContainer {
+        /* max-width: 240px; */
+        padding: 0;
+        padding-top: 15px;
+    }
+
+    .LikeBtnContainer {
+        padding: 4px 2px;
+        gap: 3px;
+        max-width: 50px;
+        min-width: 40px;
+    }
+
+    .preqtCandidImage {
+        margin-top: 15px;
+    }
+
+    .likesCount {
+        font-size: 11px;
+        text-indent: -9999px;
+        /* Hide original text */
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Hide the word "Likes" - keep only numbers */
+    .likesCount::after {
+        content: '';
+    }
+
+    .likesCount {
+        font-size: 11px;
+        text-indent: -9999px;
+        /* Hide original text */
+        position: relative;
+    }
+
+    .likesCount::before {
+        content: '1,260';
+        /* Show only the number */
+        position: absolute;
+        left: 0;
+        /* ✅ Fixed: was 9999px */
+        top: 0;
+        text-indent: 0;
+        font-size: 11px;
+        color: #878A8C;
+        line-height: 17px;
+    }
+
+    /* Comment section - show only icon and number */
+    .commentBtnContainer {
+        padding: 4px 2px;
+        gap: 3px;
+        /* max-width: 50px; */
+        /* min-width: 40px; */
+    }
+
+    .commentsCount {
+        font-size: 11px;
+        /* max-width: 30px; */
+        text-indent: -9999px;
+        position: relative;
+    }
+
+    .commentsCount::before {
+        content: '360';
+        /* Show only the number */
+        position: absolute;
+        left: 0;
+        /* ✅ Fixed: was 9999px */
+        top: 0;
+        text-indent: 0;
+        font-size: 11px;
+        color: #878A8C;
+        line-height: 17px;
+    }
+
+    /* Share button - hide text completely */
+    .ShareButton {
+        padding: 4px 2px;
+        gap: 2px;
+        /* max-width: 30px;
+        min-width: 24px; */
+        justify-content: center;
+    }
+
+    .ShareButton .commentsCount {
+        display: none;
+    }
+
+    /* Make icons smaller */
+    .likeImage {
+        max-width: 14px;
+        max-height: 14px;
+    }
+
+    /* Adjust container spacing */
+    .LikeAndCommentContainer {
+        gap: 25px;
+        max-width: 120px;
+    }
+
+    .LikeCommentAndShare {
+        padding: 2px 12px;
+        gap: 8px;
+    }
+}
+
+/* Very Small Screens (below 320px) */
+@media (max-width: 320px) {
+    .ColorGraph {
+        /* max-width: 200px; */
+        gap: 6px;
+    }
+
+    .MainColorGraphDiv {
+        /* max-width: 200px; */
+        height: 14px;
+    }
+
+    .GreenColor1,
+    .greenColor2,
+    .yellowColor,
+    .OrangeColor,
+    .lastColor {
+        height: 14px;
+    }
+
+    .ColorLevelMainContainer {
+        /* max-width: 200px; */
+        top: -2px;
+        padding: 0 1px;
+    }
+
+    .ExtremeFear {
+        font-size: 6px;
+    }
+
+    .PinScaleImage {
+        right: 40px;
+        width: 10px;
+        height: 20px;
+    }
+
+    .MarketSentimentInnerContainer {
+        /* max-width: 200px; */
+        padding: 0 4px;
+    }
+
+    .LikeBtnContainer,
+    .commentBtnContainer {
+        padding: 3px 1px;
+        gap: 2px;
+        max-width: 40px;
+        min-width: 32px;
+    }
+
+    .ShareButton {
+        padding: 3px 1px;
+        /* max-width: 24px;
+        min-width: 20px; */
+        /* margin-right: 20px; */
+    }
+
+    .likesCount::before {
+        font-size: 10px;
+    }
+
+    .commentsCount::before {
+        font-size: 10px;
+    }
+
+    .likeImage {
+        max-width: 12px;
+        max-height: 12px;
+    }
+
+    .LikeAndCommentContainer {
+        gap: 25px;
+        margin-left: 20px;
+        max-width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .LikeCommentAndShare {
+        padding: 2px 8px;
+        gap: 6px;
+    }
+}
+
+.exploreCommunityContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 12px;
+    /* margin-bottom: 10px; */
+}
+
+.exploreCommunityBtn {
+    background-color: #2D2C2A !important;
+    /* Premium dark charcoal pill matching screenshots */
+    color: #FFFFFF !important;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    padding: 10px 24px !important;
+    border-radius: 20px !important;
+    border: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    transition: all 0.2s ease !important;
+    text-decoration: none !important;
+    line-height: 20px !important;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.exploreCommunityBtn:hover {
+    background-color: #3E3D3A !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+.exploreCommunityBtn:active {
+    transform: translateY(0) !important;
+}
+
+.exploreCommunityBtn svg {
+    margin-bottom: 1px;
+}

@@ -1,0 +1,1757 @@
+.DealsTalkMainContainer {
+    /* max-width: 1020px; */
+    /* border: 1px solid black;  */
+
+    /* width: 68vw; */
+    /* max-width: 100vw; */
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    /* margin-top: 10px; */
+
+    /* margin: 0 auto; */
+}
+
+.AllDealsMainContainer {
+    background: var(--Gray-50, #F9FAFB);
+}
+
+.carouselWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.dealsSwiper {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    /* padding-right: 30px; */
+}
+
+.dealsSwiper .swiper-slide {
+    height: auto;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.homeTalkingHeadingText {
+    font-weight: 400 !important;
+}
+
+/* Custom navigation buttons */
+.dealsSwiper .swiper-button-next,
+.dealsSwiper .swiper-button-prev {
+    color: #7E60FF;
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dealsSwiper .swiper-button-next:after,
+.dealsSwiper .swiper-button-prev:after {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Hide previous arrow */
+.dealsSwiper .swiper-button-prev {
+    display: none !important;
+}
+
+/* Style only the next arrow */
+.dealsSwiper .swiper-button-next {
+    display: flex !important;
+    right: 10px;
+    left: auto;
+}
+
+/* Custom next arrow styling */
+.customNextArrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.customNextArrow:hover {
+    background: #f8f9fa;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.dealsSwiper .swiper-pagination-bullet {
+    background: #7E60FF;
+    opacity: 0.3;
+}
+
+.dealsSwiper .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #7E60FF;
+}
+
+.DealsTalkHeading {
+    font-weight: 200;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    /* text-transform: capitalize; */
+    /* width: 540px; */
+    /* height: 38px; */
+    letter-spacing: 0;
+    color: #1F2937;
+}
+
+.homeTalkingHeading {
+    display: flex;
+    gap: 10px;
+}
+
+.SpanDealsTalkHeading {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.DealsTalkHeading p {
+    font-size: 20px;
+    font-weight: 300;
+    color: #6B7280;
+    opacity: 0.8;
+}
+
+.dealsRow {
+    /* --bs-gutter-x: 32px;
+    --bs-gutter-y: 32px; */
+}
+
+.DealsTalkCardContainer {
+    height: 500px;
+
+    display: flex;
+    gap: 24px;
+    /* border: 1px solid black; */
+    align-items: center;
+    /* justify-content: center; */
+    /* width: 70vw; */
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* responsive */
+    gap: 20px;
+}
+
+
+.ofsGradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -999;
+    opacity: 1;
+    pointer-events: none;
+    border-top-left-radius: 20px;
+}
+
+/* Card 1 Container - Fixed responsive version */
+.cardContainer1 {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Changed from space-between to allow top-down flow */
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
+    padding: 16px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    cursor: pointer;
+    gap: 12px;
+    height: 100%;
+    position: relative;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+    /* Added subtle shadow */
+}
+
+.cardInnerSections {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cardIPOsection {
+    display: flex;
+    gap: 10px;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.IPOheading {
+    padding: 6px 10px 4px 10px;
+    height: 28px;
+    border-radius: 6px;
+    background: linear-gradient(136deg, #FFF2D0 -8.31%, #8E6B0F 96.65%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.HeadingContent {
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+    /* line-height: 28px;  */
+}
+
+.AnthemSection {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.anthemPicture {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    object-fit: cover;
+    /* border-radius: 50%; */
+}
+
+.anthemHeading {
+    color: #1F2937;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.dealCardContent {
+    color: #6B7280;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 21px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+/* Revenue Sections */
+.revenueMainContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    /* display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  text-align: flex-start; */
+
+}
+
+.revenueSection {
+    /* display: flex;
+    justify-content: space-between;
+
+    flex-wrap: wrap; */
+    /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: flex-start;
+}
+
+.Revenue {
+    /* min-width: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.revenuHeading {
+    font-size: 12px;
+    color: #6B7280;
+}
+
+.priceInRupee {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1F2937;
+    word-break: break-word;
+}
+
+.merchantMainContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* .merchantBanker {
+    padding: 0 12px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    border: 1px solid rgba(68, 49, 151, 0.27);
+} */
+
+.bankMerchant {
+    font-size: 12px;
+    font-weight: 500;
+    color: #000;
+}
+
+/* Footer */
+.cardFooterMainContainer {
+    border-top: 1px solid #E2E8F0;
+    /* padding-top: 10px; */
+    /* margin-top: 28%; */
+}
+
+.QandA {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.QandAstats {
+    color: #C9A74E;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    /* flex: 1; */
+}
+
+.usersIcons {
+    display: flex;
+}
+
+.userImages {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-left: -11px;
+}
+
+/* .userImages:first-child {
+    margin-left: 0;
+} */
+
+/* card 2 */
+.card2Container {
+    position: relative;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    gap: 0px;
+    color: #f5f5f5;
+    border-radius: 20px;
+    background-color: #121212;
+    backdrop-filter: blur(30px);
+    /* max-height: 470px;  */
+    height: 100%;
+}
+
+/* Inner Section */
+.card2InnerSections {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+.DealsTalkMainContainer p {
+    margin: 0;
+    /* override bootstrap only inside DealsTalk */
+}
+
+/* Custom arrow styles */
+.customPrevArrow,
+.customNextArrow {
+    width: 36px;
+    height: 36px;
+    background: white;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    right: -12px !important;
+    border-radius: 100px;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.06);
+}
+
+.customPrevArrow {
+    left: -50px;
+}
+
+.customNextArrow {
+    right: -35px;
+}
+
+.customPrevArrow:hover,
+.customNextArrow:hover {
+    background: #f5f5f5;
+}
+
+
+/* IPO Tags */
+.card2IPOsection {
+    display: flex;
+    flex-wrap: wrap;
+    width: 66%;
+    max-height: 33px;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.ofsDefaultTag {
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
+    padding: 2px 10px 0px;
+    margin-bottom: 0;
+    border-radius: 6px;
+    background: linear-gradient(113.27deg, #D2C299 15.04%, #8E6B0F 84.96%);
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ofsDefaultTagText {
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card2IPOtag {
+    border: 1px solid #444;
+    padding: 2px 10px 0px;
+    margin-bottom: 0;
+    border-radius: 6px;
+    background-color: rgba(255, 243, 215, 0.20);
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card2IPOtext {
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Company Section */
+.card2CompanySection {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card2CompanyLogo {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+
+.card2CompanyName {
+    color: #FFF;
+    font-family: "Helvetica Neue";
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Description */
+.card2Description {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+    flex: 1;
+}
+
+.tagLineWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+
+.showMoreWhite {
+    color: #FFF !important;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 300;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.showMoreWhite:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+/* Stats Section */
+.card2StatsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.ofsHighlightBox {
+    border-radius: 12px;
+    padding: 7px 11px;
+
+    border: 1px solid transparent;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-image:
+        linear-gradient(90deg, #876B1E, #473a16ad, #da161600),
+        linear-gradient(90deg, #D8BE62 0%, #d8be62fb 10%, #f1dc809a 30.8%, #24242400 100%);
+    /* background: 
+        linear-gradient(90deg, rgba(201, 167, 78, 0.15) 0%, rgba(201, 167, 78, 0) 100%) padding-box,
+        linear-gradient(90deg, rgba(201, 167, 78, 0.8) 0%, rgba(201, 167, 78, 0) 90%) border-box; */
+
+}
+
+.ofsHighlightRow {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.ofsHighlightCol {
+    display: flex;
+    min-width: 173px;
+    flex-direction: column;
+}
+
+.ofsHighlightCol:nth-child(2) {
+    grid-column: 2 / 4;
+}
+
+.ofsHighlightValue {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+}
+
+.perShare {
+    font-size: 12px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.card2StatsRow {
+    /* display: flex;
+    /* justify-content: space-between; */
+    /* gap: 34px; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 equal columns */
+    gap: 20px;
+    text-align: flex-start;
+}
+
+.card2Stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.card2StatHeading {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.card2StatValue {
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* Merchant Banker */
+.card2MerchantContainer {
+    display: flex;
+}
+
+.card2MerchantTag {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    padding: 6px 12px;
+}
+
+.card2MerchantText {
+    font-size: 11px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Footer */
+.card2Footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /* padding-top: 10px; */
+    /* margin-top: 9%; */
+}
+
+.card2QandA {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 11px;
+}
+
+.card2QandAStats {
+    color: #C9A74E;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.card2UserIcons {
+    display: flex;
+}
+
+.card2UserImage {
+    /* width: 24px; */
+    height: 24px;
+    border: 1px solid #1e1e1e;
+    border-radius: 50%;
+    margin-left: -8px;
+}
+
+/* Exclusive Tag Styles */
+.exclusiveTagWrapper {
+    position: absolute;
+    top: 0px;
+    right: -9px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 10;
+}
+
+.exclusiveTagWrapperofs {
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 10;
+}
+
+.exclusiveTagImage {
+    width: 131px;
+    height: 42px;
+}
+
+
+
+
+
+.starImage {
+    width: 49px;
+    height: 49px;
+    position: absolute;
+    top: 6px;
+    right: 4px;
+}
+
+.crousel {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #E5E7EB;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    /* centers the arrow vertically */
+    justify-content: center;
+    /* centers the arrow horizontally */
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    transform: translateY(-50%);
+}
+
+.crouselWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 71vw;
+}
+
+.crousel:hover {
+    background-color: #f9f9f9;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12); */
+    /* transform: scale(1.05); */
+}
+
+.crouselRight {
+    width: 8px;
+    /* slightly bigger arrow */
+    height: 14px;
+    object-fit: contain;
+}
+
+
+/* progress bar in cards*/
+.progressContainer {
+    display: flex;
+    flex-direction: column;
+    /* max-width: 378px; */
+    max-height: 34px;
+    gap: 8px;
+}
+
+.ProgressInPrice {
+    display: flex;
+    justify-content: space-between;
+    /* max-width: 378px; */
+    max-height: 20px;
+}
+
+.PriceIncr {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.PricePercent {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.progressWrapper {
+    height: 6px;
+    max-width: 100%;
+    border-radius: 30px;
+    background-color: #FFFFFF33;
+
+}
+
+.progress {
+    height: 6px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.progressWrapper .progressBar {
+    height: 100%;
+    /* max-width: 10%; */
+    background: linear-gradient(to left, #FFD89E, #B88609) !important;
+
+}
+
+
+.publicpromoter {
+    display: flex;
+    gap: 10px;
+    max-height: 32px;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.publicpromoter .Strong,
+.publicpromoter .monetization {
+    color: #000;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    /* 233.333% */
+    border-radius: 40px;
+    border: 1px solid #D8AD4C80
+}
+
+.promoter {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    height: 30px;
+    /* overflow: hidden; */
+}
+
+
+
+
+.Strong {
+    /* max-width: 152px; */
+    /* max-height: 30px; */
+    border-radius: 40px;
+    border: 1px solid #FFFFFF1A;
+    gap: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    color: #C9A74E;
+    padding-top: 2.2px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.monetization {
+    /* max-width: 152px; */
+    /* max-height: 30px; */
+    border-radius: 40px;
+    border: 1px solid #FFFFFF1A;
+    gap: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    padding-top: 2.2px;
+    color: #C9A74E;
+    font-weight: 500;
+    line-height: 28px;
+
+}
+
+.carouselinner {
+    display: flex;
+    gap: 10px;
+}
+
+.initialsContainer {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.initialBadge {
+    width: 24px;
+    height: 24px;
+    background: #D1C9F7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 600;
+    color: #51489A;
+    border: 1.5px solid #ffffff;
+    margin-left: -12px;
+    box-shadow: 0px 1.5px 4px rgba(0, 0, 0, 0.1);
+    font-family: var(--font-dm-sans);
+    position: relative;
+}
+
+.initialBadge:first-child {
+    margin-left: 0;
+}
+
+/* @media (max-width: 1290px) {
+    .DealsTalkMainContainer {
+        max-width: 1100px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .DealsTalkMainContainer {
+        max-width: 950px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .DealsTalkMainContainer {
+        max-width: 900px;
+    }
+} */
+
+
+
+
+@media (max-width: 1024px) {
+    .DealsTalkMainContainer {
+        width: 100%;
+        height: auto;
+        gap: 0px;
+        padding: 20px 20px;
+    }
+
+    .DealsTalkMainContainer {
+        max-width: 950px;
+    }
+
+    .DealsTalkHeading {
+        /* width: 100%; */
+        font-size: 24px;
+        height: auto;
+    }
+
+    .DealsTalkCardContainer {
+        width: 100%;
+        height: auto;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* .cardContainer1,
+    .card2Container {} */
+
+    .cardInnerSections {
+        width: 100%;
+        height: auto;
+    }
+
+    .revenueSection {
+        /* width: 100%;
+        flex-wrap: wrap;
+        gap: 10px; */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        text-align: flex-start;
+    }
+
+    .Revenue {
+        width: 100px;
+    }
+
+    .merchantMainContainer {
+        width: 100%;
+    }
+
+    .QandA {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .crousel {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .DealsTalkMainContainer {
+        max-width: 820px;
+    }
+}
+
+@media (max-width: 850px) {
+    .DealsTalkMainContainer {
+        max-width: 760px;
+    }
+
+    .allDealsHead p {
+        font-size: 16px
+    }
+
+    .SpanDealsTalkHeading {
+        font-size: 20px;
+    }
+}
+
+/* Mobile Landscape (481px to 768px) */
+
+/* Redesigned Header Badges */
+.topHeaderRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: auto;
+}
+
+.leftBadges {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.liveBadge {
+    background: #DCF5E6;
+    color: #22C55E;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px 8px 3px 4px;
+    /* Adjusted padding for larger dot area */
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.upcomingBadge {
+    background: #FFEDD5;
+    color: #FB923C;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 3px 8px 3px 4px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    /* gap: 5px; */
+}
+
+.closedBadge {
+    background: #FEE2E2;
+    color: #DC2626;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 3px 12px 3px 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 0px;
+}
+
+.dotWrapper {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.dotInner {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.liveDotInner {
+    background-color: #22C55E;
+    animation: pulse 2s infinite;
+}
+
+.upcomingDotInner {
+    background-color: #FB923C;
+}
+
+.closedDotInner {
+    background-color: #DC2626;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+
+.smeBadge {
+    background: linear-gradient(136.03deg, #FFF2D0 -8.31%, #8E6B0F 96.65%);
+
+    color: #FFF;
+    border-radius: 6px;
+    padding: 2px 10px 0px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 26px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ratingBadgeNew {
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #A57D24 3.16%, #A88027 10.4%, #B08B31 16.66%, #BE9D43 22.58%, #D2B65B 55.92%, #EBD679 98.79%);
+    overflow: hidden;
+    border: 1px solid #D8AD4C;
+    height: 30px;
+    /* Fixed height for clean pill look */
+}
+
+.ratingNumberBox {
+    background-color: #3B2C02;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 700;
+    height: 100%;
+    padding-top: 2px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    margin: -1px;
+    /* To cover the outer border slightly */
+}
+
+.starsBox {
+    display: flex;
+    gap: 3px;
+    padding: 0 8px;
+    align-items: center;
+}
+
+.starIconSmall {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+/* Company Section */
+.companyInfoMain {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.companyTitle {
+    color: #1F2937;
+    font-family: "Helvetica Neue";
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.taglineText {
+    color: #4B5563;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 4px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+    /* min-height: 42px; */
+    /* 15px * 1.4 line-height * 2 lines */
+    height: 42px;
+}
+
+/* Highlight Cards */
+.highlightStatsRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    /* margin: 8px 0; */
+}
+
+.statBox {
+    background-color: #F3EDE2;
+    /* Specific color requested by user */
+    border-radius: 12px;
+    padding: 6px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.statBoxLabel {
+    color: #374151;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+
+}
+
+.statBoxValue {
+    color: #111827;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.statBoxSubValue {
+    color: #16A34A;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+.statsGrid6 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 16px;
+    column-gap: 8px;
+}
+
+.gridItem {
+    display: flex;
+    flex-direction: column;
+    /* gap: 4px; */
+}
+
+.gridLabel {
+    color: #9CA3AF;
+    font-size: 12px;
+}
+
+.gridValue {
+    color: #111827;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Chips */
+.tagChipsRow {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    /* margin-top: 8px; */
+}
+
+
+
+.tagChip {
+    border: 1px solid #D8AD4C80;
+    border-radius: 40px;
+    padding: 4px 10px;
+    color: #111827;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+
+.bottomFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 6px;
+    border-top: 1px solid #E2E8F0;
+    margin-top: auto;
+}
+
+.qaGoldText {
+    color: #C9A74E;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.askNowLink {
+    color: #C9A74E;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.askNowLink:hover {
+    color: #B59131;
+}
+
+.avatarOverlapStack {
+    display: flex;
+    align-items: center;
+}
+
+.overlapAvatar {
+    width: 22px;
+    height: 22px;
+    background-color: #000;
+    color: #FFF;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1.5px solid #FFF;
+    margin-left: -8px;
+}
+
+.overlapAvatar:first-child {
+    margin-left: 0;
+}
+
+@media (max-width: 1200px) {
+    .exclusiveTagWrapperofs {
+        top: 17px;
+        right: -0.2px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .DealsTalkMainContainer {
+        padding: 20px 15px;
+        gap: 0px;
+        /* max-width: 490px; */
+    }
+
+    .allDealsHead p {
+        display: none;
+    }
+
+
+    .DealsTalkCardContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .cardContainer1,
+    .card2Container {
+        width: 100%;
+        /* max-width: 350px; */
+        padding: 20px;
+        /* height: -webkit-fill-available; */
+    }
+
+    .cardIPOsection,
+    .card2IPOsection {
+        flex-wrap: wrap;
+        gap: 8px;
+
+    }
+
+    .IPOheading,
+    .card2IPOtag {
+        width: auto;
+        padding: 4px 8px;
+    }
+
+    .AnthemSection,
+    .card2CompanySection {
+        gap: 12px;
+    }
+
+    .anthemHeading,
+    .card2CompanyName {
+        font-size: 11px;
+    }
+
+    .dealCardContent,
+    .card2Description {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+
+    .ofsHighlightValue {
+        font-size: 15px;
+    }
+
+    .revenueSection,
+    .card2StatsRow {
+        /* flex-direction: column;
+        gap: 8px;
+        height: auto; */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        text-align: flex-start;
+    }
+
+    .Revenue,
+    .card2Stat {
+        width: 100%;
+        flex-direction: column;
+        /* justify-content: space-between; */
+    }
+
+    .merchantBanker {
+        width: auto;
+        padding: 6px 12px;
+    }
+
+    .QandA,
+    .card2QandA {
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .promoter {
+        gap: 8px;
+        height: auto;
+    }
+
+
+
+    .usersIcons {
+        padding-left: 11px;
+    }
+
+    .card2UserIcons {
+        padding-left: 11px;
+    }
+
+    .allDealsHead p {
+        font-size: 16px;
+        margin-top: 3px;
+        line-height: 20px;
+        margin-bottom: 10px;
+        /* display: none; */
+    }
+
+    .allDealsHead span {
+        font-size: 22px;
+    }
+
+    .dealsRow {
+        --bs-gutter-y: 17px;
+        margin: 0px;
+    }
+
+    .exclusiveTagWrapperofs {
+        top: 10px;
+        right: -0.2px;
+    }
+}
+
+/* Mobile Portrait (320px to 480px) */
+
+@media (max-width: 480px) {
+    .card2StatsContainer {
+        gap: 14px;
+    }
+
+    .allDealsHead span {
+        font-size: 18px;
+    }
+
+    .DealsTalkMainContainer {
+        gap: 2px;
+        padding: 15px 16px;
+        max-width: 450px;
+        margin-top: 0;
+
+        /* padding: 20px 16px; */
+    }
+
+    /* .DealsTalkHeading {
+        font-size: 18px;
+    } */
+
+    .DealsTalkCardContainer {
+        gap: 12px;
+    }
+
+    .cardContainer1,
+    .card2Container {
+        width: 100%;
+        padding: 11px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .IPOheading,
+    .card2IPOtag {
+        padding: 2px 6px;
+    }
+
+    /* .HeadingContent,
+    .card2IPOtext {
+        font-size: 8px;
+    } */
+
+    .anthemPicture,
+    .card2CompanyLogo {
+        width: 24px;
+        height: 24px;
+    }
+
+    .anthemHeading,
+    .card2CompanyName {
+        font-size: 15px;
+    }
+
+    .dealCardContent,
+    .card2Description {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    .revenuHeading,
+    .card2StatHeading {
+        font-size: 12px;
+    }
+
+    .priceInRupee,
+    .card2StatValue {
+        font-size: 12px;
+    }
+
+    .bankMerchant {
+        font-size: 9px;
+    }
+
+    .QandAstats,
+    .card2QandAStats {
+        font-size: 12px;
+    }
+
+    .userImages,
+    .card2UserImage {
+        width: 20px;
+        height: 20px;
+    }
+
+    .progressContainer {
+        max-width: 100%;
+    }
+
+    .PriceIncr,
+    .PricePercent {
+        font-size: 10px;
+    }
+
+    .Strong,
+    .monetization {
+        /* max-width: 100px; */
+        font-size: 12px;
+        padding: 3px 10px;
+    }
+
+    .publicpromoter {
+        height: unset;
+    }
+}
+
+/* Very Small Screens (below 320px) */
+
+@media (max-width: 320px) {
+    .DealsTalkMainContainer {
+        padding: 0;
+        gap: 16px;
+    }
+
+    .DealsTalkHeading {
+        font-size: 12px;
+    }
+
+    .cardContainer1,
+    .card2Container {
+        padding: 16px;
+    }
+
+    .HeadingContent,
+    .card2IPOtext {
+        font-size: 7px;
+    }
+
+    .anthemHeading,
+    .card2CompanyName {
+        font-size: 9px;
+    }
+
+    .dealCardContent,
+    .card2Description {
+        font-size: 11px;
+    }
+
+    .revenuHeading,
+    .card2StatHeading {
+        font-size: 9px;
+    }
+
+    .priceInRupee,
+    .card2StatValue {
+        font-size: 10px;
+    }
+
+    .Strong,
+    .monetization {
+        font-size: 8px;
+        padding: 2px 4px;
+    }
+}
+
+/* Private Deal Theme for DealsTalk */
+.privateDealTheme {
+    background-color: #000000 !important;
+    color: white !important;
+}
+
+.privateDealTheme .DealsTalkHeading {
+    color: white !important;
+}
+
+.privateDealTheme .SpanDealsTalkHeading {
+    color: #B59131 !important;
+}
+
+.cardLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    /* height:423px; */
+    cursor: pointer;
+}
+
+.privateCard {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    max-height: 423px;
+}
+
+.privateCard:hover {
+    transform: scale3d(1.02, 1.02, 1);
+    transition: all 0.3s ease-in-out;
+}
+
+.privateCard img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.privateCardOverLay {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.privateCardOverLay .lockImg {
+    margin-left: auto;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-20%, -50%);
+    max-width: 200px;
+}
+
+.loginBtnContainer {
+    background: linear-gradient(136.03deg, #FFF2D0 -8.31%, #8E6B0F 96.65%);
+    padding: 1px;
+    border-radius: 100px;
+    margin: auto auto 15% auto;
+    cursor: pointer;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+.loginBtnNew {
+    color: #C9A74E;
+    font-family: Helvetica Neue;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+    border: 1px solid;
+    padding: 12px 24px;
+    border-radius: 100px;
+    background: black;
+}
+
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+@media (max-width: 480px) {
+    .hideOnMobile {
+        display: none !important;
+    }
+
+    .leftBadges {
+        gap: 4px;
+    }
+
+    .starsBox {
+        gap: 0px;
+        padding: 0px 3px;
+    }
+
+    .ratingNumberBox {
+        min-width: 28px;
+        font-size: 11px;
+        border-radius: 6px;
+    }
+
+    .ratingBadgeNew {
+        border-radius: 8px;
+    }
+
+    .card2Container,
+    .card2Container1 {
+        width: 100%;
+    }
+
+    .starIconSmall {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+.highConvictionBadge {
+    color: #00A63E;
+    background-color: #F0FDF4;
+    border: 1px solid #00A63E;
+    backdrop-filter: blur(12px);
+    border-radius: 6px;
+    padding: 2px 10px 0px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 26px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

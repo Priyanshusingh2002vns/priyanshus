@@ -1,0 +1,428 @@
+.FooterMainContainer {
+    /* max-width: 1920px; */
+    /* max-height: 380px; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 5%;
+    background-color: #1A1401;
+    gap: 10px;
+    align-items: center;
+}
+
+.FooterInnerDiv {
+    width: 100%;
+    max-width: 1800px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+}
+
+.upperFooter {
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.footerImage {
+    max-width: 153px;
+    max-height: 48px;
+    opacity: 1;
+}
+
+.footerRightPart {
+    /* max-width: 1457px; */
+    flex: 1;
+    /* max-height: 239px; */
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid wheat; */
+}
+
+.footerRightPart p {
+    margin: 0;
+}
+
+
+.quickLink {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 86px;
+    max-height: 239px;
+    /* border: 1px solid white; */
+}
+
+.quickLinkHeading {
+    color: #FFFFFF;
+    opacity: 70%;
+}
+
+.quickLinkOptions {
+    max-width: 86px;
+    max-height: 204px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.quickLinks {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 184%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    font-weight: 400;
+    text-decoration: none;
+
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.FundDetailsDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.FundDetailsHeading {
+    color: #FFFFFF;
+    opacity: 70%;
+}
+
+.fundDetailsOptions {
+    width: 333px;
+    height: 169px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.fundDetails {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.OfficeDetails {
+    max-width: 221px;
+    max-height: 87px;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 184%;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.OfficeDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contactRow {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    max-width: 256px;
+}
+
+.locationDetails {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 1.4;
+    white-space: normal;
+    max-width: 100%;
+}
+
+.ContactMainContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.ContactDetailsDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hrLine {
+    max-width: 1800px;
+    height: 0px;
+    /* border: 1px solid #FFFFFF; */
+    color: #FFFFFF1A;
+    opacity: 100%;
+}
+
+.CopyWriteContent {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 10px;
+    line-height: 184%;
+    letter-spacing: 0%;
+    font-weight: 400;
+}
+
+.quickLinks:hover {
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.quickLinks::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 0;
+    background-color: #FFFFFF;
+    transition: width 0.3s ease;
+}
+
+.quickLinks:hover::after {
+    width: 100%;
+}
+
+/* Existing CSS remains unchanged above */
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+    .FooterMainContainer {
+        padding: 40px 8%;
+    }
+
+    .upperFooter {
+        gap: 120px;
+    }
+}
+
+/* Tablet and Small Desktop (768px to 1024px) */
+@media (max-width: 1024px) {
+    .FooterMainContainer {
+        padding: 30px 4%;
+    }
+
+    .upperFooter {
+        gap: 60px;
+    }
+
+    .footerRightPart {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .fundDetailsOptions {
+        width: 280px;
+        height: auto;
+    }
+
+    .quickLink {
+        max-width: 120px;
+    }
+}
+
+/* Mobile Landscape and Small Tablets (481px to 768px) */
+@media (max-width: 768px) {
+    .FooterMainContainer {
+        padding: 20px 3%;
+    }
+
+    .upperFooter {
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+    }
+
+    .footerImage {
+        max-width: 120px;
+        max-height: 38px;
+    }
+
+    .footerRightPart {
+        width: 100%;
+        flex-direction: column;
+        gap: 25px;
+        max-height: none;
+    }
+
+    .quickLink,
+    .FundDetailsDiv,
+    .ContactDetailsDiv {
+        max-width: 100%;
+        width: 100%;
+        gap: 0px;
+
+    }
+
+    .fundDetailsOptions {
+        width: 100%;
+        height: auto;
+    }
+
+    .quickLinkOptions {
+        max-width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .quickLinkOptions .seprate {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        margin-right: 50px;
+        gap: 3px;
+    }
+
+    .quickLinks {
+
+        white-space: nowrap;
+    }
+
+    .contactRow {
+        max-width: 100%;
+    }
+
+    .OfficeDetails {
+        max-width: 100%;
+        max-height: none;
+    }
+}
+
+/* Mobile Portrait (320px to 480px) */
+@media (max-width: 480px) {
+    .FooterMainContainer {
+        padding: 16px 4%;
+        gap: 16px;
+    }
+
+    .FooterInnerDiv {
+        gap: 20px;
+    }
+
+    .upperFooter {
+        gap: 20px;
+    }
+
+    .footerImage {
+        max-width: 100px;
+        max-height: 32px;
+    }
+
+    .footerRightPart {
+        gap: 20px;
+    }
+
+    .quickLinkHeading,
+    .FundDetailsHeading {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .quickLink {
+        gap: 10px;
+    }
+
+    .quickLinkOptions {
+        /* flex-direction: column; */
+        gap: 0px;
+    }
+
+    .quickLinkOptions .seprate {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-right: 50px;
+        gap: 3px;
+    }
+
+    .seprate h4 {
+        margin: 0;
+    }
+
+    .quickLinks {
+        font-size: 13px;
+        line-height: 160%;
+    }
+
+    .fundDetails {
+        font-size: 13px;
+        line-height: 160%;
+    }
+
+    .OfficeDetails {
+        font-size: 13px;
+        line-height: 160%;
+    }
+
+    .locationDetails {
+        font-size: 13px;
+    }
+
+    .contactRow {
+        gap: 8px;
+    }
+
+    .CopyWriteContent {
+        font-size: 9px;
+        line-height: 150%;
+    }
+
+    .hrLine {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Very Small Screens (below 320px) */
+@media (max-width: 360px) {
+    .FooterMainContainer {
+        padding: 12px 3%;
+    }
+
+    .footerImage {
+        max-width: 80px;
+        max-height: 26px;
+    }
+
+    .quickLinks,
+    .fundDetails,
+    .OfficeDetails,
+    .locationDetails {
+        font-size: 12px;
+    }
+
+    .quickLinkHeading,
+    .FundDetailsHeading {
+        font-size: 14px;
+    }
+
+    .quickLinkOptions .seprate {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-right: 30px;
+        gap: 3px;
+    }
+
+    .CopyWriteContent {
+        font-size: 8px;
+    }
+
+    .contactRow {
+        gap: 6px;
+    }
+
+    .ContactMainContainer {
+        gap: 8px;
+    }
+}

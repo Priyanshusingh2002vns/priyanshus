@@ -1,0 +1,297 @@
+.container {
+    position: relative;
+    width: 100%;
+    /* INCREASED: Set to 300vh to give ample scroll room for the longer animation */
+    height: 300vh;
+    perspective: 1200px;
+    background: #fff;
+}
+
+.overlay {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    z-index: 9999;
+    height: 100px;
+    width: 100%;
+    /* transform: translateY(0%); */
+}
+
+
+.stickyWrapper {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 1320px;
+    margin: auto;
+    border-right: 1px solid #E2E8F0;
+    border-left: 1px solid #E2E8F0;
+}
+
+.dealsmattertitle h2 {
+    font-family: Manrope;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 50px;
+    letter-spacing: -1px;
+    text-align: center;
+    color: #3F3F46;
+    text-align: center;
+    font-style: normal;
+    font-weight: 200;
+}
+
+.dealsmattertitle h2 span {
+    color: var(--White-White, #3F3F46);
+    text-align: center;
+    text-shadow: 0 4px 20px rgba(255, 255, 255, 0.60);
+    font-family: Manrope;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 50px;
+    /* 125% */
+    letter-spacing: -1px;
+}
+
+
+.sepratebox {
+    height: 80px;
+    border-top: 1px solid var(--white-white-20, #E2E8F0);
+    border-bottom: 1px solid var(--white-white-20, #E2E8F0);
+    /* position: absolute; */
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+}
+
+.sepratebox2 {
+    height: 80px;
+    /* border-top: 1px solid var(--white-white-20, #E2E8F0); */
+    border-bottom: 1px solid #E2E8F0;
+    /* position: absolute; */
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1;
+}
+
+.seprateboxcontent {
+    height: 78px;
+    width: 100%;
+    background: #fff;
+    border-right: 1px solid #E2E8F0;
+    border-left: 1px solid #E2E8F0;
+}
+
+
+.backgroundVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    /* REMOVED: transition property to ensure smooth scroll-synced updates */
+    will-change: transform, opacity;
+}
+
+
+
+.layer h1,
+.layer .HeadingTagReplace {
+    font-size: 70px;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+}
+
+.layer h1 span:first-child,
+.layer .HeadingTagReplace span:first-child {
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 50%, #D8BF7E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.layer h1 span:last-child,
+.layer .HeadingTagReplace span:last-child {
+    background: linear-gradient(180deg, #fdf7fe 0%, #d8bf7e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.layer p {
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+
+    text-align: center;
+    margin: 1rem auto;
+    opacity: 1;
+    letter-spacing: 0.7px;
+
+}
+
+.firstText {
+    max-width: 35vw;
+}
+
+.secondText {
+    max-width: 51vw;
+    font-size: 18px !important;
+}
+
+.containersp {
+    max-width: 1320px;
+}
+
+@media (max-width: 1400px){
+  .seprateboxcontent,.section,.stickyWrapper{
+    max-width: 1140px;
+    margin: auto;
+  } 
+}
+
+@media (max-width: 1024px) {
+.seprateboxcontent,.stickyWrapper,.containersp{
+    max-width: 954px;
+    margin: auto;
+  } 
+}
+
+@media (min-width: 1441px) {
+  .stickyWrapper,.seprateboxcontent,.containersp {
+    max-width: 1290px;
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 1200px) {
+  .stickyWrapper,.seprateboxcontent,.containersp {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 1025px) {
+  .stickyWrapper,.seprateboxcontent,.containersp {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 991px) {
+
+    .dealsmattertitle h2 {
+        font-size: 32px;
+        line-height: 30px;
+    }
+
+    .dealsmattertitle h2 span {
+        font-size: 32px;
+        line-height: 30px;
+
+    }
+
+    .containersp,
+    .stickyWrapper {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 767px) {
+    .containersp {
+        max-width: 100%;
+    }
+
+    .sepratebox {
+
+        padding: 0 20px;
+    }
+
+    .container {
+
+        padding: 0 20px;
+    }
+
+    .dealsmattertitle h2 {
+        font-size: 28px;
+        line-height: 30px;
+        max-width: 360px;
+    }
+
+    .dealsmattertitle h2 span {
+        font-size: 24px;
+        line-height: 30px;
+
+    }
+
+    .containersp {
+        max-width: 100%;
+    }
+
+
+    .layer h1,
+    .layer .HeadingTagReplace {
+        font-size: 42px;
+    }
+
+    .layer p {
+        font-size: 18px;
+        max-width: 80vw;
+    }
+
+    .firstText {
+        max-width: 80vw;
+    }
+
+    .secondText {
+        max-width: 80vw;
+    }
+
+    .stickyWrapper {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .layer h1,
+    .layer .HeadingTagReplace {
+        font-size: 26px;
+        max-width: 69%;
+    }
+
+    .layer p {
+        font-size: 15px;
+        max-width: 78vw;
+    }
+
+    .firstText {
+        max-width: 90vw;
+    }
+
+    .secondText {
+        max-width: 90vw;
+    }
+
+   
+}

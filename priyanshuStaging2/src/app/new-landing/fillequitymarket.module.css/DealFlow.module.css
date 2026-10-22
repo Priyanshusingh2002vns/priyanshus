@@ -1,0 +1,358 @@
+.section {
+  position: relative;
+  background: #000;
+  padding: 0 10px;
+  /* padding: 180px 0; */
+  overflow: hidden;
+  /* height: calc(100vh - 189px); */
+  max-width: 1320px;
+  margin: auto;
+  border-right: 1px solid #434343;
+  border-left: 1px solid #434343;
+  height: 800px;
+}
+
+.sectionbg {
+  background: #000;
+}
+
+.dealflowcontainer {
+  background: #000;
+  height: 500px;
+  /* border-right: 1px solid #434343;
+    border-left: 1px solid #434343; */
+}
+
+/* FUNNEL IMAGE */
+.funnelWrap,
+.funnelWraptwo {
+  position: relative;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleY(0.35);
+  opacity: 0;
+  transition: transform 1.2s cubic-bezier(.22, .61, .36, 1),
+    opacity 0.6s ease;
+  z-index: 1;
+}
+
+.colcontentbottom {
+  height: 76px;
+}
+
+.dealflowheadingcontainer {
+  background: #000;
+  border-top: 1px solid #434343;
+}
+
+.dealflowheading {
+  background: radial-gradient(50% 50% at 50% 50%, #FFF 0%, #D8BF7E 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.44px;
+  max-width: 1320px;
+  margin: auto;
+  padding-top: 80px;
+  padding-bottom: 57px;
+  border-right: 1px solid #434343;
+  border-left: 1px solid #434343;
+}
+
+.funnelWrap.show {
+  transform: translate(-50%, -50%) scaleY(1);
+  opacity: 1;
+}
+
+.funnelWraptwo.show {
+  transform: translate(0%, 0%) scaleY(1);
+  opacity: 1;
+}
+
+.funnelWrap img {
+  width: 100%;
+  max-width: 90vw;
+}
+
+/* CONTENT */
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0px;
+  padding: 0 53x;
+  height: 100%;
+}
+
+/* COLUMNS */
+.col {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* justify-content: space-between; */
+  gap: 16px;
+  border-left: 1px solid rgba(219, 219, 219, 0.10);
+  padding-left: 16px;
+  max-width: 275px;
+
+}
+
+.col:last-child {
+  border-right: 1px solid rgba(219, 219, 219, 0.10);
+  max-width: 100%;
+  padding-right: 20px;
+}
+
+.col.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* TEXT */
+.label,
+.percentage {
+  display: block;
+  color: #FFF;
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.percentage {
+  display: none;
+}
+
+.col h3 {
+  color: var(--White-White, #FFF);
+  font-family: Manrope;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  height: 58px;
+}
+
+.col p {
+  color: var(--White-White, #FFF);
+  font-family: Manrope;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.7;
+}
+
+.funnelWraptwo {
+  display: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1399px) {
+
+
+  .dealflowcontainer {
+    background: #000;
+    height: 500px;
+    max-width: 100%;
+  }
+}
+
+
+@media (max-width: 1400px){
+  .dealflowheading,.section{
+    max-width: 1140px;
+  } 
+}
+
+@media (max-width: 1300px) {
+  .funnelWrap img {
+    max-width: 92vw;
+  }
+  .section{
+    padding: 0 4px;
+  }
+}
+@media (min-width: 1441px) {
+  .dealflowheading ,.section{
+    max-width: 1290px;
+  }
+}
+
+
+@media (max-width: 1440px) and (min-width: 1200px) {
+  .dealflowheading ,.section{
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 1025px) {
+  .dealflowheading ,.section{
+    max-width: 1000px;
+  }
+}
+
+@media (min-width: 992px){
+  .dealflowheading,.section{
+    /* max-width: 1140px; */
+  }
+}
+
+@media (max-width: 1200px) {
+  .funnelWrap img {
+
+    max-width: 100%;
+  }
+
+  .col h3 {
+    font-size: 22px;
+  }
+
+  .col p {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 991px) {
+  .colborder {
+    border-top: 1px solid rgba(219, 219, 219, 0.10);
+  }
+
+  .colborder:last-child {
+    border-bottom: 1px solid rgba(219, 219, 219, 0.10);
+  }
+
+  .colborder:first-child {
+    border-top: unset;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 29px;
+  }
+
+  .funnelWrap {
+    display: none;
+  }
+
+  .dealflowheading {
+    font-size: 38px;
+    max-width: 954px;
+    margin: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding: 40px 20px;
+  }
+
+  .col p {
+    font-size: 14px;
+  }
+
+  .label {
+    display: none;
+  }
+
+  .percentage {
+    display: block;
+  }
+
+  .col h3 {
+    height: unset;
+    margin: 0;
+  }
+
+  .col {
+    border-left: unset;
+    height: 230px;
+    padding-top: 16px;
+  }
+
+  .col:last-child {
+    border-right: unset;
+    max-width: 275px;
+  }
+
+  .colcontentbottom {
+    height: unset;
+  }
+
+  .section {
+    height: 100%;
+    max-width: 954px;
+  }
+
+  .dealflowcontainer {
+    height: 100%;
+  }
+
+  .funnelWraptwo {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    left: unset;
+  }
+
+  .content {
+    padding: 0;
+  }
+
+
+}
+@media (max-width: 1024px) and (min-width: 993px) {
+  .dealflowheading , .section{
+    max-width: 960px;
+  }
+}
+
+@media  (max-width: 993px) and (min-width: 768px){
+  .dealflowheading , .section{
+    max-width: 720px;
+  }
+}
+
+
+
+
+@media (max-width: 767px) {
+  .dealflowheading {
+    font-size: 32px;
+    padding-top: 0;
+    max-width: 720px;
+    /* border: unset; */
+  }
+
+  .dealflowheadingcontainer {
+    padding: 0 20px;
+  }
+
+  /* .section {
+    border: unset;
+  } */
+  .sectionbg {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px){
+  .dealflowheading{
+    padding: 30px 20px;
+    font-size: 28px;
+  }
+} 
+
+@media (max-width: 375px) {
+  .col {
+    max-width: 258px !important;
+  }
+}

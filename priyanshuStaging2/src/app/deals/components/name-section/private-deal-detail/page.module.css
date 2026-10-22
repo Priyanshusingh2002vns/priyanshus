@@ -1,0 +1,237 @@
+.privateDealDetails {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+.respectedDetails {
+    width: 62%;
+}
+
+.section {
+    margin-bottom: 24px;
+    border-radius: 32px;
+    background: #171717;
+    box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.06);
+}
+
+.section:last-child {
+    margin-bottom: 0 !important;
+}
+
+.detailslabel {
+    color: var(--White-White, #FFF);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    padding: 28px 0 0 32px;
+}
+
+.respectedMenu {
+    flex: 1;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+    height: fit-content;
+}
+
+.respectedMenu ul {
+    list-style: none;
+    padding: 0;
+    padding-left: 42px;
+    margin: 0;
+    position: relative;
+}
+
+
+.respectedMenu ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0.5rem;
+    width: 6px;
+    border-radius: 100px;
+    background: #27272A;
+    height: 100%;
+    z-index: -1;
+}
+
+.respectedMenu ul::after {
+    content: "";
+    position: absolute;
+    top: var(--indicator-top, 0);
+    left: 0.5rem;
+    width: 6px;
+    height: var(--indicator-height, 40px);
+    border-radius: 3px;
+    background: #fff;
+    border-radius: 100px;
+    /* mimic SVG glow layering */
+    box-shadow:
+        0 0 10px 0px #facc15,
+        /* outer glow (matches stdDeviation=20) */
+        0 0 30px 0px #facc15,
+        /* medium blur (matches stdDeviation=15) */
+        0 0 30px 0px #facc15,
+        /* duplicate like your SVG layers */
+        0 0 10px 0px #facc15;
+    /* tight inner glow (stdDeviation=2) */
+    transition: top 0.25s ease, height 0.25s ease;
+}
+
+
+
+.respectedMenu li {
+    padding: 10px 0;
+    cursor: pointer;
+    color: #A1A1AA;
+    /* font-family: "Helvetica Neue"; */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: capitalize;
+    transition: color 0.3s, font-weight 0.3s;
+    margin-bottom: 12px;
+}
+
+.respectedMenu li:last-child {
+    margin-bottom: 0;
+}
+
+/* keyframes: webkit + standard */
+/* @-webkit-keyframes glow {
+    from {
+        text-shadow:
+            0 0 3px rgba(255, 255, 255, 1),
+            0 0 6px rgba(252, 190, 45, 0.9),
+            0 0 12px rgba(252, 190, 45, 0.6),
+            0 0 18px rgba(252, 190, 45, 0.4);
+    }
+
+    to {
+        text-shadow:
+            0 0 6px rgba(255, 255, 255, 1),
+            0 0 12px rgba(252, 190, 45, 1),
+            0 0 18px rgba(252, 190, 45, 0.8),
+            0 0 28px rgba(252, 190, 45, 0.6);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow:
+            0 0 3px rgba(255, 255, 255, 1),
+            0 0 6px rgba(252, 190, 45, 0.9),
+            0 0 12px rgba(252, 190, 45, 0.6),
+            0 0 18px rgba(252, 190, 45, 0.4);
+    }
+
+    to {
+        text-shadow:
+            0 0 6px rgba(255, 255, 255, 1),
+            0 0 12px rgba(252, 190, 45, 1),
+            0 0 18px rgba(252, 190, 45, 0.8),
+            0 0 28px rgba(252, 190, 45, 0.6);
+    }
+} */
+
+/* .respectedMenu li.active {
+  color: #fff;
+  text-shadow: 
+    0 0 15px rgba(252, 190, 45, 0.7),
+    0 0 30px rgba(252, 190, 45, 0.5),
+    0 0 45px rgba(252, 190, 45, 0.3),
+    0 0 60px rgba(252, 190, 45, 0.15);
+} */
+
+.publicDealDetails{
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+.publicDealDetails .section{
+  
+background: #FFF;
+
+/* Base Shadow */
+box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.06);
+   
+}
+
+.publicDealDetails .detailslabel{
+    color: #000;
+}
+
+.publicDealDetails .respectedMenu li{
+    color: #A1A1AA;
+}
+
+.publicDealDetails .respectedDetails li.active span{
+    color: #C9A74E !important;
+}
+
+.publicDealDetails .respectedMenu ul::before{
+    background-color: #E4E4E7;
+}
+
+.publicDealDetails .respectedMenu ul::after{
+    background-color: #C9A74E;
+    box-shadow: none;
+}
+
+.publicDealDetails .respectedMenu li.active span {
+  color: #C9A74E;
+  text-shadow: none;
+  animation: none;
+}
+
+.privateDealDetails .respectedMenu li.active span {
+  position: relative;
+  color: #fff; /* main text */
+}
+
+/* Layer 1 */
+.privateDealDetails .respectedMenu li.active span::before {
+  content: attr(data-label);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #FCBE2D;
+  filter: blur(6px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Layer 2 */
+.privateDealDetails .respectedMenu li.active span::after {
+  content: attr(data-label);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #FCBE2D;
+  filter: blur(26px);
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* Extra Layer using text-shadow (instead of 3rd span) */
+.privateDealDetails .respectedMenu li.active span {
+  text-shadow: 0 0 5px rgba(252, 190, 45, 0.9);
+}
+
+@media(max-width: 1024px){
+    .respectedDetails{
+        width: 70%;
+    }
+
+
+}
+
+@media(max-width: 920px) {
+    .respectedMenu{
+        display: none;
+    }
+}

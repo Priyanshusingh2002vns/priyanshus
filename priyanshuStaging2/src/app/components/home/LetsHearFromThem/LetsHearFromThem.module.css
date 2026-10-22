@@ -1,0 +1,352 @@
+.testimonailMainContainer {
+    display: flex;
+    flex-direction: column;
+    /* height: 451px; */
+    /* max-width: 1020px;
+    width: 100%; */
+
+    /* width: 68vw; */
+    /* max-width: 150vw; */
+    /* margin: 0 auto; */
+    gap: 20.72px;
+    padding-bottom: 58px;
+}
+
+.headingSection {
+    height: 37px;
+    width: 100%;
+    letter-spacing: 0%;
+    color: #1F2937;
+    font-family: "Helvetica Neue";
+    font-size: 25.898px;
+    font-weight: 300;
+    /* line-height: 36.257px; */
+}
+
+.videoTestimonialSection {
+    height: 393px;
+    width: 100%;
+    gap: 20px;
+    /* width: 100%; */
+    /* overflow-x: auto; */
+    /* border: 1px solid black; */
+    display: flex;
+    position: relative;
+    /* overflow-y: auto;          */
+    scrollbar-width: none;
+}
+
+.videoTestimonialSection::-webkit-scrollbar {
+    display: none;
+    /* hide scrollbar in Chrome/Safari */
+}
+
+.testimonialSwiper {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.testimonialSwiper .swiper-wrapper {
+    overflow: visible;
+}
+
+.customNextArrow {
+    position: absolute;
+    right: -11px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    cursor: pointer;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    pointer-events: auto;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.customNextArrow:hover {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.customNextArrow:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.testimonialCard {
+    /* width: 450px; */
+
+    /* height: 393px; */
+    /* border: 1px solid black; */
+    border-radius: 0 25.9px 25.9px 25.9px;
+    background-color: #F7F6F2;
+    display: flex;
+    align-items: stretch;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    height: -webkit-fill-available;
+    /* min-width: 450px;  */
+    /* flex-shrink: 0; */
+}
+
+.testimonialCard>div {
+    flex: 1;
+}
+
+.testimonialVideo {
+    height: 300px;
+    /* width: 170px; */
+    /* border: 1px solid black; */
+}
+
+.videoTitle {
+    /* height: 105px; */
+    /* width: 120px; */
+    position: absolute;
+    top: 260px;
+    left: 240px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.titleBy {
+
+    /* width: 105px; */
+    position: absolute;
+    top: 460px;
+    left: 240px;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000000;
+}
+
+.spanTitleBy {
+    color: #6B7280;
+}
+
+.testimonialvideo2 {
+    width: 240px;
+    height: 393px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    object-fit: cover;
+    border-bottom-left-radius: 20px;
+    flex: 0 0 240px;
+}
+
+.titleContainer {
+    /* height: 393px; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 23px;
+    padding-bottom: 0;
+    padding-top: 35px;
+    min-width: 0;
+}
+
+.videoTitle2 {
+    /* width: min-content; */
+    /* height: 165px; */
+    /* position: relative; */
+    top: 35px;
+    font-size: 21px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000000;
+    left: 21px;
+    font-weight: 300;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.titleBy2 {
+    /* width: 105px; */
+    /* width: 105px; */
+
+    /* position: relative; */
+    top: 150px;
+    left: 21px;
+    font-size: 18.129px;
+    line-height: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+
+}
+
+.spanTitleBy2 {
+    color: rgba(0, 0, 0, 0.40);
+
+    color: rgba(0, 0, 0, 0.40);
+    text-transform: uppercase;
+
+}
+
+.thumbnailWrapper {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+
+.thumbnailImage {
+    width: 100%;
+    max-width: 240px;
+    max-height: 393px;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    object-fit: cover;
+    border-radius: 0 0 0 25.9px;
+}
+
+.playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 0 0 5px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    backdrop-filter: blur(4px);
+}
+
+@media (max-width: 1500px) {
+    .videoTitle2 {
+        font-size: 21px;
+    }
+
+    .testimonialvideo2 {
+        width: 200px;
+        flex: 0 0 200px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .videoTitle2 {
+        font-size: 20px;
+    }
+
+    .testimonialvideo2 {
+        width: 180px;
+        flex: 0 0 180px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .testimonialCard {
+        flex-direction: column;
+    }
+
+    .testimonialvideo2 {
+        width: 100%;
+        height: auto;
+        max-height: 304px;
+        flex: 0 0 auto;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .titleContainer {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .customNextArrow {
+        right: 5px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .customNextArrow svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .thumbnailImage {
+        width: -webkit-fill-available;
+        border-radius: unset;
+        max-width: unset;
+
+    }
+
+    .testimonialCard {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 480px) {
+    .headingSection {
+        font-size: 20px;
+        height: unset;
+    }
+
+    .thumbnailImage {
+        height: 304px;
+    }
+
+    .testimonailMainContainer {
+        padding: 0;
+        gap: 16px;
+        padding-bottom: 32px;
+    }
+
+    .testimonialCard {
+        height: auto;
+    }
+
+    .testimonialvideo2 {
+        width: 100%;
+        height: auto;
+        max-height: 304px;
+        flex: 0 0 auto;
+    }
+
+    .videoTitle2 {
+        font-size: 21px;
+    }
+
+    .titleBy2 {
+        width: unset;
+        font-size: 14px;
+        margin-bottom: 13px;
+    }
+
+    .videoTestimonialSection {
+        height: unset;
+    }
+
+    .customNextArrow {
+        right: 5px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .customNextArrow svg {
+        width: 18px;
+        height: 18px;
+    }
+}

@@ -1,0 +1,234 @@
+.container {
+    display: flex;
+    max-width: 1330px;
+    justify-content: space-between;
+    padding: 120px 16px;
+    width: 100%;
+    margin: auto;
+    min-height: 100vh;
+    background-color: #111;
+    /* Dark background as per your image */
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.leftSection {
+    flex: 0 0 460px;
+    position: sticky;
+    top: 100px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.leftImageCard {
+    background-color: #1A1A1A;
+    border-radius: 40px;
+    border: 0.5px solid rgba(171, 171, 171, 0.40);
+    padding: 54px 32px 35px 32px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.leftImage {
+    position: relative;
+    border-radius: 50%;
+    margin: 0 auto 27px auto;
+    max-width: 260px;
+    width: 100%;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* keeps animation inside the circle */
+  }
+  
+  .leftImage::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('/landing-asset/SigninEllipse.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* border-radius: 50%; */
+    animation: scaleUp 2s ease-in-out infinite;
+  }
+  
+  /* 🔁 Animation keyframes */
+  @keyframes scaleUp {
+    0%, 100% {
+      transform: scale(1);
+      filter: blur(0);
+    }
+    50% {
+      transform: scale(1.05);
+      filter: blur(1px);
+    }
+  }
+  
+
+.leftImage img {
+    width: 200px;
+    height: 200px;
+}
+
+.signUpText h3, .Heading3TagReplace {
+    margin: 0;
+    color: var(--White-White, #FFF);
+    text-align: left;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px;
+    /* 150% */
+    letter-spacing: -0.32px;
+    margin-bottom: 16px;
+}
+
+.signUpText p {
+    color: var(--Zinc-400, #A1A1AA);
+    font-family: "Helvetica Neue";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 175% */
+    margin-bottom: 0;
+}
+
+
+.rightSection {
+    max-width: 765px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.processHeader {
+    font-size: 0.9em;
+    color: #999;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.rightSection h1, .rightSection .HeadingTagReplace {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 74px;
+    letter-spacing: -0.64px;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 60px;
+    max-width: 670px;
+    width: 100%;
+    background: linear-gradient(rgb(255, 255, 255) 0%, rgb(249, 246, 235) 25%, rgb(241, 225, 166) 60%, rgb(216, 191, 126) 85%) text;
+}
+
+.stepCard {
+    border-radius: 20px;
+    border: 0.5px solid rgba(171, 171, 171, 0.40);
+    background: #1A1A1A;
+    margin-bottom: 60px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    padding: 24px;
+}
+
+.stepCard:last-child {
+    margin-bottom: 0;
+}
+
+.cardImagePlaceholder {
+    width: 100%;
+    background-color: #333;
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+}
+
+.cardImagePlaceholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cover the area, cropping if necessary */
+    display: block;
+}
+
+.cardContent {
+    padding-top: 16px;
+}
+
+.cardContent h2 {
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 28px */
+    margin-bottom: 14px;
+}
+
+.cardContent p {
+    color: #FFF;
+    font-family: "Helvetica Neue";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    margin-bottom: 0;
+}
+
+@media (max-width:1200px) {
+    .leftSection {
+        flex: 1 1 400px;
+        margin-right: 20px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .leftSection {
+        display: none;
+    }
+
+    .container {
+        padding: 60px 16px;
+    }
+
+    .rightSection h1, .rightSection .HeadingTagReplace {
+        font-size: 48px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width:480px) {
+    .rightSection h1, .rightSection .HeadingTagReplace {
+        font-size: 32px;
+        text-align: center;
+        line-height: 36px;
+    }
+
+    .processHeader {
+        justify-content: center;
+    }
+    .cardContent h2{
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    .cardContent p{
+        font-size: 14px;
+    }
+    .stepCard{
+        padding: 20px;
+        margin-bottom: 24px;
+    }
+}

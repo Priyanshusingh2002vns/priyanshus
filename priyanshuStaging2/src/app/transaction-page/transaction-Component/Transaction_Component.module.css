@@ -1,0 +1,749 @@
+.container {
+  width: 50%;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0 auto;
+  display: contents;
+  padding: 30px;
+  /* height: 36px; */
+  background-color: rgba(255, 255, 255, 1);
+}
+
+
+.subcardcont {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.subcardcont::before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 15px; /* align with your circles */
+  width: 2px;
+  height: 100%;
+  background-color: rgba(229, 231, 235, 1);
+  z-index: 0;
+}
+.meetingLinkItem{
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.meetingHeadTime{
+  display: flex;
+  flex-direction: column;
+  /* gap: 1px; */
+  justify-content: space-between;
+}
+
+/* Hide the line after the last task */
+.taskStatusCont:last-child::after {
+  content: "";
+    position: absolute;
+    left: 10px;
+    bottom: -4px;
+    width: 2px;
+    height: calc(100% - 20px);
+    background-color: #fff;
+    z-index: 1;
+}
+
+.detailWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  /* gap: ; */
+}
+
+.heading {
+  color: rgba(31, 41, 55, 1);
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 0;
+
+
+}
+
+.hr {
+  border: none;
+  background-color: rgba(229, 231, 235, 1);
+  height: 1px;
+  margin-top: 15px;
+  margin-bottom: 24px;
+}
+
+.companyLogo {
+  border-radius: 100%;
+}
+
+.topContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: rgba(217, 211, 195, 0.13);
+  border-radius: 12px;
+  align-items: center;
+}
+
+.status {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.shownInterest {
+  font-family: 'Helvetica Neue';
+  font-weight: 500;
+  font-style: Normal;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #B59131;
+  margin-top: 4px
+}
+
+.date {
+  font-family: 'Helvetica Neue';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #242424;
+  margin-top: 4px
+}
+
+.companyInfo {
+  display: flex;
+  gap: 10px;
+}
+
+.investmentDetails {
+  display: flex;
+  justify-content: space-between;
+}
+
+.investmentDetailsSubItem {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+}
+
+.investmentDetailsSubItem p {
+  margin: 0;
+}
+
+.label {
+  font-family: "Helvetica Neue";
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #6B7280;
+}
+
+.value {
+  font-family: "Helvetica Neue";
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #1F2937;
+  word-wrap: break-word;
+}
+
+.pendingValue{
+  color: var(--Slate-500, #64748B);
+font-size: 14px !important;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 125% */
+}
+
+.viewButton {
+  outline: none;
+  border: 1px solid #B59131;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 1;
+  padding: 12px 16px;
+  background-color: transparent;
+}
+.viewButton span {
+  margin-top: 3px;
+  font-family: 'Helvetica Neue';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  vertical-align: middle;
+  color: #B59131;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 20px;
+}
+
+.detailCard{
+  gap: 16px !important;
+  padding: 24px !important;
+}
+.card {
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(229, 231, 235, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  background: rgba(236, 236, 240, 1);
+  color: rgba(36, 36, 36, 1);
+  /* width: 28px; */
+  padding: 6px 13px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 12px;
+
+}
+
+/* .companyLogo{
+    display: flex;
+    flex-direction: column;
+  } */
+
+.img,
+.company {
+  display: inline-block;
+
+}
+
+.img {
+  margin-right: 10px;
+}
+
+
+.company {
+  font-family: 'Helvetica Neue';
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin: 0;
+
+}
+
+.subInfo {
+  display: flex;
+  gap: 10px;
+}
+
+.subInfo span {
+  margin: 0;
+  font-family: 'Helvetica Neue';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #1F2937;
+}
+
+.companyInfoHeader{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4px;
+}
+.description {
+  color: #6B7280;
+  font-size: 16px;
+  line-height: 17px;
+  font-weight: 300;
+  font-style: light;
+  margin: unset;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  /* margin-top: 10px; */
+}
+
+.details div {
+  flex: 1;
+}
+
+.details strong {
+  font-size: 12px;
+  font-weight: 400;
+  color: #6B7280;
+  display: block;
+  /* margin-bottom: 4px; */
+}
+
+.details p {
+  font-size: 13px;
+  font-weight: 400;
+  color: #1F2937;
+  margin: unset;
+}
+
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid #44319745;
+  padding: 6px 12px;
+  font-weight: 500;
+  border-radius: 40px;
+  font-size: 12px;
+  color: #000000;
+  font-weight: 400;
+
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.shownInterestDetails {
+  font-family: "Helvetica Neue";
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #B59131;
+
+}
+
+.dateDetails {
+  font-family: "Helvetica Neue";
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #242424;
+}
+
+.buttons button:hover {
+  background: #eee;
+}
+
+.statusBox {
+  background: #B5913121;
+  /* border: 1px solid #ddd; */
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.companyName {
+  font-family: "Helvetica Neue";
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin: 0;
+  color: #1F2937;
+
+}
+
+.companyInfoDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.categoryForDetails {
+  display: flex;
+  gap: 10px;
+  font-family: "Helvetica Neue";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+
+  line-height: 1;
+  letter-spacing: 0%;
+  margin-top: 0;
+  margin-bottom: 0;
+
+}
+
+.detailsGrid {
+  display: flex;
+  justify-content: space-between;
+  /* width: 50%; */
+
+}
+
+.detailsGrid .detail {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detailsGrid .detail p {
+  margin: 0;
+}
+
+.detail .label {
+  font-family: 'Helvetica Neue';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #6B7280;
+}
+
+.detail .value {
+  font-family: 'Helvetica Neue';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #1F2937;
+}
+
+
+.tastCard {
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(229, 231, 235, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hrr {
+  border: none;
+  background-color: rgba(229, 231, 235, 1);
+  height: 1px;
+}
+
+.verticalLineCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.verticalLine {
+  position: absolute;
+  top: 0;
+  /* border: none; */
+  background-color: rgba(229, 231, 235, 1);
+  height: 100%;
+  width: 1px;
+  z-index: 9;
+}
+
+.mainSubCont {
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px solid #E2E8F0;
+  padding-left: 32px;
+
+}
+
+.subcardcont {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  /* border-left: 1px solid gray; */
+}
+
+.taskStatusCont {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 50px;
+  left: -11px;
+  top: 50px;
+  z-index: 19;
+  /* align-items: center; */
+
+}
+
+.updateTime {
+  font-family: 'Helvetica Neue';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #9CA3AF;
+}
+.tastHead{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 6px;
+}
+
+.taskStatusContRight {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.mainDate {
+  position: absolute;
+  top: 0;
+  left: -15px;
+  min-width: 64px;
+  background-color: #F8FAFC;
+  padding: 7.5px 12px 4.5px 12px;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  /* border-radius: 12px; */
+
+  font-family: "Helvetica Neue";
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #9CA3AF;
+  z-index: 12;
+}
+
+.taskStatusDetails {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 10px;
+}
+
+.taskStatusDetails p {
+  margin: 0;
+}
+.docDetailsItme{
+  width: 100% !important;
+}
+
+.taskStatusDetailsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.taskStatusDetailsItem .label {
+  font-family: "Helvetica Neue";
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #64748B;
+
+}
+
+.link {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 4px;
+  color: #B59131;
+  align-items: center;
+}
+
+.docCont {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.docName {
+  color: #B59131;
+  text-decoration: none;
+  margin-top: 3px;
+}
+
+.taskStatusDetailsItem .value {
+  font-family: "Helvetica Neue";
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #1E293B;
+}
+
+.tastHeadName {
+  font-family: 'Helvetica Neue';
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0%;
+
+  color: #1F2937;
+}
+
+
+
+
+/* 📱 Mobile view */
+@media (max-width: 768px) {
+  .taskStatusDetailsItem{
+    width: 100%;
+  }
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  /* .heading {
+
+  display: none;
+  } */
+
+  .grid {
+    grid-template-columns: 1fr;
+    /* sab card ek line me */
+  }
+
+  .details {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .buttons {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .buttons button {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  
+
+  .taskStatusDetails {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+}
+
+@media (max-width: 580px) {
+  .heading {
+
+    display: none;
+  }
+
+  .hr {
+    display: none;
+  }
+ 
+  .taskStatusDetails {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .taskStatusDetailsItem .value{
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+
+  .detail .value{
+    font-size: 14px;
+  }
+
+
+  .shownInterestDetails{
+    font-size: 16px;
+  }
+  .dateDetails{
+    font-size: 16px;
+  }
+  .heading {
+    font-size: 20px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .meetingLinkItem{
+
+    flex-direction: column !important;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .company {
+    font-size: 13px;
+  }
+ 
+
+  .taskStatusDetails {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+}

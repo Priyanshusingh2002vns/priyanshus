@@ -1,0 +1,358 @@
+.container {
+  margin-top: 24px;
+  border-top: 1px solid #E5E7EB;
+  padding-top: 24px;
+}
+
+.privateContainer {
+  margin-top: 32px;
+  border-top: 1px solid #3F3F46;
+  padding-top: 28px;
+}
+
+.titleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #222222;
+  margin: 0;
+}
+
+.privateTitle {
+  color: #FFFFFF;
+}
+
+.chevronIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.imagesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.imageCard {
+  width: 180px;
+  height: 150px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+}
+
+.privateImageCard {
+  background-color: #18181B;
+  border: 1px solid #3F3F46;
+}
+
+.investorImageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.investorImage {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Modal / Lightbox Full View */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modalContent {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullImage {
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  background: #ffffff;
+  padding: 12px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: -46px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.closeBtn:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.05);
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+  z-index: 2;
+}
+
+.navBtn:hover {
+  background: rgba(0, 0, 0, 0.85);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.prevBtn {
+  left: -56px;
+}
+
+.nextBtn {
+  right: -56px;
+}
+
+.imageCounter {
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #E5E7EB;
+  font-size: 13px;
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 4px 14px;
+  border-radius: 12px;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   Observations & Insights Section (Matching Financial Highlights / keyfinancials.css)
+   ========================================================================== */
+.observationsCard {
+  background: #B591310D;
+  border: 1px solid #B5913126;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.privateObservationsCard {
+  background: #B591310D;
+  border: 1px solid #B5913126;
+}
+
+.observationsTitle {
+  color: var(--Gray-800, #1F2937);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.privateObservationsTitle {
+  color: #FFFFFF !important;
+}
+
+/* Rich Text HTML Observation Styling matching Financial Highlights */
+.observationsHtmlContent p {
+  word-wrap: anywhere;
+  /* margin: 0 !important; */
+  padding: 0 !important;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.observationsHtmlContent h1,
+.observationsHtmlContent h5 {
+  font-size: 18px;
+}
+
+.observationsHtmlContent h2,
+.observationsHtmlContent h6 {
+  font-size: 14px;
+}
+
+.observationsHtmlContent p {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.observationsHtmlContent li,
+.observationsHtmlContent ul,
+.observationsHtmlContent ol {
+  margin-bottom: 0px;
+}
+
+/* Fallback Observations List matching Financial Highlights */
+.observationsList {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.observationsList li {
+  color: var(--Slate-600, #334155);
+  font-size: 14px;
+  line-height: 160%;
+  font-weight: 300;
+  /* margin-bottom: 8px; */
+}
+
+.observationsList li::marker {
+  color: #334155;
+}
+
+.observationsList li:last-child {
+  margin-bottom: 0;
+}
+
+.privateObservationsList li {
+  color: #D1D5DB !important;
+}
+
+@media (max-width: 768px) {
+  .container,
+  .privateContainer {
+    margin-top: 24px;
+    padding-top: 20px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .imagesGrid {
+    gap: 12px;
+  }
+
+  .imageCard {
+    width: 150px;
+    height: 120px;
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .modalOverlay {
+    padding: 16px;
+  }
+
+  .closeBtn {
+    top: -42px;
+    right: 0;
+    width: 34px;
+    height: 34px;
+  }
+
+  .navBtn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .prevBtn {
+    left: 8px;
+  }
+
+  .nextBtn {
+    right: 8px;
+  }
+
+  .observationsCard {
+    padding: 16px 18px;
+    border-radius: 12px;
+  }
+
+  .observationsTitle {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+}

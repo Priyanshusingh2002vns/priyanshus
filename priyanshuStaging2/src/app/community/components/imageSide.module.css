@@ -1,0 +1,250 @@
+.Carouselimage {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  max-width: 628px !important;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.CarouselimageContainer {
+  height: 100%;
+  width: 100%;
+  max-width: 628px !important;
+}
+
+.sliderImg {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  border-radius: 18px;
+  display: block;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.imageSlideWrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  display: block;
+}
+
+.zoomable {
+  cursor: zoom-in;
+}
+
+.feedItem {
+  cursor: pointer;
+}
+
+.zoomable:hover .sliderImg {
+  filter: brightness(0.96);
+}
+
+.zoomBadge {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.imageSlideWrapper:hover .zoomBadge {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fullscreen Lightbox Modal */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: modalFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modalContent {
+  position: relative;
+  max-width: 94vw;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: modalScaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fullImage {
+  max-width: 92vw;
+  max-height: 84vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.8);
+  user-select: none;
+  background: #0f172a;
+}
+
+.fullVideo {
+  max-width: 92vw;
+  max-height: 84vh;
+  border-radius: 12px;
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.8);
+}
+
+.modalHeaderBar {
+  position: absolute;
+  top: -48px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
+}
+
+.iconBtn {
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.iconBtn:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.08);
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(18, 18, 18, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.navBtn:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.prevBtn {
+  left: -60px;
+}
+
+.nextBtn {
+  right: -60px;
+}
+
+.imageCounter {
+  margin-top: 14px;
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #f1f5f9;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 14px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .modalOverlay {
+    padding: 14px;
+  }
+
+  .modalHeaderBar {
+    top: 12px;
+    right: 12px;
+  }
+
+  .prevBtn {
+    left: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .nextBtn {
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .fullImage {
+    max-height: 80vh;
+  }
+
+  .zoomBadge {
+    opacity: 1; /* always show subtle badge on mobile */
+    font-size: 11px;
+    padding: 4px 8px;
+    bottom: 10px;
+    right: 10px;
+  }
+}

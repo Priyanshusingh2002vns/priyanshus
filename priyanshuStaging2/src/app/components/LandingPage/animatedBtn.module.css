@@ -1,0 +1,231 @@
+.wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    z-index: 10;
+    margin-top: 32px;
+}
+
+
+/* === Border Light Effects === */
+.borderBlur {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: calc(100% + 9px);
+    width: calc(100% + 9px);
+    transform: translate(-50%, -50%);
+    border-radius: 9999px;
+    will-change: transform;
+}
+
+.border {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.borderLayer1 {
+    opacity: 1;
+}
+
+.borderLayer2 {
+    opacity: 0;
+    transform: translate(-50%, -50%) scaleX(-1);
+    border-radius: 10803.646px;
+}
+
+/* === Main Button === */
+
+
+.button {
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 64px;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: -0.015em;
+    color: #271F04;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: #d1d1d1;
+    /* Updated transition to include box-shadow */
+    transition: all 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    cursor: pointer;
+    filter: unset;
+}
+
+.button:hover {
+    background: #e0e0e0;
+    /* Optional: slightly enhance the shadow on hover */
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* === Glow Animations === */
+.glowWrapper {
+    position: absolute;
+    display: flex;
+    width: 204px;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    /* Corrected transform for initial centering and allowing dynamic translateX */
+    transform: translate(0, -50%);
+    z-index: -1;
+    transition: transform 0.2s ease;
+    pointer-events: none;
+}
+
+.glow1 {
+    position: absolute;
+    top: 50%;
+    height: 121px;
+    width: 121px;
+    transform: translateY(-50%);
+    background: radial-gradient(50% 50% at 50% 50%,
+            #fffff5 3.5%,
+            #ffaa81 26.5%,
+            #ffda9f 37.5%,
+            rgba(255, 170, 129, 0.5) 49%,
+            rgba(210, 106, 58, 0) 92.5%);
+}
+
+.glow2 {
+    position: absolute;
+    top: 50%;
+    height: 103px;
+    width: 204px;
+    transform: translateY(-50%);
+    background: radial-gradient(43.3% 44.23% at 50% 49.51%,
+            #fffff7 29%,
+            #fffacd 48.5%,
+            #f4d2bf 60.71%,
+            rgba(214, 211, 210, 0) 100%);
+    filter: blur(5px);
+}
+
+
+.text {
+    position: relative;
+    z-index: 1;
+    color: #271F04;
+}
+
+.icon {
+    height: 9px;
+    width: 17px;
+    margin-left: 4px;
+    color: #271F04;
+}
+
+.btnIcon {
+    margin-left: 5px;
+}
+
+.btnWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainBtnWrap {
+    overflow: hidden;
+    padding: 8px 0px;
+}
+
+/* .circularAnimation {
+    color: #A1A1AA;
+    font-family: "Helvetica Neue";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    border: 1px solid #D8BF7E;
+    padding: 10px 20px;
+    border-radius: 100px;
+} */
+
+.circularAnimation {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #A1A1AA;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+
+    padding: 8px 20px;
+    border-radius: 100px;
+    background: rgba(45, 45, 45, 0.4);
+    backdrop-filter: blur(5px);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin-bottom: 30px;
+}
+
+.circularAnimation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 100px;
+    padding: 1px;
+    background: linear-gradient(170deg,
+            rgba(255, 255, 255, 0.3) 0%,
+            rgba(255, 255, 255, 0) 50%,
+            rgba(255, 255, 255, 0.3) 100%);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+.bullet {
+    color: #A1A1AA;
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* Styling for the overall dark theme, useful for context in an external wrapper */
+/* You would apply this to a parent element like a body or section */
+/* .dark-background {
+    background-color: #111;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+@media (max-width:480px) {
+    .wrapper{
+        max-width: 250px;
+    }
+    .circularAnimation{
+        margin-bottom: 10px;
+    }
+    .button{
+        padding: 0px 35px;
+    }
+}
+
+@media (max-width:440px) {
+    .wrapper{
+        margin-top: 15px;
+    }
+}

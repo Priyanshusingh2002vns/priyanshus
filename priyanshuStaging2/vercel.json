@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "preqt.club"
+        }
+      ],
+      "destination": "https://www.preqt.club/:path*",
+      "statusCode": 308
+    }
+  ]
+}

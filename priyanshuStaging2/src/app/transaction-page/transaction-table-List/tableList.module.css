@@ -1,0 +1,8 @@
+.TransactionsTable{
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(243, 244, 246, 1);
+
+}

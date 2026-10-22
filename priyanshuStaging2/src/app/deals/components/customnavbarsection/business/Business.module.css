@@ -1,0 +1,465 @@
+  
+  .container {
+  background-color: #FFFFFF;
+  color: #1F2937;
+  padding:24px 30px ;
+  border-radius: 32px;
+  /* font-family: Arial, sans-serif; */
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0;
+}
+.dropdown {
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.header {
+  /* border: 1px solid red; */
+ /* margin: 30px 0px 20px 0px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 1rem; */
+  cursor: pointer;
+
+}
+
+.hr {
+  /* border: none; */
+  height: 1px;
+  background-color: #F3F4F6;
+  opacity: 0.1;
+}
+
+
+.collapse,
+.collapsing {
+  transition: height 0.35s ease; /* Bootstrap default */
+}
+
+
+.products {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, 1fr); /* default: 1 column (mobile) */
+  margin-top: 1rem;
+  margin-bottom: 24px;
+}
+
+.card {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 180px;
+  height: 100%;
+
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.clientcardImage {
+  width: 63px;
+  height: 63px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  border: 1px solid #E5E7EB;
+}
+
+.clientcardwrap {
+  background-color: #FFFFFF;
+  border: 1px solid #F3F4F6;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.clientName {
+  color: #1F2937;
+  text-align: center;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+/* Gradient overlay from bottom */
+.overlay {
+     position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .88), transparent);
+    pointer-events: none;
+}
+
+/* Product name text */
+.productName {
+ position: absolute;
+    bottom: 7px;
+    left: 50%;
+    transform: translate(-50%);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    z-index: 2;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+
+
+/* .cardImage {
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+} */
+
+.ptag {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  padding: 10px 0px;
+  margin: 0;
+  margin-bottom: unset;
+}
+.p{
+  margin-bottom: unset;
+}
+
+ .strong {
+  display: inline-block;
+  color:#64748b;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 10px 0px;
+  margin-bottom: unset;
+}
+
+.ul{
+   padding: 0px ,0px;
+  margin: 0;
+
+}
+
+.ul li {
+  font-size: 14px;
+  font-weight: 400;
+  color: #64748b;
+  /* padding: 0px 0px ; */
+  /* list-style: none; */
+  
+
+}
+
+.ul .list{
+    font-size: 14px;
+  font-weight: 400;
+  color: #64748b;
+  padding: 5px 0px ;
+  list-style: disc;
+  /* margin-left: 25px; */
+  
+}
+
+.highlight {
+  color: #B59131;
+  font-weight: bold;
+}
+
+.clients {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardImage {
+  object-fit: contain;
+}
+
+.clientCard {
+
+  width: 368px;
+  height: 115px;
+  background-color: rgb(245, 245, 245);
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 300;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconWrapper {
+  display: inline-flex;
+  transition: transform 0.3s ease;
+}
+
+.iconWrapper.open {
+  transform: rotate(180deg);
+}
+
+
+/* ==============================================Add Private deal css =========================================================== */
+.privateDeal {
+    background: #171717 !important ;
+    color: #FFFFFF !important;
+}
+
+
+.privateDeal .products{
+  background-color: #171717 !important;
+}
+.privateDeal .strong{
+  color: #9CA3AF !important;
+}
+.privateDeal .ul li, 
+.privateDeal .p{
+  color: #D4D4D8 !important;
+}
+.privateDeal .clientCard{
+  background-color: #FFFFFF !important;
+  color: #171717 !important;
+}
+
+.businessModal p{
+  color: #000;
+  font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px;
+margin-bottom: 5px;
+}
+.businessModal strong,
+.businessModal b {
+  font-weight: 700 !important;
+  margin-bottom: unset !important;
+}
+
+.privateDeal .businessModal strong,
+.privateDeal .businessModal b {
+  color: var(--Gray-400, #9CA3AF);
+  font-weight: 700 !important;
+}
+
+.privateDeal .businessModal p{
+  color: var(--Zinc-300, #D4D4D8) !important;
+font-size: 14px;
+font-style: normal;
+font-weight: 300;
+line-height: 20px;
+}
+.businessModal {
+  padding-top: 15px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.businessModal h1 {
+  color: var(--Gray-800, #1F2937);
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.businessModal h2 {
+  color: var(--Gray-800, #1F2937);
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+
+.privateDeal .businessModal h1,
+.privateDeal .businessModal h2 {
+  color: #FFFFFF !important;
+}
+
+.businessModal ul,
+.businessModal ol {
+  padding-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.businessModal li {
+  font-size: 14px;
+  font-weight: 400;
+  color: #1F2937;
+  line-height: 20px;
+  margin-bottom: 4px;
+}
+
+.privateDeal .businessModal li {
+  color: var(--Zinc-300, #D4D4D8) !important;
+}
+
+/* ======================= Key Risk Factors =========================== */
+.riskFactorsContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 12px;
+}
+
+.riskItem {
+  padding: 14px 0;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.riskItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.riskHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.riskTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.riskDot {
+  width: 8px;
+  height: 8px;
+  background-color: #B58E2C;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.riskTitle {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.riskBadge {
+  padding: 3px 12px;
+  border-radius: 12px;
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badgeHigh {
+  background-color: #FEE2E2;
+  color: #DC2626;
+}
+
+.badgeMedium {
+  background-color: #FEF3C7;
+  color: #D97706;
+}
+
+.badgeLow {
+  background-color: #DCFCE7;
+  color: #16A34A;
+}
+
+.riskDescription {
+  margin-top: 3px;
+  margin-left: 18px;
+  font-size: 11px;
+  color: #6B7280;
+  line-height: 14px;
+}
+
+.privateDeal .riskItem {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.privateDeal .riskTitle {
+  color: #FFFFFF !important;
+}
+
+.privateDeal .riskDescription {
+  color: #D4D4D8 !important;
+}
+
+
+
+
+/* =======================Responsive ui =========================== */
+
+@media(max-width:920px){
+  .container{
+    padding: 24px;
+    padding-top: 10px;
+  }
+}
+
+/* @media(max-width:480px){
+  .container{
+    padding-top: 10;
+  }
+} */
+
+@media(max-width:480px) {
+  .container{
+    padding: 15px;
+    padding-top: 0;
+  }
+  .clients{
+    grid-template-columns:  repeat(2, 1fr);;
+  }
+
+  .clientName{
+    font-size: 14px;
+  }
+}
+
+.pastPerformanceDisclaimer {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  color: #8C7333;
+  margin-top: 12px;
+  margin-bottom: 0px;
+}

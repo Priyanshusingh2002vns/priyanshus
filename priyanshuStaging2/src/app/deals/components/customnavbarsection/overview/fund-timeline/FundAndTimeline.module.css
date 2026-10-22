@@ -1,0 +1,245 @@
+.container {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--font-inter), sans-serif;
+  /* margin: 32px 0; */
+}
+
+.card {
+  flex: 1;
+  background: linear-gradient(180deg, #F3F4F6 0%, #FFFFFF 100%);
+  border-radius: 20px;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.card {
+  padding: 24px 16px; 
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+}
+
+.totalValue {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+}
+
+/* Donut Chart Area */
+.chartArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.donutContainer {
+  position: relative;
+  width: 220px;
+  height: 220px;
+}
+
+.donutCenter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sourceLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6B7280;
+}
+
+.sourceValue {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6B7280;
+  text-align: center;
+}
+
+/* Legend Area */
+.legendWrapper {
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.legendItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.legendLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0 !important;
+}
+
+.legendLabel {
+  font-size: 12px;
+  line-height: 18px;
+  color: #4B5563;
+}
+
+.legendRight {
+  display: flex;
+  gap: 6px;
+}
+
+.legendVal {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color:#1F2937;
+}
+
+.legendPercent {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #1F2937;
+}
+
+/* Timeline */
+.timelineWrapper {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.timelineStep {
+  display: flex;
+  margin-bottom: 20px;
+  min-height: 49px;
+}
+
+.timelineStep:last-child {
+  margin-bottom: 0;
+}
+
+.timelineIconWrapper {
+  width: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  position: relative;
+}
+
+.checkIcon {
+  width: 18px;
+  height: 18px;
+  background-color: #B59131;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  /* box-shadow: 0 0 0 4px #F8FAFC; */
+}
+
+.grayCirc {
+  width: 16px;
+  height: 16px;
+  background-color: #E5E7EB;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  /* box-shadow: 0 0 0 4px #F8FAFC; */
+}
+
+.line {
+  position: absolute;
+  top: 8px;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  z-index: 1;
+}
+
+.lineGold {
+  background-color: #B59131;
+}
+
+.lineGray {
+  background-color: #E5E7EB;
+}
+
+.timelineContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-top: -2px;
+}
+
+.stepLabel {
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 500;
+  color: #1F2937;
+}
+
+.completed .stepLabel {
+  color: #1F2937;
+}
+
+.stepDate {
+  font-size: 16px;
+  line-height: 100%;
+  color: #1F2937;
+  font-style: italic;
+}
+
+
+@media (max-width: 480px) {
+  .stepDate {
+    font-size: 14px;
+  }
+  .stepLabel {
+    font-size: 15px;
+  }
+  /* .timelineStep {
+    min-height: 30px;
+  } */
+}

@@ -1,0 +1,270 @@
+.bod-section {
+  background: #f9fafb;
+  border-radius: 24px;
+  padding: 24px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.bod-section h4,
+.bod-section h3 {
+  color: var(--Gray-800, #1F2937);
+
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+  /* 140% */
+  margin-bottom: 12px;
+
+}
+
+.bod-item {
+  /* background: #ffffff; */
+  border-radius: 12px;
+  margin-bottom: 12px;
+  /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08); */
+  overflow: hidden;
+}
+
+.dropdown-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding-bottom: 24px;
+  transition: background 0.2s ease;
+}
+
+.our-directors img {
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+}
+
+.our-directors {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.our-directors h6,
+.our-directors h4,
+.our-directors .director-name {
+  color: var(--Gray-800, #1F2937);
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  /* 150% */
+  margin: 0;
+  text-align: left;
+}
+
+.our-directors p {
+  color: var(--Gray-500, #6B7280);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 142.857% */
+  margin: 0;
+  text-align: left;
+}
+
+.arrow-icon {
+  display: inline-flex;
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-body {
+  padding-top: 12px;
+  border-top: 1px solid #E5E7EB;
+}
+
+.dropdown-body p {
+  color: var(--Gray-500, #6B7280);
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 16px;
+}
+
+.bg-head {
+  color: var(--Gray-800, #1F2937);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+  /* 140% */
+  margin-bottom: 8px;
+  padding-top: 12px;
+}
+
+.dropdown-body > a,
+.dropdown-body a.linkedin-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  background: #B59131;
+  color: #FFF;
+  text-align: center;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  /* 150% */
+  border: none;
+  border-radius: 999px;
+  padding: 10px 20px;padding-bottom: 8px;
+
+  cursor: pointer;
+  transition: background 0.2s ease;
+  width: 100%;
+}
+
+.dropdown-body .bg-content a {
+  display: inline;
+  background: transparent;
+  color: #B59131;
+  padding: 0;
+  width: auto;
+  border-radius: 0;
+  text-decoration: underline;
+  word-break: break-word;
+}
+
+.dropdown-body .bg-content {
+  color: var(--Gray-500, #6B7280);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 16px;
+}
+
+.dropdown-body .bg-content p {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.dropdown-body .bg-content h1,
+.dropdown-body .bg-content h3,
+.dropdown-body .bg-content h4,
+.dropdown-body .bg-content h5,
+.dropdown-body .bg-content h6 {
+  color: var(--Gray-800, #1F2937);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.dropdown-body .bg-content h2 {
+  color: var(--Gray-800, #1F2937);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.dropdown-body .bg-content ol,
+.dropdown-body .bg-content ul {
+  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.dropdown-body .bg-content ol {
+  list-style-type: decimal;
+}
+
+.dropdown-body .bg-content ul {
+  list-style-type: disc;
+}
+
+.dropdown-body .bg-content li {
+  margin-bottom: 4px;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.dropdown-body .bg-content li p {
+  margin-bottom: 0;
+}
+
+
+/* =============================================================================Private deal css   ============================================================ */
+
+
+.private-bod-section .our-directors h6,
+.private-bod-section .our-directors h4,
+.private-bod-section .our-directors .director-name {
+  color: var(--White-White, #FFF);
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  /* 150% */
+
+}
+
+.private-bod-section .bg-head {
+  color: #FFF;
+}
+
+.private-bod-section .dropdown-body .bg-content {
+  color: #D1D5DB;
+}
+
+.private-bod-section .dropdown-body .bg-content p {
+  color: inherit;
+}
+
+.private-bod-section .dropdown-body .bg-content h1,
+.private-bod-section .dropdown-body .bg-content h2,
+.private-bod-section .dropdown-body .bg-content h3,
+.private-bod-section .dropdown-body .bg-content h4,
+.private-bod-section .dropdown-body .bg-content h5,
+.private-bod-section .dropdown-body .bg-content h6 {
+  color: #FFFFFF;
+}
+
+@media (max-width:480px) {
+  .bod-section {
+    padding: 12px 10px;
+    border-radius: 14px;
+  }
+
+  .bod-section h4,
+  .bod-section h3 {
+    margin-bottom: 10px;
+  }
+
+  .dropdown-header {
+    padding: 10px 0;
+  }
+}

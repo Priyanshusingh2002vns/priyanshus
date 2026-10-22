@@ -1,0 +1,60 @@
+.carouselContainer {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0e0e0e;
+    /* overflow: hidden; */
+    position: relative;
+    /* max-width: 450px; */
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+}
+
+.iconWrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.iconCircle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    transition: all 0.4s ease;
+}
+
+@media (max-width: 768px) {
+    .iconCircle img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .iconCircle {
+        height: 40px;
+        width: 40px;
+    }
+
+    .iconCircle img {
+        height: 35px;
+        width: 35px;
+    }
+}
