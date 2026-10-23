@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 // import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "react-toastify/dist/ReactToastify.css";
+// import "react-toastify/dist/ReactToastify.css";
 import { MultiStepProvider } from "./utils/MultiStepContext";
 import { DealTypeProvider } from "./utils/DealTypeContext";
 import { Playfair_Display,Inter,Manrope } from "next/font/google";

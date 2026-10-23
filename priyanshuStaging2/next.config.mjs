@@ -16,6 +16,31 @@ const nextConfig = {
     ],
   },
 
+  // new upadte 
+
+    webpack: (config, { isServer }) => {
+    if (!isServer) {
+      // Merge split CSS chunks into consolidated bundles
+      config.optimization.splitChunks = {
+        ...config.optimization.splitChunks,
+        cacheGroups: {
+          ...config.optimization.splitChunks?.cacheGroups,
+          styles: {
+            name: 'styles',
+            test: /\.(css|scss)$/,
+            chunks: 'all',
+            enforce: true,
+          },
+        },
+      };
+    }
+    return config;
+  },
+
+
+  // new upadte 
+
+
   async headers() {
     return [
       {
