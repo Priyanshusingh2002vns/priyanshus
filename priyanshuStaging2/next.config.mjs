@@ -18,27 +18,9 @@ const nextConfig = {
 
   // new upadte 
 
-  //   webpack: (config, { isServer }) => {
-  //   if (!isServer) {
-  //     // Merge split CSS chunks into consolidated bundles
-  //     config.optimization.splitChunks = {
-  //       ...config.optimization.splitChunks,
-  //       cacheGroups: {
-  //         ...config.optimization.splitChunks?.cacheGroups,
-  //         styles: {
-  //           name: 'styles',
-  //           test: /\.(css|scss)$/,
-  //           chunks: 'all',
-  //           enforce: true,
-  //         },
-  //       },
-  //     };
-  //   }
-  //   return config;
-  // },
-
-   webpack: (config, { isServer }) => {
+    webpack: (config, { isServer }) => {
     if (!isServer) {
+      // Merge split CSS chunks into consolidated bundles
       config.optimization.splitChunks = {
         ...config.optimization.splitChunks,
         cacheGroups: {
@@ -46,8 +28,7 @@ const nextConfig = {
           styles: {
             name: 'styles',
             test: /\.(css|scss)$/,
-            // Only merge styles belonging to the initial layout and homepage, NOT other routes
-            chunks: (chunk) => chunk.name === 'app/layout' || chunk.name === 'app/page',
+            chunks: 'all',
             enforce: true,
           },
         },
