@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./NewFooter.module.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function NewFooter({ isPrivateDeals }) {
   const router = useRouter();
@@ -15,7 +16,15 @@ export default function NewFooter({ isPrivateDeals }) {
   return (
     <footer className={styles.footer}>
       <Link href="/" className={styles.logo}>
-        <img src="/footerLogo.png" alt="PrEqt footer logo - Private Equity and Pre-IPO Investment Platform" title="PrEqt footer logo - Private Equity and Pre-IPO Investment Platform" width={288} height={90} />
+        {/* <img src="/footerLogo.png" alt="PrEqt footer logo - Private Equity and Pre-IPO Investment Platform" title="PrEqt footer logo - Private Equity and Pre-IPO Investment Platform" width={288} height={90} /> */}
+         <Image
+          src="/footerLogo.png"
+          alt="PrEqt footer logo - Private Equity and Pre-IPO Investment Platform"
+          title="PrEqt footer logo - Private Equity and Pre-IPO Investment Platform"
+          width={288}
+          height={90}
+          loading="lazy"
+        />
       </Link>
 
 
