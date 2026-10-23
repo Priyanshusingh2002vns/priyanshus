@@ -118,7 +118,7 @@ function FillEquityMarket() {
           <div className={styles.fillcontainer}>
             <div className={styles.visual}>
               <div className={styles.goldenGlow}>
-                <video src="/goldenGlow.mp4" autoPlay loop muted playsInline />
+                <video src="/goldenGlow.mp4" autoPlay loop muted playsInline preload='none'/>
               </div>
             </div>
 

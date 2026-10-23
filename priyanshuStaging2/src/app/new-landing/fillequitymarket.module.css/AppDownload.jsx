@@ -57,7 +57,7 @@ export default function AppDownload() {
 
           {/* BACKGROUND VIDEO */}
           <div className={styles.gridmoves}>
-            <video src="/gridmoves.mp4" autoPlay muted loop playsInline />
+            <video src="/gridmoves.mp4" autoPlay muted loop playsInline  preload="none" />
           </div>
 
           {/* BACKGROUND PHONE */}
