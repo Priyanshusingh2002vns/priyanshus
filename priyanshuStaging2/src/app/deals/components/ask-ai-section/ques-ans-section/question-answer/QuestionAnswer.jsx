@@ -373,10 +373,11 @@ const QuestionAnswer = ({ handleQuesAns, handleAskAI, qaCount, setShowPrivateQna
               <span className={styles.s1}>{qaCount > 0 ? `${qaCount} Q&A answered in last ${daysUntilLive(liveAt)} days`:  "Do you have any question? Ask now"}  {} </span>
             </>
             <span className={styles.s2}>
-              <img
+              {/* <img
                 src="/assets/pictures/8e3073ca31264b3cb0bd9cb1e07af102b937cb5c.gif"
                 alt="gif"
-              />
+              /> */}
+               <img src="/assets/pictures/8e3073ca31264b3cb0bd9cb1e07af102b937cb5c.webp" alt="gif" width={28} height={28}/>
             </span>
           </div>
         </div>

@@ -164,7 +164,8 @@ const Ipotimeline = ({ handleAskAI, handleQuesAns, isPrivateDeal, qaCount }) => 
           </div>
           <span className="s1">{qaCount > 0 ? `${qaCount} Q&A answered in last ${daysUntilLive(liveAt)} days`:  "Do you have any question? Ask now"} </span>
           <span className="s2">
-            <img src="/assets/pictures/8e3073ca31264b3cb0bd9cb1e07af102b937cb5c.gif" alt="gif" />
+            {/* <img src="/assets/pictures/8e3073ca31264b3cb0bd9cb1e07af102b937cb5c.gif" alt="gif" /> */}
+             <img src="/assets/pictures/8e3073ca31264b3cb0bd9cb1e07af102b937cb5c.webp" alt="gif" width={28} height={28}/>
           </span>
         </button>
 

@@ -97,7 +97,7 @@ export default function HeroBanner() {
   return (
     <>
     {/* fix ind code  */}
-    {/* <link rel="preload" as="image" href="/thumbnailhero.webp" fetchPriority='high' /> */}
+    <link rel="preload" as="image" href="/thumbnailhero.webp" fetchPriority='high' />
     {/* fix ind code  */}
       <section className={styles.heroBanner}>
         <video
