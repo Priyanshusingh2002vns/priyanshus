@@ -18,37 +18,15 @@ const nextConfig = {
 
   // new upadte 
 
-  //   webpack: (config, { isServer }) => {
-  //   if (!isServer) {
-  //     // Merge split CSS chunks into consolidated bundles
-  //     config.optimization.splitChunks = {
-  //       ...config.optimization.splitChunks,
-  //       cacheGroups: {
-  //         ...config.optimization.splitChunks?.cacheGroups,
-  //         styles: {
-  //           name: 'styles',
-  //           test: /\.(css|scss)$/,
-  //           chunks: 'all',
-  //           enforce: true,
-  //         },
-  //       },
-  //     };
-  //   }
-  //   return config;
-  // },
-
-
     webpack: (config, { isServer }) => {
     if (!isServer) {
+      // Merge split CSS chunks into consolidated bundles
       config.optimization.splitChunks = {
         ...config.optimization.splitChunks,
         cacheGroups: {
           ...config.optimization.splitChunks?.cacheGroups,
           styles: {
-            // Generates a chunk name based on the route instead of forcing everything into 'styles'
-            name(module, chunks) {
-              return chunks.map((item) => item.name).join('~');
-            },
+            name: 'styles',
             test: /\.(css|scss)$/,
             chunks: 'all',
             enforce: true,
@@ -58,6 +36,28 @@ const nextConfig = {
     }
     return config;
   },
+
+
+  //   webpack: (config, { isServer }) => {
+  //   if (!isServer) {
+  //     config.optimization.splitChunks = {
+  //       ...config.optimization.splitChunks,
+  //       cacheGroups: {
+  //         ...config.optimization.splitChunks?.cacheGroups,
+  //         styles: {
+  //           // Generates a chunk name based on the route instead of forcing everything into 'styles'
+  //           name(module, chunks) {
+  //             return chunks.map((item) => item.name).join('~');
+  //           },
+  //           test: /\.(css|scss)$/,
+  //           chunks: 'all',
+  //           enforce: true,
+  //         },
+  //       },
+  //     };
+  //   }
+  //   return config;
+  // },
 
 
   // new upadte 
