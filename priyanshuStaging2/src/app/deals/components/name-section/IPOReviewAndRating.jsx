@@ -125,7 +125,14 @@ const IPOReviewAndRating = ({ reviewData }) => {
   const contentRef = useRef(null);
   const [maxHeight, setMaxHeight] = useState("180px");
 
+  
+  const isFirstRender = useRef(true);
   useEffect(() => {
+    // Skip animation on initial page load / hydration
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
     if (contentRef.current) {
       if (isMainOpen) {
         setMaxHeight(`${contentRef.current.scrollHeight}px`);
@@ -134,8 +141,7 @@ const IPOReviewAndRating = ({ reviewData }) => {
         }, 400); // Wait for transition of 0.4s to finish
         return () => clearTimeout(timer);
       } else {
-        // If it was "none", we must temporarily set it to the actual scrollHeight
-        // so the browser can animate the transition down to 180px.
+        // Runs ONLY when user actively clicks to close the accordion
         setMaxHeight(`${contentRef.current.scrollHeight}px`);
         const timer = setTimeout(() => {
           setMaxHeight("180px");
@@ -143,7 +149,7 @@ const IPOReviewAndRating = ({ reviewData }) => {
         return () => clearTimeout(timer);
       }
     }
-  }, [isMainOpen, reviewData]);
+  }, [isMainOpen]);
 
   const toggleRow = (id) => {
     setExpandedRows(prev => ({
